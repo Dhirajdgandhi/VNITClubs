@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>
+     Student Portal
+    </title>
+
+
+{% include "homeheader.html" %}
+
+
+</head>
+{% load staticfiles %}
+
+{% include "headercontent.html" %}
+
+
+<!-- Start of the container section -->
+
+<div class="container-fluid" id="content1" style="background-color: #EFEFEF !important;">
+<div class="col-md-2"></div>
+
+<div class="col-md-8">
+    {% if saved_intern_exp %}
+    {% for exp in saved_intern_exp  %}
+    {% with exp as i and 'true' as saved %}
+            {% include "intern_experience.html" %}
+
+    {% endwith %}
+    {% endfor %}
+    {% endif %}
+
+    {% if saved_job_exp %}
+    {% for exp in saved_job_exp  %}
+    {% with exp as i and 'true' as saved %}
+        {% include "job_experience.html" %}
+    {% endwith %}
+    {% endfor %}
+    {% endif %}
+
+    <button   onclick="location.href='/home/contribute/?new_exp=1'" class="btn btn-success btn-md">Contribute new Experience</button>
+
+</div>
+
+    <div class="col-md-2"></div>
+
+  </div>
+
+
+<footer style="margin-top:5%">
+
+<div class="footer-main-wrap">
+
+
+</div>
+</footer>
+  </body>
+</html>

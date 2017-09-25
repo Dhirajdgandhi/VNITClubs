@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+
+<title>Contribute Experience </title>
+<head>
+{% include "homeheader.html" %}
+
+<!-- WMD -->
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'CSS/wmd.css' %}"/>
+{% load staticfiles %}
+<script type="text/javascript" src="{% static 'JS/showdown.js' %}"></script>
+<!-- WMD ends here -->
+
+
+<!-- Quill -->
+{% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/quill.snow.css' %}">
+{% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/advanced.css' %}">
+<!-- -->
+
+
+<script>
+
+
+function display()
+{
+//alert('funciton');
+	var rounds = document.getElementById("rounds").value;
+//alert(rounds);
+	var s= "";
+    	document.getElementById("displayrounds").innerHTML='';
+	var i=1;
+	while (i<=rounds) {
+//alert(i);
+//	document.getElementById("roundinfo").visibility = true; 
+	
+        
+s+="<div class='row'>";
+
+s+="<hr style='height:1px;border:none;color:#333;background-color:#333;' /><strong><p align='center' style='margin-bottom:2%'>Round " + i + " details </p></strong>"
+
+    s+="<div class='col-md-4'>";
+            s+="<label for='round'"+i+"'>Round Type</label> ";
+            s+="<select class='form-control' name='round"+i+"type'>{% for i in round_type %}<option value='{{ i.id }}'>{{ i.display_name }}</option>{% endfor %}</select>";
+    s+="</div>";       
+  
+    s+="<div class='col-md-4'>";
+        s+="<label for='round'"+i+"time'>Time in minutes</label>";
+        s+="<input type='text' class='form-control' name='round"+i+"time' id='round"+i+"time' value='30'/> ";
+	s+="<font color='red'> <DIV id='round"+i+"timer'> </DIV> </font>"
+    s+="</div>";
+      
+    s+="<div class='col-md-4'>";
+        s+="<label for='round'"+i+"level'>Difficulty level </label> ";
+        s+="<select class='form-control' name='round"+i+"level'>{% for i in difficulty_obj %}<option value='{{ i.id }}'>{{ i.display_name }}</option>{% endfor %}</select>";
+    s+="</div>";
+
+s+="</div>";
+        s+="<textarea placeholder='Fill your experience here' class='form-control margin-top' style='width:100%;height:300px;resize:vertical;' name='round"+i+"'></textarea><br><br><br>"; 
+
+	i++;
+    }
+    document.getElementById("displayrounds").innerHTML=s;
+	
+}
+
+   function changeFunc()
+   {
+        var selectBox = document.getElementById("company");
+        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+    
+        if(selectedValue=="other")
+        {
+            $("#newcompany").removeProp("display").css("display","block");
+        }
+        else
+        {
+            $("#newcompany").removeProp("display").css("display","none");
+        }
+     
+   }
+   
+   
+</script>
+
+</head>
+  <body>
+{% include "headercontent.html" %}
+
+{% csrf_token %}
+	 <form method="post" name="exp_form" action="" onsubmit="return validate_exp()">
+{% csrf_token %}
+	 <br><br>
+
+<div class="row">
+
+<div class="contribute_form">
+
+<div class="row">
+<ul>
+{% for i in err_msg %}
+<li><font color='red'> <DIV >{{ i }} </DIV> </font></li>
+{% endfor %}
+</ul>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <label for="Type">Type</label>
+        <select class="form-control" name="type">
+            <!-- <option value="" default>-- Select --</option> -->
+    		  <option value="0">Internship</option>
+            <option value="1">Placement/Job</option>
+        </select>
+  	</div>
+    
+    <div class="col-md-4">
+        <label for="profile">Profile</label>
+        <select class="form-control" name="profile" id="profile">
+               
+    			{% for i in profile_type %}
+    			<option value="{{ i.id }}">{{ i.display_name }}</option>
+    			{% endfor %}
+    		</select>        
+		<font color='red'> <DIV id="pfr"> </DIV> </font>
+    </div>
+    
+<div class="col-md-4">
+        <label for="selected">Status</label>
+        <select class="form-control" name="selected" id="selected">
+               
+    			<option value=1>Accepted Offer</option>
+    			<option value=0>No Offer</option>
+
+    		</select>        
+		
+    </div>
+
+</div>
+        
+<br>
+
+    <label for="criteria">Enter Job/Intern Criteria if any : &nbsp</label>
+        <input class="form-control" type="text" width="80px" name="criteria" id="criteria" size="70" placeholder="The company had a pointer criteria of 7.5 and no current backlogs"/>
+    <br>
+
+
+<div class="row">
+    <div class="col-md-6">
+        <label for="company">Choose company : </label>
+    		<select class="form-control" onchange="changeFunc();" name="company" id="company">
+                    <option value="" default>-- Select --</option>
+    			{% for comp in comp_list %}
+    			<option value="{{ comp.id }}">{{comp.company_name}}</option>
+    			{% endfor %}
+                    <option value="other">Other</option>
+    		</select>
+		
+    </div>
+    
+    <div class="col-md-6">
+    <br>
+        <select class="form-control" name="On-Off campus">
+        <option value="1">On Campus</option>
+        <option value="0">Off Campus</option>
+        </select>
+    </div>
+
+<br>
+
+</div>
+
+
+<div id="newcompany" style="display:none;">
+<input class="form-control" type="text" placeholder="Enter company's name" id="new_company" name="new_company"/>
+(A request will be sent to the Admin for the New company)
+</div>
+<font color='red'> <DIV id="cpr"> </DIV> </font>
+<br>
+
+
+<div class="row">
+
+    <div class="col-md-4">
+    <label for="package">Package/Stipend</label>
+    <input type="text"  class="form-control" id="package" name="package" placeholder="Enter amount in Rupees"></input>
+	<font color='red'> <DIV id="pckgr"> </DIV> </font>
+    </div>
+
+    <div hidden="true" class="col-md-4">
+    <br>
+    <select name="amount" class="form-control">
+        <option value="1000" default>Thousand</option>
+        <option value="100000">Lakhs</option>
+    </select>
+    </div>
+
+<!--
+<p> If the company is not in the list Kindly <a href="new_company_request">click here</a> to send us a notification regarding the same </p>
+-->
+    <div class="col-md-4">
+    <br>
+    <input type="text" class="form-control" placeholder="Current CGPA" id="cgpa" name="cgpa"/>
+     <font color='red'> <DIV id="cgpar"> </DIV> </font>
+    </div>
+
+</div>
+
+<br>
+<!-- added this on 11th june -->
+<div class="row">
+<div class="col-md-4">
+<label for="session">Session or year</label>
+ <select class="form-control" id="session" name="session">
+        <option value="2016-17">2016-17</option>
+        <option value="2015-16">2015-16</option>
+        <option value="2014-15">2014-15</option>
+        <option value="2013-14">2013-14</option>
+    </select>
+</div>
+</div>
+<!-- 11th june end -->			
+				
+<br>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <label for="rounds">Enter no. of rounds of interview :</label>
+        <select name="rounds" class="form-control" id="rounds" onchange="display()">
+        <option value="0" default>-- Select --</option>	
+        {% for i in "123456" %}
+        <option value="{{forloop.counter}}">{{forloop.counter}}</option>
+        {% endfor %}
+        </select>
+	<font color='red'> <DIV id="nrr"> </DIV> </font>
+    </div>
+</div>
+
+<br><br>
+<div id="displayrounds"> </div>
+    <label for="other_comments">General Tips / Other comments :</label>
+     <textarea name="other_comments" id="other_comments"  style="width:100%;height:100px;resize:vertical;margin-bottom:30px;" > </textarea>
+
+<!-- Currently not using the special editor
+{% include "advanced.html" %}
+<script>function hi(){alert(quill.container.innerHTML);}</script>
+-->
+<input type="submit" class="btn btn-success btn-block"  name="submit" value="Submit Experience"><span class="glyphicon glyphicon-off"></span></input>	
+<br>
+
+
+</div>
+</div>
+
+
+	 </form> 
+	
+
+  </body>
+  </html>

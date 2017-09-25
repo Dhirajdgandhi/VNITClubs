@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>
+     Add TNP Head
+    </title>
+
+
+{% include "homeheader.html" %}
+
+
+</head>
+{% load staticfiles %}
+{% load app_filters %}
+{% include "headercontent.html" %}
+
+<body>
+
+    <div class="row">
+        <div class="col-md-offset-2 col-md-4 col-sm-12 " style="background-color:white !important;margin:2%;">
+             <div class="panel panel-info" style="margin:2%;">
+{#            <div class="panel panel-info">#}
+              <div class="panel-heading">Current TNP Heads</div>
+              <div class="panel-body">
+                {% if TNPHead_list%}
+                   <ol>
+                    {% for TNPHead in TNPHead_list %}
+                        <li>
+                            <b>{{ TNPHead.firstname}}</b>
+                            <b>{{ TNPHead.lastname}}</b>
+                            <i>{{ TNPHead.deptid|deptname }}</i>
+                            (<b>ID:</b>{{ TNPHead.clg_id }})
+                        </li>
+                    {% endfor %}
+                   </ol>
+                 {% else %}
+                    <h1>No TNP Heads</h1>
+                {% endif %}
+              </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12" style="background-color:white;!important;margin:2%;">
+            <form id="addtnpheadform" class="form-inline" style="margin: 2%;" method="post">
+                {% csrf_token %}
+                <label for="user_id" class="control-label" style="margin-top: 2%;">Input The UserId:</label><br/><br/>
+                <input type="number" class="form-control mb-2 mr-sm-2 mb-sm-0" id="user_id" name="user_id" placeholder="Ex: 18475" >
+                <input type="button"  id="get_user_btn" class="btn btn-primary" value="Get User Info" onclick="getUser()">
+                <div id="disp" style="display: none; margin-left: 3%;margin-top: 3%;">
+                     <b>First Name : </b><div id="firstname" style="display:inline"></div><br>
+                     <b>Last Name : </b><div id="lastname" style="display:inline"></div><br>
+                     <b>Department : </b><div id="dept_name" style="display:inline"></div><br>
+                     <b>Roll No. : </b><div id="rollno" style="display:inline"></div><br>
+                     <b>Role : </b><div id="role_id_short" style="display:inline"></div>
+                    <button id="make_tnp_head_btn" class="btn btn-warning"  style="display:none;" type="submit">Make TnP Head</button>
+                    <button id="remove_tnp_head_btn" class="btn btn-danger" style="display:none;" type="submit">Remove TnP Head</button>
+                </div>
+                <div id="finalmessage" style="display: none;margin-top:3%;margin-left: 3%">
+                    <p id="message"> </p>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-2 col-sm-12"></div>
+    </div>
+
+<footer style="margin-top: 20px">
+    <div class="footer-main-wrap">
+    </div>
+</footer>
+
+<script>
+     var user_ki_id;
+        $('#addtnpheadform').on("keyup keypress", function(e){
+        var keyCode = e.keyCode || e.which;
+        if(keyCode === 13)
+        {
+            e.preventDefault();
+            return false;
+        }
+    });
+
+function getUser()
+{
+    var id = document.getElementById('user_id').value;
+    user_ki_id = id;
+    $('#addtnpheadform').on("keyup keypress", function(e){
+        var keyCode = e.keyCode || e.which;
+        if(keyCode === 13)
+        {
+            e.preventDefault();
+            return false;
+        }
+    });
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200)
+    {
+        var data = JSON.parse(xhttp.responseText);
+         if(data['isvalid'] == 'False')
+         {
+             alert('UserID is Invalid ');
+         }
+         else
+         {
+
+                document.getElementById('disp').style.display = 'block';
+                document.getElementById('firstname').innerHTML =  data['fname'];
+                document.getElementById('dept_name').innerHTML = data['dept_name'];
+                document.getElementById('lastname').innerHTML =  data['lname'];
+                document.getElementById('rollno').innerHTML =  data['roll_no'];
+                document.getElementById('role_id_short').innerHTML =  data['role_id'];
+
+                if(data['role_id'] == "Admin")
+                {
+                    document.getElementById('make_tnp_head_btn').style.display = 'none';
+                    document.getElementById('remove_tnp_head_btn').style.display = 'none';
+                    document.getElementById('make_tnp_head_btn').className = 'btn btn-warning disabled';
+                    document.getElementById('finalmessage').style.display = 'block';
+                    document.getElementById('finalmessage').style.color = 'green';
+                    document.getElementById('message').innerHTML = 'You cannot make an ADMIN a TNP HEAD' ;
+                }
+                else if (data['role_id'] == "TNP Head")
+                {
+                    document.getElementById('make_tnp_head_btn').style.display = 'none';
+                    document.getElementById('remove_tnp_head_btn').style.display = 'block';
+                    document.getElementById('message').innerHTML = '' ;
+                }
+                else
+                {
+                    document.getElementById('make_tnp_head_btn').style.display = 'block';
+                    document.getElementById('remove_tnp_head_btn').style.display = 'none';
+                    document.getElementById('make_tnp_head_btn').className = 'btn btn-warning';
+                    document.getElementById('message').innerHTML = '' ;
+
+                }
+         }
+
+
+    }
+  }
+  xhttp.open("GET", id, true);
+  xhttp.send();
+}
+
+ function makeTNPhead()
+ {
+        var xhttp = new XMLHttpRequest();
+        var id = document.getElementById('user_id').value;
+        xhttp.onreadystatechange = function()
+        {
+            if (xhttp.readyState == 4 && xhttp.status == 200)
+            {
+                var data = JSON.parse(xhttp.responseText);
+                document.getElementById('finalmessage').style.display = 'block';
+                document.getElementById('finalmessage').style.color = 'green';
+
+                if (data['role_id'] == 'TNP Head')
+                {
+                    document.getElementById('message').innerHTML = ' Successfully done!!!';
+                    document.getElementById('role_id_short').innerHTML = 'TNP Head';
+                    document.getElementById('make_tnp_head_btn').style.display = 'none';
+                    document.getElementById('remove_tnp_head_btn').style.display = 'block';
+                }
+                else
+                {
+                    document.getElementById('message').innerHTML = ' Successfully done!!!';
+                    document.getElementById('role_id_short').innerHTML = 'Student';
+                    document.getElementById('make_tnp_head_btn').style.display = 'block';
+                    document.getElementById('remove_tnp_head_btn').style.display = 'none';
+                    document.getElementById('make_tnp_head_btn').className = 'btn btn-warning';
+                }
+            }
+        }
+        xhttp.open("GET",'make_tnp_head/'+ id, true);
+        xhttp.send();
+ }
+
+</script>
+
+  </body>
+</html>
+

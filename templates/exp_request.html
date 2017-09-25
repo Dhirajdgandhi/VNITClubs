@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>
+      Accept Experience
+    </title>
+
+{% include "homeheader.html" %}   
+</head>
+{% load staticfiles %}
+
+
+{% include "headercontent.html" %}
+  <body>
+ 
+{% csrf_token %}
+	 <form method="post" action="">
+{% csrf_token %}
+   
+<!-- Start of the container section -->
+<div class="container-fluid" id="content1">
+<br>
+<div class="col-md-1" >
+
+
+
+
+</div>
+<div class="col-md-9">
+
+
+<ul class="nav nav-tabs ">
+    <li ><a data-toggle="tab" href="#interntab">Internship</a></li>
+    <li ><a data-toggle="tab" href="#jobtab">Job</a></li>
+  </ul>
+<br>
+<div class="tab-content">
+
+
+<div id="interntab" class="tab-pane fade in ">
+{% for exp in intern_exp_obj_request  %}
+    {% with exp as i %}
+
+ 		{% include "intern_experience.html" %}
+    {% endwith %}
+{% endfor %}
+</div>
+
+
+<div id="jobtab" class="tab-pane fade in">
+{% for exp in job_exp_obj_request  %}
+    {% with exp as i %}
+            
+{#            <div class="col-md-4">#}
+{# <button type="submit" name="button"  value="Accept|{{ i.id }}|job"  class="btn btn-success  ">ACCEPT </button>#}
+{#</div>#}
+{##}
+{#<div class="col-md-offset-4 col-md-4">#}
+{# <button name="button" value="Reject|{{ i.id }}|job" type="submit" class="btn btn-danger  ">REJECT </button>#}
+{# </div>      #}
+ 	{% include "job_experience.html" %}
+    {% endwith %}
+{% endfor %}
+</div>
+
+
+</div> <!-- End of tab-content-->
+
+   
+
+  </div>
+
+  <div class="col-md-*" ></div>
+
+</div>
+</div>
+</form>
+
+<footer>
+    <div class="footer-main-wrap">
+    </div>
+    </footer>
+
+  </body>
+
+</html>
+

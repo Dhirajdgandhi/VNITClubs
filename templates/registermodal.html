@@ -1,0 +1,187 @@
+<script>
+</script>
+<!-- Register Modal -->
+  <div class="modal fade" id="myModal2" tabindex='-1' role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" id="register_content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3><span class="glyphicon glyphicon-lock "></span>&nbsp Register </h3>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+        
+        
+        
+        
+        
+<!-- Error msgs from backend/authentication error -->
+<div name="error_block">
+	<ul>
+	{% if err_msg %}
+		{% for i in err_msg %}
+		{% if i != "" %}
+		<li style="color:red;">{{ i }}</li>
+		{% endif %}
+		{% endfor %}
+	{% endif %}
+	</ul>
+	</div>
+
+
+
+
+{% csrf_token %}
+          <form role="form" name="register_form" method="POST" action="/register/" onsubmit= "return validate_register_Form()">
+{% csrf_token %}
+    
+<!-- Email -->        
+ <div class="form-group">
+              
+              <div class="inner-addon left-addon">
+                <span class="fa fa-user"></span>
+                <input name="email" type="text" class="form-control" value="{{ email }}" id="email" required placeholder="Enter email id">
+		<font color='red'> <DIV id="emr_err"> </DIV> </font>
+              </div>
+ </div>
+<!-- End of email -->
+
+
+<!-- Names -->
+<div class="row">
+
+<div class="col-md-6">
+            <div class="form-group">
+              
+              <input name="fname" type="text" class="form-control" value="{{ register_fname }}"  id="fname" placeholder="Enter First Name" required/>
+		<font color='red'> <DIV id="fnr"> </DIV> </font>
+            </div>
+</div>
+
+<div class="col-md-6">
+             <div class="form-group">
+             
+              <input name="lname" type="text" class="form-control" value="{{ lname }}" id="lname" required placeholder="Enter Last Name" >
+	      <font color='red'> <DIV id="lnr"> </DIV> </font>
+            </div>
+</div>
+
+</div>
+<!-- End of names -->
+
+
+<!-- Details -->
+<div class="row">
+
+<div class="col-md-4">
+            <div class="form-group">
+              <label for="clg_id"><span class="glyphicon"></span>College ID no.</label>
+              <input name="clg_id" type="text" class="form-control" value="{{ register_clg_id}}" id="clg_id" placeholder="15616" required>
+		<font color='red'> <DIV id="cidr_err"> </DIV> </font>
+            </div>
+</div>
+
+
+<div class="col-md-4">
+     
+
+             <div class="form-group">
+              <label for="dept"></span>Department</label>
+                      
+                        <select name="dept" class="form-control">
+                           {% for i in dept_list %}
+                            	<option value="{{ i.id }}">{{ i.display_name }}</option>
+                            {% endfor %}
+                        </select>
+			<font color='red'> <DIV id="br"> </DIV> </font>
+                      
+            </div>
+</div>
+
+<div class="col-md-4">
+             <div class="form-group">
+              <label for="roll_no"><span class="glyphicon"></span>Enrollment no. :</label>
+              <input name="roll_no" type="text" class="form-control" id="roll_no" placeholder="BT13CSE033" value="{{ roll_no }}" required>
+		<font color='red'> <DIV id="rnr"> </DIV> </font>
+            </div>
+</div>
+
+</div>
+<!-- End of details -->
+
+
+<!-- Contact no. -->
+<div class="row">
+
+<div class="col-md-6">
+            <div class="form-group">
+              <!--<label for="telephone1">Mobile &nbsp<span class="fa fa-mobile"></span> </label> -->
+              <div class="inner-addon left-addon">
+              <span class="fa fa-mobile"></span>
+              <input name="telephone1" type="text" class="form-control" id="telephone1" value="{{ mob1 }}" placeholder="Enter mobile no." required>
+              <font color='red'> <DIV id="mbr1"> </DIV> </font>
+		</div>
+		
+            </div>
+</div>
+
+<div class="col-md-6">
+             <div class="form-group">
+              <!--<label for="telephone2">Mobile/Telephone(Optional) &nbsp<span class="fa fa-phone "></span> </label>-->
+              <div class="inner-addon left-addon">
+              <span class="fa fa-phone "></span> 
+              <input name="telephone2" type="text" class="form-control" value="{{ mob2 }}" id="telephone2" placeholder="Enter mobile no.">
+			<font color='red'> <DIV id="mbr2"> </DIV> </font>
+		</div>
+            </div>
+</div>
+
+</div>
+<!-- End of contact no. -->
+
+
+<!-- Passwords -->
+<div class="row">
+
+<div class="col-md-6">
+            <div class="form-group">
+              <label for="password1">Password &nbsp</label>
+              <div class="inner-addon right-addon">
+<span class="fa fa-eye" font-size="50px" onclick="showhide('pwd1','password1');" id="pwd1" ></span>
+            <input name="password1" type="password" class="form-control" id="password1" placeholder="Enter password" required>
+		<font color='red'> <DIV id="passr1"> </DIV> </font>
+</div>           
+ </div>
+</div>
+
+<div class="col-md-6">
+             <div class="form-group">
+              <label for="password2">Password(again)</label>
+           <div class="inner-addon right-addon"> 
+<span class="fa fa-eye" font-size="50px" onclick="showhide('pwd2','password2');" id="pwd2" ></span>  
+ <input name="password2" type="password" class="form-control" id="password2" placeholder="Enter password again" required>
+<font color='red'> <DIV id="passr2"> </DIV> </font>
+</div>
+            </div>
+</div>
+
+</div>
+<!-- End of passwords  -->
+
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>Remember me</label>
+            </div>
+              <button type="submit" class="btn btn-block "><span class="glyphicon glyphicon-off"></span> Register </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+        
+        </div>
+      </div>
+
+</div>
+</div>
+
+<!-- Register Modal Ends -->
+

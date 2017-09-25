@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>
+
+      {{ page_name }}
+    </title>
+
+{% include "homeheader.html" %}
+</head>
+
+<body>
+{% load staticfiles %}
+
+{% include "headercontent.html" %}
+
+<!-- Start of the container section -->
+
+<div class="container-fluid" id="content1">
+<br>
+<div class="row">
+        <div class="col-md-2"></div>
+
+        <div class="col-md-8">
+         <ul class="nav nav-tabs">
+                 {% for i in dept_list %}
+                        <li ><a data-toggle="tab" href="#{{ i.id }}">{{ i.display_name }}<sup>{{ jobs | length }}</sup></a></li>
+                {% endfor %}
+          </ul>
+<br>
+<div class="tab-content">
+        {% for dept in dept_list %}
+            <div id="{{ dept.id }}" class="tab-pane fade in ">
+                <!-- Experiences for the comp-dept has to be shown -->
+                {% for job in jobs %}
+                    {% if dept == job.cdr_id.deptid %}
+                        {% with job as i %}
+                                    {% include "job_experience.html" %}
+                        {% endwith %}
+                 {% endif %}
+                {% endfor %}
+            </div>
+        {% endfor %}
+</div>
+        </div>
+
+<div class="col-md-2"></div>
+    </div>
+
+
+</div>
+
+<footer>
+<div class="footer-main-wrap">
+</div>
+</footer>
+
+
+  </body>
+</html>

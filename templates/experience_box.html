@@ -1,0 +1,103 @@
+<table id="intern" class="table table-hover">
+    <tbody>
+    <tr>
+
+        <td id="linkdata" onclick="window.location='/exp_{% if type == 'job' %}placed{% else %}{{ type }}{% endif %}/{{ i.id }}/'">
+        <article id="" class="post-137294 post type-post status-publish format-standard hentry category-interview-experiences tag-amazon">
+				<header class="entry-header">
+						<h2 class="entry-title">
+{% if i.valid != 3 %}
+                				<a href="/exp_{% if type == 'job' %}placed{% else %}{{ type }}{% endif %}/{{ i.id }}/" rel="bookmark">{{ i.cdr_id.company_id.display_name }} {{ type }} interview experience </a>
+                			&nbsp
+{% else %}
+
+<span style="color:#0f8383;">{{ i.cdr_id.company_id.display_name }} {{ type }} interview experience </span>
+                			&nbsp
+{% endif %}
+
+            <span style="font-size:80%;color:#0f8383;" class="entry-title" >
+                    {% if i.onoffcampus == 1 %}
+                            ( On Campus )
+                    {% else %}
+                            ( Off Campus )
+                    {% endif %}
+                </span>
+
+<div class="post-date">{{ i.timestamp.date }}</div>
+
+	</h2>
+  </header>
+
+<!-- entry-header -->
+
+
+		<div class="entry-summary">
+				<!-- Ico nic One home page thumbnail with custom excerpt -->
+                <div class="excerpt-thumb">
+                </div>
+    			<p>It consisted of {{ i.num_of_rounds }} rounds. {% if i.profile != "" %} Profile : {{ i.profile.display_name }}{% endif %}{% if i.criteria != "" %}. Criteria : {{ i.criteria }}{% endif %}.<br> Round 1 description : {{ i.round1_text.description | slice:":250"  }} ....
+{% if i.valid != 3 %}
+<span class="read-more"><a href="/exp_{% if type == 'job' %}placed{% else %}{{ type }}{% endif %}/{{ i.id }}/">Read More &raquo;</a></span>
+{% endif %}
+</p>
+
+          </div><!-- .entry-summary -->
+
+		{% if saved == "true" %}
+           <!--
+           <span style="float:right">
+               <button class="btn btn-danger btn-sm">Delete experience</button>
+           </span>
+           -->
+
+<span style="float:right">
+               <button onclick="location.href='/home/contribute/?edit_exp={{ i.id }}&type={{ type}}'"   class="btn btn-primary btn-sm">Edit experience</button>
+           </span>
+{% endif %}
+
+
+
+		<footer class="entry-meta">
+        		<!--
+                <span>Category:
+                     <a href="" rel="category tag">{{ type }} Experiences</a>
+                </span>
+    -->
+                <span>Tags:
+                    <a href="/home/company_select/{{ i.cdr_id.company_id.id }}/{{ type }}/" rel="Visit co">{{ i.cdr_id.company_id.display_name }}</a>
+                </span>
+             <span>Author :</span>
+                <span style="color:#060 !important;">
+                     {{ i.userid.firstname }} {{ i.userid.lastname }} | {{ i.userid.email }} | {{ i.cdr_id.deptid.short_name }}
+                </span>
+ <span>Session :</span>
+                <span style="color:#060 !important;">
+                     {{ i.cdr_id.session }}
+                </span>
+
+<span>Status :</span>
+                <span style="color:#060 !important;">
+			{% with s=i.selected %}
+                     {% if s == 1 %}Accepted Offer{% else %}No Offer{% endif %}
+			{% endwith %}
+                </span>
+
+
+                {% if i.valid == 0 %}
+        <div class="row">
+                        <div class="col-md-offset-8 col-md-1 col-xs-offset-1 col-xs-4">
+ <button type="submit" name="button"  value="Accept|{{ i.id }}|{{ type }}"  class="btn btn-success  ">ACCEPT </button>
+</div>
+
+<div class="col-md-offset-1 col-md-1 col-xs-4">
+ <button name="button" value="Reject|{{ i.id }}|{{ type }}" type="submit" class="btn btn-danger  ">REJECT </button>
+ </div>
+        </div>
+{% endif %}
+   	    </footer><!-- .entry-meta -->
+
+	</article><!-- #post -->
+</td>
+	</tr>
+    </tbody>
+  </table>

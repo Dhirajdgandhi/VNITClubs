@@ -1,0 +1,233 @@
+ <html>
+    <head>
+        {% load staticfiles %}
+        <title>
+        {{ page_name }}
+        </title>
+        
+{#        <style type="text/css" href="{% static 'CSS/shar.css' %}" rel="stylesheet"></style>#}
+
+    <style type="text/css">
+.aboutus_title{
+font-weight: bold;
+ text-transform: uppercase;
+    font-family: "MontserratRegular","Helvetical";
+    color: #2a3361;
+{#    margin: 0 0.8rem;#}
+        font-size: medium; !important;
+    padding: 0;
+    letter-spacing: 1px;
+    text-align: center;
+{#    vertical-align: middle;#}
+{#    display: inline-block;#}
+{#    line-height: 2.5rem;#}
+{#    margin-top: 5px;#}
+
+}
+
+
+.aboutus_content{
+display: inline-block;
+    vertical-align: top;
+    word-wrap: break-word;
+    padding: 1.5rem;
+   
+    margin-right: 0.5rem;
+    line-height: 2.9rem;
+    margin-top: 3px;
+    font-size: large;
+    font-family: "MontserratRegular", "Helvetical";
+    }
+
+@media only screen and (max-device-width: 480px)
+.aboutus_content{
+	font-size:small;
+}
+ .aboutus_teamimg{
+height:175px;
+ width:175px ;
+border-radius: 50%;
+
+ } 
+    
+.aboutus_teamcontent_name{
+    display: block;
+    text-align: center;
+    font-size: large;
+    font-family: "MontserratRegular", "Helvetical";
+}
+    
+  .aboutus_teamcontent{
+    display: block;
+    word-wrap: break-word;
+    text-align: center;
+    font-size: medium;
+    font-family: "MontserratRegular", "Helvetical";
+}
+    
+    
+ .aboutus_teamcontent_field{
+ color:#747474;
+ }
+    
+</style>
+
+        {% include "homeheader.html" %}         
+    </head>
+
+    <body>
+    {% include "headercontent.html" %}
+
+
+<div class="wrapper" style="overflow-x: hidden !important;">
+        <div class="container">
+
+
+    <div class="experience-content">
+<br>
+
+
+{#<div class="row">#}
+{#    <div class="col-md-2"> </div>#}
+{#	<div class="col-md-8 "><div class="aboutus_title">  About Student Portal 	</div></div>#}
+{#</div>#}
+<div class="row" style="overflow-x: hidden !important;">
+
+<div class="content-abt col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+     
+<!-- Other comments -->
+
+<div class="row aboutus">
+
+
+<div class="aboutus_content">
+
+<p>VNIT Student Portal helps students with their Job/Internship Interview Preparation for On-Off Campus recruitements. 
+We provide Interview Experiences, Tips and other contact information of students who have already been interviewed at various companies.
+
+</p>
+<br><br>
+
+
+<p><b>Why we think Interview Experiences solves a problem ?</b> 	</p>
+<p>We believe in the power of an Individual. An Individual’s Experience. An experience is powerful.
+ But what is more powerful is an experience shared. It resonates. 
+ It simmers, sinks in and shapes us, directing students towards new knowledge, polished insights,
+  forming a clearer picture of their goal. An experience shared is an experience remembered!	</p>
+<br><br>
+
+
+<p><b>What we expect from you ?</b> 	</p>
+<p>Experiences are powerful.
+ We expect you to share your interview experience, as it can help students prepare for their interviews.
+ 	</p>
+<br><br>
+
+
+<p><b>VISION</b></p>
+<p>Our vision is to help students in VNIT prepare for their Job/Internship Interviews
+ with some beforehand tips and preparatory questions contributed by their seniors and batchmates.
+</p>
+
+<br><br>
+
+
+<!-- End of Other comments -->
+
+
+{#</div>#}
+</div>
+</div>
+</div>
+
+</div>
+<div class="row">
+    <h1 class="aboutus_title" style="text-align: center;">OUR TEAM</h1>
+</div>
+
+<!--<div class="row" style="overflow-x: hidden !important;">-->
+
+<div class="content-abt col-md-10 col-md-offset-1 col-sm-12 col-xs-12  ">
+
+<!-- Other comments -->
+{% load staticfiles %}
+<div class="row aboutus">
+
+<div class="row">
+    <div class="col-md-6 col-xs-12" style="padding-bottom: 20px;">
+        <img class="aboutus_teamimg" alt="Dhiraj Gandhi pic" style="display: block;margin: 0 auto;" src="{% static 'IMAGES/dhiraj.jpg' %}"/><br>
+        <p class="aboutus_teamcontent_name"><b>Dhiraj Gandhi<b></p>
+        <p class="aboutus_teamcontent"> ddgandhi.96@gmail.com</p>
+        <p class="aboutus_teamcontent"><span class="aboutus_teamcontent_field"> VNIT CSE'17</span></p>
+    </div>
+
+    <div class="col-md-6 col-xs-12" style="padding-bottom: 20px;" >
+        <img class="aboutus_teamimg" alt="Sonia Godhwani pic" style="display: block;margin: 0 auto;" src="{% static 'IMAGES/sonia.jpeg' %}"/><br>
+        <p class="aboutus_teamcontent_name"><b>Sonia Godhwani<b></p>
+        <p class="aboutus_teamcontent">soinaa.godhwani@gmail.com</p>
+        <p class="aboutus_teamcontent"><span class="aboutus_teamcontent_field">VNIT CSE'17</span></p>
+    </div>
+
+</div>
+
+<br>
+
+<div class="row">
+    <div class="col-md-4 col-xs-12 " style="padding-bottom: 20px;">
+        <img class="aboutus_teamimg" alt="Saurabh Rathi pic" style="display: block;margin: 0 auto;" src="{% static 'IMAGES/rathi.jpg' %}"/><br>
+        <p class="aboutus_teamcontent_name"><b>Saurabh Rathi<b></p>
+        <p class="aboutus_teamcontent"> saurabhrathi1234@gmail.com</p>
+        <p class="aboutus_teamcontent"><span class="aboutus_teamcontent_field">VNIT CSE'19</span></p>
+    </div>
+
+
+
+    <div class="col-md-4 col-xs-12 " style="padding-bottom: 20px;">
+        <img class="aboutus_teamimg" alt="Sharvil Nagarkar pic" style="display: block;margin: 0 auto;" src="{% static 'IMAGES/sharvil.jpg' %}"/><br>
+        <p class="aboutus_teamcontent_name"><b>Sharvil Nagarkar<b></p>
+        <p class="aboutus_teamcontent">sharvilnagarkar@gmail.com</p>
+        <p class="aboutus_teamcontent"><span class="aboutus_teamcontent_field">VNIT CSE'19</span></p>
+    </div>
+
+    <div class="col-md-4 col-xs-12 " style="padding-bottom: 20px;">
+        <img class="aboutus_teamimg" alt="Atharva Parwatkar pic" style="display: block;margin: 0 auto;" src="{% static 'IMAGES/atharva.jpg' %}"/><br>
+        <p class="aboutus_teamcontent_name"><b>Atharva Parwatkar<b></p>
+        <p class="aboutus_teamcontent">atharva.parwatkar@gmail.com</p>
+        <p class="aboutus_teamcontent"><span class="aboutus_teamcontent_field">VNIT CSE'19</span></p>
+    </div>
+
+</div>
+
+</div>
+
+<hr>
+
+<div>
+<p style="text-align:center;font-size:2.5rem;"><b>Contact Us </b></p>
+<p style="text-align:center;font-size:1.5rem;"><b>studentportal@students.vnit.ac.in</b></p>
+</div>
+
+</div>
+
+
+
+<!-- End of Other comments -->
+
+
+<!--</div>-->
+
+</div>
+
+</div></div>
+<br>
+<br>
+<footer>
+<div class="footer-main-wrap"  style="overflow-x: hidden;">
+</div>
+</footer>
+    </div>
+    </body>
+
+
+</html>
+

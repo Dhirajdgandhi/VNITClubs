@@ -1,0 +1,68 @@
+<!-- Add Company session Modal -->
+  <div class="modal fade" id="list{{ request_obj.id }}" tabindex='-1' role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3><span class="glyphicon glyphicon-lock "></span>&nbsp Choose Company </h3>
+        </div>
+        <div class="modal-body"  style="padding:40px 50px;">
+{% csrf_token %}
+          <form role="form" method="POST" action="" onsubmit="return isvalid_companyid();" name="list{{ request_obj.id }}">
+{% csrf_token %}
+<i>Choose the company from the below list with appropriate session.</i>
+            <div class="form-group">
+<i>The Requested company is :</i><strong>{{ request_obj.company_id.company_name }} </strong><br>
+              <label for="company_name"><span class="glyphicon"></span>Company name</label>
+              <select name="company_name" class="form-control" id="company_name" required  >
+                        <option value="0">--Select Company from below--</option>
+                            {% for i in all_companies %}
+                            	<option value="{{ i.id }}">{{ i.display_name }}</option>
+                            {% endfor %}        
+</select>    <font color='red'> <DIV id="cnr_lcm{{  request_obj.id }}"> </DIV> </font> 
+
+</div>
+
+             <div class="form-group">
+<label for="session" >Session  </label>
+ <input class="form-control" id="session" name="session" readonly value="{{ request_obj.session }}">
+   <!--     <option value="2016-17">2016-17</option>
+        <option value="2015-16">2015-16</option>
+        <option value="2014-15">2014-15</option>
+        <option value="2013-14">2013-14</option>
+    </select>-->
+</div>
+
+<div class="form-group row">
+        <div class="col-md-6 checkbox">
+        <font color='red'> <DIV id="deptr_lcm{{  request_obj.id }}"> </DIV> </font> 
+        <strong>Department  </strong><br>
+        {% for i in dept_obj %}
+         <label> <input type="checkbox" name="dept" {% if i.id == request_obj.intern_exp_id.userid.deptid or i.id == request_obj.job_exp_id.userid.deptid %} onclick="return false;" checked="true"  {% endif %} value={{ i.id }}>{{ i.short_name }} </input></label><br>
+         {% endfor %}  
+        </div>
+    
+        <div class="col-md-6 checkbox"><br>
+        <font color='red'> <DIV id="typer_lcm{{  request_obj.id }}"> </DIV> </font> 
+            <strong>Type  </strong><br>
+            <label><input  type="checkbox" name="type" {% if  request_obj.job_exp_id %} onclick="return false;" checked="true"  {% endif %} value="1">Job</label><br>
+            <label><input  type="checkbox" name="type" {% if request_obj.intern_exp_id  %} onclick="return false;" checked="true"  {% endif %} value="0">Internship</label>
+        </div>
+</div>
+
+        
+        <br>
+
+              <button type="submit" onclick="return validate_accept_list_modal({{request_obj.id}});" name="button" value="List|{{request_obj.id}}" class="btn btn-success btn-block "><span class="glyphicon glyphicon-off"></span> Select Company </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+        
+        </div>
+      </div>
+
+</div>
+</div>
+<!-- Add company session Modal Ends -->

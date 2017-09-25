@@ -1,0 +1,355 @@
+    <!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+  <title>{{ deptobj.name }}</title>
+
+{% include "homeheader.html" %} 
+
+</head>
+
+
+
+
+<body>
+
+{% include "headercontent.html" %}  
+    
+{%csrf_token %}
+<form>
+{%csrf_token %}
+
+{#<div class="entry-content">#}
+{#<br>#}
+{#   <div class="row">#}
+{#        <div class="col-md-2 col-xs-2"></div>#}
+{##}
+{#        <div class="col-md-7 col-xs-7">#}
+{#           <div class="row">#}
+{#                 <div class="col-md-6 col-xs-12">#}
+{#                    <p><strong>Internship Companies</strong></p>#}
+{##}
+{# <div style="width:50%;float:left;">#}
+{##}
+{#<ul style="list-style:square outside;">#}
+{##}
+{#{% for i in interns %}#}
+{#	<li><a href="/home/company_select/{{ i.id }}/intern/">{{ i.display_name }}   </a>#}
+{#	</li>#}
+{#{% endfor %}#}
+{##}
+{#</ul>#}
+{##}
+{#            </div>#}
+{#                <div class="col-md-6"  >#}
+{#    {% if interns %}#}
+{#                    <ul class="pagination nav navbar-nav">#}
+{#                        {% if interns.has_previous %}#}
+{#                                <li><a href="?internpage={{ interns.previous_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'internpage' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">Prev</a></li>#}
+{#                        {% endif %}#}
+{#                        {% for ipage in interns.paginator.page_range %}#}
+{#                            <li class="{% if interns.number == ipage  %}active{% endif %}"><a href="?internpage={{ ipage }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'internpage' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">{{ ipage }}</a></li>#}
+{#                        {% endfor %}#}
+{##}
+{#                        {% if interns.has_next %}#}
+{#                            <li> <a href="?internpage={{ interns.next_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'internpage' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">Next</a></li>#}
+{#                        {% endif %}#}
+{#                     </ul>#}
+{#     {% endif %}#}
+{#    </div>  #}
+{##}
+{#                 </div>#}
+{##}
+{#                 <div class="col-md-6">#}
+{#                    <p><strong>Job Companies</strong></p>#}
+{#                        <div style="width:50%;float:left;">#}
+{#<ul style="list-style:square outside;">#}
+{##}
+{#{% for i in jobs %}#}
+{#	<li><a href="/home/company_select/{{ i.id }}/job/">{{ i.display_name }}   </a>#}
+{#	</li>#}
+{#{% endfor %}#}
+{##}
+{#</ul>#}
+{##}
+{#                </div>#}
+{#                 </div>#}
+{#    <div class="col-md-6"  >#}
+{#    {% if jobs %}#}
+{#                    <ul class="pagination nav navbar-nav">#}
+{#                        {% if jobs.has_previous %}#}
+{#                                <li><a href="?jobpage={{ jobs.previous_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'jobpage' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">Prev</a></li>#}
+{#                        {% endif %}#}
+{#                        {% for jpage in jobs.paginator.page_range %}#}
+{#                            <li class="{% if jobs.number == jpage  %}active{% endif %}"><a href="?jobpage={{ jpage }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'jobpage' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">{{ jpage }}</a></li>#}
+{#                        {% endfor %}#}
+{##}
+{#                        {% if jobs.has_next %}#}
+{#                            <li> <a href="?jobpage={{ jobs.next_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'jobpage' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">Next</a></li>#}
+{#                        {% endif %}#}
+{#                     </ul>#}
+{#      {% endif %}#}
+{#    </div>#}
+{#            </div>#}
+{##}
+{#<div class="row">#}
+{#    <div class="col-md-6"  >#}
+{#    {% if interns %}#}
+{#                    <ul class="pagination nav navbar-nav">#}
+{#                        {% if interns.has_previous %}#}
+{#                                <li><a href="?internpage={{ interns.previous_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'internpage' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">Prev</a></li>#}
+{#                        {% endif %}#}
+{#                        {% for ipage in interns.paginator.page_range %}#}
+{#                            <li class="{% if interns.number == ipage  %}active{% endif %}"><a href="?internpage={{ ipage }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'internpage' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">{{ ipage }}</a></li>#}
+{#                        {% endfor %}#}
+{##}
+{#                        {% if interns.has_next %}#}
+{#                            <li> <a href="?internpage={{ interns.next_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'internpage' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">Next</a></li>#}
+{#                        {% endif %}#}
+{#                     </ul>#}
+{#     {% endif %}#}
+{#    </div>#}
+{##}
+{#    <div class="col-md-6"  >#}
+{#    {% if jobs %}#}
+{#                    <ul class="pagination nav navbar-nav">#}
+{#                        {% if jobs.has_previous %}#}
+{#                                <li><a href="?jobpage={{ jobs.previous_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'jobpage' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">Prev</a></li>#}
+{#                        {% endif %}#}
+{#                        {% for jpage in jobs.paginator.page_range %}#}
+{#                            <li class="{% if jobs.number == jpage  %}active{% endif %}"><a href="?jobpage={{ jpage }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'jobpage' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">{{ jpage }}</a></li>#}
+{#                        {% endfor %}#}
+{##}
+{#                        {% if jobs.has_next %}#}
+{#                            <li> <a href="?jobpage={{ jobs.next_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'jobpage' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">Next</a></li>#}
+{#                        {% endif %}#}
+{#                     </ul>#}
+{#      {% endif %}#}
+{#    </div>#}
+{#</div>#}
+{##}
+{##}
+{#        </div>#}
+{##}
+{#        <div class="col-md-3 col-xs-12"><p><strong>Recent Visits to Campus </strong></p>#}
+{#             <div style="float:left;">#}
+{#                <ul style="list-style:square outside;">#}
+{#                <br>#}
+{#                <p><strong>Job/Placement Companies</strong></p>#}
+{#                <ul style="list-style:square outside;">#}
+{#                {% for i in recentjob %}#}
+{#                	<li><a href="/home{{ i.get_absolute_url }}job/">{{ i.short_name }} </a>#}
+{#<span style="font-size:14px;" class="post-date">{{ i.recentdate | date}}</span>#}
+{#</li>#}
+{#                {% endfor %}#}
+{#                </ul>#}
+{#                <hr style="height:1px;border:none;color:#333;background-color:#333;">#}
+{##}
+{#                <p><strong>Internship Companies</strong></p>#}
+{#                <ul style="list-style:square outside;">#}
+{#                {% for i in recentinterns %}#}
+{#                	<li><a href="/home{{ i.get_absolute_url }}intern/">{{ i.short_name }} </a>#}
+{#<span style="font-size:14px;" class="post-date">{{ i.recentdate | date}}</span>#}
+{#                	</li>#}
+{#                {% endfor %}#}
+{##}
+{#                </ul>#}
+{#                </ul>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{##}
+{#    <div class="row">#}
+{##}
+{#			<div class="col-md-2 col-xs-2"></div>#}
+{#			<div class="col-md-8 col-xs-2">#}
+
+
+
+
+
+
+<div class="container">
+    <div class="row">
+    
+    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6" style="text-align: center; min-height: 320px;">
+        <span style="font-size: 14px;"><strong>Internship Companies</strong></span>
+        <ul style="list-style: square ; padding-top: 10px;padding-left:0;">
+            {% for i in interns %}
+	         <li style="margin-left:20%; text-align:left;"><a href="/home/company_select/{{ i.id }}/intern/">{{ i.display_name }}   </a></li>
+            {% endfor %}
+        </ul>
+        {% if interns %}
+            <ul class="pagination nav navbar-nav"  style="bottom: 0; position: absolute; margin-left: -17%;">
+                {% if interns.has_previous %}
+                        <li><a href="?internpage={{ interns.previous_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'internpage' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">Prev</a></li>
+                {% endif %}
+                {% for ipage in interns.paginator.page_range %}
+                    <li class="{% if interns.number == ipage  %}active{% endif %}"><a href="?internpage={{ ipage }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'internpage' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">{{ ipage }}</a></li>
+                {% endfor %}
+
+                {% if interns.has_next %}
+                    <li> <a href="?internpage={{ interns.next_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'internpage' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">Next</a></li>
+                {% endif %}
+             </ul>
+	{% else %}
+		<p>No Data Currently</p>
+        {% endif %}
+
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6" style="text-align: center; min-height: 320px;">
+        <span style=" font-size: 14px; padding-bottom: 10px;"><strong>Job Companies</strong></span>
+        <ul style="list-style: square; padding-top: 10px;padding-left:0;">
+            {% for i in jobs %}
+                <li style="margin-left:20%; text-align:left;"><a href="/home/company_select/{{ i.id }}/job/">{{ i.display_name }}   </a></li>
+            {% endfor %}
+        </ul>
+            {% if jobs %}
+                <ul class="pagination nav navbar-nav" style="bottom: 0; position: absolute; margin-left: -17%;">
+                    {% if jobs.has_previous %}
+                            <li><a href="?jobpage={{ jobs.previous_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'jobpage' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">Prev</a></li>
+                    {% endif %}
+                    {% for jpage in jobs.paginator.page_range %}
+                        <li class="{% if jobs.number == jpage  %}active{% endif %}"><a href="?jobpage={{ jpage }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'jobpage' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">{{ jpage }}</a></li>
+                    {% endfor %}
+
+                    {% if jobs.has_next %}
+                        <li> <a href="?jobpage={{ jobs.next_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'jobpage' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">Next</a></li>
+                    {% endif %}
+                 </ul>
+			{% else %}
+		<p>No Data Currently</p>
+            {% endif %}
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 recent" style="text-align: center;">
+        <span style="text-align: center; font-size: 14px;"><strong>Recent Visits to Campus</strong></span>
+        <ul style="list-style: none; padding-top: 10px">
+        <li class="li_left"><strong >Job/Placement Companies</strong></li>
+        <ul style="list-style: square ; padding-top: 10px;padding-left:0;">
+		            {% if recentjob %}
+            {% for i in recentjob %}
+                <li class="no_margin_li" style=" text-align:left;"><a href="/home{{ i.get_absolute_url }}job/">{{ i.short_name }} </a>
+                    <span style="font-size:14px;" class="post-date">{{ i.recentdate | date}}</span>
+                </li>
+            {% endfor %}
+		{% else %}
+		<p>No Data Currently</p>
+            {% endif %}
+        </ul>
+
+        <hr style="height:1px;border:none;color:#333;background-color:#333;">
+
+        <li class="li_left"><strong>Internship Companies</strong></li>
+        <ul style="list-style: square ; padding-top: 10px;padding-left:0;">
+			            {% if recentinterns %}
+        {% for i in recentinterns %}
+            <li class="no_margin_li" style=" text-align:left;"><a href="/home{{ i.get_absolute_url }}intern/">{{ i.short_name }} </a>
+                <span style="font-size:14px;" class="post-date">{{ i.recentdate | date}}</span>
+            </li>
+        {% endfor %}
+		{% else %}
+		<p>No Data Currently</p>
+            {% endif %}
+        </ul>
+        </ul>
+    </div>
+    </div>
+
+</div>
+<div class="container">
+<div class="row" style="overflow-x: hidden;">
+	    <div class="col-md-10 col-md-offset-1 col-xs-12 col-sm-12">
+
+
+<ul class="nav nav-tabs ">
+    <li ><a data-toggle="tab" href="#interntab">Internship<sup>{{ dept_exp_intern_list | length }}</sup></a></li>
+    <li><a data-toggle="tab" href="#jobtab">Job<sup>{{ dept_exp_job_list | length }}</sup></a></li>
+  </ul>
+<br>
+<div class="tab-content">
+
+
+
+<div id="interntab" class="tab-pane fade in ">
+{% for i in dept_exp_intern_list  %}
+    {% with i as i %}
+            {% include "intern_experience.html" %}
+    {% endwith %}
+{% endfor %}
+
+{% if dept_exp_intern_list %}
+<div class="row">
+    <div class="col-md-6"  >
+                    <ul class="pagination nav navbar-nav" style="margin-left:25%;">
+                        {% if dept_exp_intern_list.has_previous %}
+                                <li><a href="?intern_exp_page={{ dept_exp_intern_lists.previous_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'intern_exp_page' and key != 'job_exp_page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">Prev</a></li>
+                        {% endif %}
+                        {% for ipage in dept_exp_intern_list.paginator.page_range %}
+                            <li class="{% if dept_exp_intern_list.number == ipage  %}active{% endif %}"><a href="?intern_exp_page={{ ipage }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'intern_exp_page' and key != 'job_exp_page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">{{ ipage }}</a></li>
+                        {% endfor %}
+
+                        {% if dept_exp_intern_list.has_next %}
+                            <li> <a href="?intern_exp_page={{ dept_exp_intern_list.next_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'intern_exp_page' and key != 'job_exp_page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">Next</a></li>
+                        {% endif %}
+                     </ul>
+    </div>
+    </div>
+    {% endif %}
+
+
+</div>
+
+<div id="jobtab" class="tab-pane fade in ">
+{% for i in dept_exp_job_list  %}
+    {% with i as i %}
+            {% include "job_experience.html" %}
+    {% endwith %}
+{% endfor %}
+
+  {% if dept_exp_job_list %}
+   <div class="row">
+      <div class="col-md-6"  >
+                    <ul class="pagination nav navbar-nav">
+                        {% if dept_exp_job_list.has_previous %}
+                                <li><a href="?job_exp_page={{ dept_exp_job_list.previous_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'job_exp_page' and key != 'intern_exp_page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">Prev</a></li>
+                        {% endif %}
+                        {% for ipage in dept_exp_job_list.paginator.page_range %}
+                            <li class="{% if dept_exp_job_list.number == ipage  %}active{% endif %}"><a href="?job_exp_page={{ ipage }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'job_exp_page' and key != 'intern_exp_page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">{{ ipage }}</a></li>
+                        {% endfor %}
+
+                        {% if dept_exp_job_list.has_next %}
+                            <li> <a href="?job_exp_page={{ dept_exp_job_list.next_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' and key != 'job_exp_page' and key != 'intern_exp_page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">Next</a></li>
+                        {% endif %}
+                     </ul>
+    </div>
+</div>
+{% endif %}
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+<div class="col-md-3"></div>
+
+
+
+    </div>
+</div>
+
+<footer>
+<div class="footer-main-wrap">
+</div>
+</footer>
+
+</body>
+</html>

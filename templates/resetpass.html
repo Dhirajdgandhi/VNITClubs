@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+      Reset Your Password
+    </title>
+
+{% include "homeheader.html" %}   
+</head>
+
+<body>
+
+{% include "headercontent.html" %} 
+
+{% csrf_token %}
+	 <form method="post" name="pass_form" action="" onsubmit="return validate_reset_pass()">
+{% csrf_token %}
+
+
+
+<div class="row">
+    <div class="col-md-4"> </div>
+    
+    <div class="col-md-4">
+		<div class="row" name="error_block">
+	<ul>
+	{% if err_msg %}
+		<li style="color:red">{{ err_msg }}</li>
+	{% endif %}
+	</ul>
+	</div>
+	
+	<div class="row " style="padding:10px;">
+	<div class="col-md-10 col-xs-8 col-sm-8 col-xs-offset-2">
+      		<label for="pass1">New Password: &nbsp </label>
+              <div class="inner-addon right-addon">
+                <span class="fa fa-eye" onclick="showhide('password','pass1');" id="password" ></span>
+                <input name="pass1" type="password"  class="form-control" id="pass1" placeholder="Enter new password" required>
+		<font color='red'> <DIV id="passr11"> </DIV> </font>
+              </div>
+              </div>
+              </div>
+              
+              
+		<div class="row" style="padding:10px;">
+	<div class="col-md-10 col-xs-8 col-sm-8 col-xs-offset-2">
+	<label for="pass1">Confirm New Password:</label>
+              <div class="inner-addon right-addon">
+                <span class="fa fa-eye" onclick="showhide('password','pass2');" id="password" ></span>
+                <input name="pass2" type="password"  class="form-control" id="pass2" placeholder="Enter password" required>
+		<font color='red'> <DIV id="passr12"> </DIV> </font>
+              </div>
+	</div>
+	</div>
+	
+	<div class="row" style="padding:10px;">
+	<div class="col-md-10 col-xs-8 col-sm-8 col-xs-offset-2">
+<input type="submit" class="form-control btn btn-success btn-md" name="submit" value="Change Password" />
+</div>
+</div>
+    </div>
+	
+    <div class="col-md-4"> </div>
+    
+
+</div>
+    
+    
+  <!--  
+<div class="row margin-top">
+    <div class="col-md-4"> </div>
+    <div class="col-md-4">
+      		<label for="pass1">Confirm New Password:</label>
+              <div class="inner-addon right-addon">
+                <span class="fa fa-eye" onclick="showhide('password','pass2');" id="password" ></span>
+                <input name="pass2" type="password"  class="form-control" id="pass2" placeholder="Enter password" required>
+		<font color='red'> <DIV id="passr12"> </DIV> </font>
+              </div>
+
+	<br>
+<br>
+<input type="submit" class="form-control btn btn-success btn-md" name="submit" value="Change Password" />
+    </div>
+    <div class="col-md-4"> </div>
+</div>
+
+-->
+</form> 
+
+<footer>
+<div class="footer-main-wrap">
+</div>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+      Email
+    </title>
+
+{% include "homeheader.html" %}   
+</head>
+
+<body>
+
+{% include "headercontent.html" %} 
+
+
+<p> The following message will be sent to the user on his email {{email}}.</p>
+<p> Click on the link here to change your password.</p>
+<br><br><a href="{{link}}">{{link}}</a>
+
+</body>
+</html>

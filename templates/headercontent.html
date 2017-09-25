@@ -1,0 +1,328 @@
+<style>
+    @media screen and (min-width: 992px){
+        .columns{
+            -moz-column-count:4; /* Firefox */
+            -webkit-column-count:4; /* Safari and Chrome */
+            column-count:4;
+            width: 850px;
+            height:575px;
+        }
+        #dd {
+            height: 20px;
+        }
+    }
+</style
+ <!-- On click of user,open usermenu -->
+<script type="text/javascript" >
+   function change_display(){
+     if( $("#usermenu").css('display') == 'none'){ $("#usermenu").css("display", "block");}
+     else { $("#usermenu").css("display", "none"); }
+   };
+</script>
+
+
+<!-- Load default tab onload -->
+<script type="text/javascript" >
+$(document).ready(function() {
+ $('.tab-content > div:first').addClass('active');
+   
+    $('.nav-tabs li:first').addClass('active');
+   
+});
+</script>
+
+{% load staticfiles %}
+{#<div class="fixedheader" id="top_header">#}
+{##}
+{#<div class="container-fluid" id="header1">#}
+{##}
+{#<div class="main-menu">#}
+{#  #}
+{#  <div class="left-section navbar">#}
+{#  <ul class="nav nav-pills">#}
+{#  <li id="nav1" class="nav1" ><p class="dropbtn"><a   href="/home">Home</a></p></li>#}
+{# <li id="nav1" class="nav1"><p class="dropbtn"><a href="/home/aboutus">About</a></p></li>#}
+{##}
+{##}
+{#  <li id="nav1" class="nav1 dropdown_here"  ><p class="dropbtn">Departments</p>#}
+{##}
+{#       #}
+{#       <ul class="row showMenu" style=" width: 200%;margin-left: -20%;">#}
+{#           {% for i in header_dept_list %}#}
+{#            	<li class="col-md-3"><a style="font-size:inherit !important;" href="{{ i.get_absolute_url }}">{{ i.display_name }}</a></li>#}
+{#            {% endfor %}#}
+{#            </ul>#}
+{#    #}
+{#  </li>#}
+{##}
+{##}
+{#  <li id="nav1" class="nav1 dropdown_here" ><p class="dropbtn">Internships</p>#}
+{##}
+{#    #}
+{#    <ul class="row showMenu" style=" width: 600%;margin-left: -200%">#}
+{#           {% for i in header_intern_company_list %}#}
+{#        	<li class="col-md-3"><a href="/home/company_select/{{ i.id }}/intern/">{{ i.display_name }}</a></li>#}
+{#        {% endfor %}#}
+{#        </ul>#}
+{#  #}
+{#</li>#}
+{#  #}
+{##}
+{##}
+{#<!-- Inc variable value :- {{ forloop.counter|add:"1" }}  -->#}
+{#   #}
+{#  <li id="nav1" class="nav1 dropdown_here" ><p class="dropbtn">Jobs</p>#}
+{#    #}
+{#    <ul class="row showMenu" style="width: 1800%;margin-left: -400%">#}
+{#       {% for i in header_job_company_list %}#}
+{#        	<li  class="col-md-3"><a  href="/home/company_select/{{ i.id }}/job/ ">{{ i.display_name }}</a></li>#}
+{#    {% endfor %}#}
+{#    </ul>#}
+{#  #}
+{#</li>#}
+{#   #}
+{##}
+{#   #}
+{# #}
+{#</ul>#}
+{##}
+{#  </div>#}
+{#  #}
+{#  #}
+{#<div class="right-section">#}
+{##}
+{#<ul class="nav nav-pills">#}
+{#<!--#}
+{#<li id="nav1">#}
+{#<span class="twitter-typeahead" style="position: relative; display: inline-block;">#}
+{#<input class="search-company " name="CompanyName" type="text" title="Enter a company name" placeholder="Search a company" required="" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;">#}
+{#</span>#}
+{#</li>#}
+{#-->#}
+{#<!--#}
+{#<li id="nav1" ><input style="" class="search-company" placeholder="Search a company"/></li>#}
+{#-->#}
+{#	<li id="nav1" ><a  href="/home/contribute" style="margin:8px;padding:10px;" class="highlight">Contribute	 </a></li>#}
+{##}
+{#<!-- Shown only if not logged it -->#}
+{#{% if fname == "" %}#}
+{##}
+{#<!-- Login Modal -->#}
+{#	<li id="nav1" ><button id="myBtn">Login</button> 	</li>#}
+{#	<!-- Register Modal -->#}
+{# <!-- <li id="nav1" ><button id="myBtn2" >Register</button> 	</li> -->#}
+{##}
+{#	#}
+{#{% else %}#}
+{#{% load app_filters %}#}
+{#<!--#}
+{#<li id="nav1" ><p class="dropbtn"><a id="myBtn3" href="/logout/">Logout</a></p></li>#}
+{#-->#}
+{#<li id="nav1"  >#}
+{#<p   onclick="change_display()" class="dropbtn" >HI,{{ fname }}   </p></li>#}
+{##}
+{#<div class="user-menu" id="usermenu" style="display: none;">#}
+{##}
+{#<a href="/edit_profile/{{ clg_id | urlencrypt }}/"><i class="icon-user"><span class="fa fa-user"></span></i> profile</a>#}
+{#<a href="/logout"><i class="icon-logout"><span class="fa fa-sign-out"></span></i> logout</a>#}
+{#</div>#}
+{##}
+{#<li id="nav1"  ><p   onclick="change_display()" style="font-size: large !important;margin-left: -11px;" class="dropbtn" ><i  class="icon-user"><span class="fa fa-sort-desc"></span></i></p></li>#}
+{#{% endif %}#}
+{##}
+{# </ul>#}
+{# #}
+{#  </div>#}
+{#  #}
+{#  #}
+{##}
+{#</div>#}
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+{#      <a class="navbar-brand" href="#">Brand</a>#}
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="background-color: #181F45;">
+      <ul class="nav navbar-nav">
+        <li><a href="/home">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="/home/aboutus">About</a></li>
+        <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="background: #181F45 !important; "> Departments</a>
+            <ul class="dropdown-menu">
+            {#       <ul class="row showMenu" style=" width: 200%;margin-left: -20%;">#}
+           {% for i in header_dept_list %}
+            	<li><a style="font-size:inherit !important;" href="{{ i.get_absolute_url }}">{{ i.display_name }}</a></li>
+            {% endfor %}
+{#            </ul>#}
+            </ul>
+        </li>
+        <li class="dropdown" style="background-color: #181F45 !important;">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="background: #181F45 !important;"> Internships </a>
+            <ul class="dropdown-menu">
+            {% for i in header_intern_company_list %}
+        	<li><a href="/home/company_select/{{ i.id }}/intern/" >{{ i.display_name }}</a></li>
+            {% endfor %}
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="background: #181F45 !important;"> Jobs  </a>
+            <ul class="dropdown-menu columns">
+            {% for i in header_job_company_list %}
+           <li id="dd"><a href="/home/company_select/{{ i.id }}/job/">{{ i.display_name }}</a></li>
+            {% endfor %}
+            </ul>
+        </li>
+      </ul>
+{% load app_filters %}
+      <ul class="nav navbar-nav navbar-right">
+        <li id="nav1" ><a  href="/home/contribute" style="margin:8px;padding:10px;" class="highlight" onfocus=" "><span style="color: #FFC107;">Contribute</span>	 </a></li>
+
+          {% if fname == "" %}
+            <li><button id="myBtn">Login</button></li>
+          {% else %}
+        <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" style="background: #181F45 !important;" aria-expanded="false">Hi! {{ fname }}  <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+            <li><a href="/edit_profile/{{ clg_id | urlencrypt }}/"><i class="icon-user"><span class="fa fa-user"></span></i> <span style="font-family: inherit; text-transform: uppercase; letter-spacing: 1px; font-size: 15px; padding-left: 15px">Profile</span></a></li>
+            <li><a href="/logout"><i class="icon-logout"><span class="fa fa-sign-out"></span></i><span style="font-family: inherit; text-transform: uppercase; letter-spacing: 1px; font-size: 15px; padding-left: 12px"> Logout</span></a></li>
+            </ul>
+        </li>
+          {% endif %}
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+{% include "loginmodal.html" %}  
+{% include "registermodal.html" %}
+{% include "success_dialogue.html" %}
+	<script> <!-- If error modal,open modal with error -->
+x="{{open_modal1}}"
+	if(x==1)
+	{
+		$("#myModal2").modal('show'); 	
+	}
+	if(x==4)
+	{
+		$("#myModal").modal('show'); 	
+	}
+	if(x==5)
+	{
+		$("#myforgotModal").modal('show'); 	
+	}
+	
+	
+register_success="{{register_success}}"
+
+	if(register_success==1)
+	{
+		$("#my_reg_modal").modal('show');
+	}
+
+contribute_success="{{contribute_success}}"
+	if(contribute_success==1)
+	{
+		
+		$("#my_contribute_modal").modal('show');
+	}
+cannot_contribute="{{cannot_contribute}}"
+
+	if(cannot_contribute==1)
+	{
+		$("#cannot_contribute_modal").modal('show');
+	}
+
+forgotpass_emailsent="{{forgotpass_emailsent}}"
+
+	if(forgotpass_emailsent==1)
+	{
+		$("#forgotpass_emailsent_modal").modal('show');
+	}
+
+experience_saved="{{experience_saved}}"
+
+	if(experience_saved==1)
+	{
+		$("#experience_saved").modal('show');
+	}
+
+
+</script>
+	
+{% if page_name == "homepage" %} <!-- Display top only for mainpage -->
+<div class="container" style="background-color:white;">
+<div class="row" style="background-color:white;">
+  <div class="col-md-2 margin-top">
+{% load staticfiles %}<img class="img-responsive margin-top" height="150px" width="150px" style="margin: 0 auto;" alt="VNIT LOGO" src="{% static 'IMAGES/VNIT-Nagpur-Logo.jpg' %}"/>
+</div>
+
+  <div class="col-md-8"><h2 id="name" style="margin-top:4%;" align="center">VISVESVARAYA NATIONAL INSTITUTE OF TECHNOLOGY</h2></div>
+  <div class="col-md-2 margin-top"></div>
+   </div>
+</div>
+    <p class="container sp" style="font-size: 40px; text-align: center; color: black; background-color: white">Student Portal</p>
+<!--
+ <section class="cover-image js-menu-shift"><div class="layer"><h1 class="h1">VNIT Student Portal</h1></div></section>
+   -->      
+
+         {% elif pagename != "" %}
+         
+         <section class="cover-image js-menu-shift"><div class="layer"><h1 class="h1">{{ page_name }} {% if exp_type != "" %} {{ exp_type }} {% endif %}</h1></div></section>
+         
+         {% endif %}   
+
+{% if page_name == "homepage" %} <!-- Display top only for mainpage -->
+<hr style="height: 10px;border: 0;	box-shadow: 0 10px 10px -10px grey inset;">
+{% endif %}
+<!-- End of HEader section -->
+
+<br>
+
+<script>
+    if(screen.width > 767){
+        $(document).ready(function() {
+        $( '.dropdown' ).hover(
+            function(){
+                $(this).children('.dropdown-menu').slideDown(200);
+            },
+            function(){
+                $(this).children('.dropdown-menu').slideUp(200);
+            }
+
+        );
+        });
+{#        window.alert("desktop called");#}
+    }
+    else {
+        $(document).ready(function () {
+            $('.dropdown').live("click",
+                    function () {
+                        $(this).children('.dropdown-menu').slideDown(200);
+                    },
+                    function () {
+                        $(this).children('.dropdown-menu').slideUp(200);
+                    }
+            );
+        });
+{#        window.alert("mobile called");#}
+    }
+
+{#    $('.dropdown-toggle').on("click",#}
+{#        function(){#}
+{#            $(this).css("background-color", "#181F45");#}
+{#        }#}
+{#    )#}
+
+</script>

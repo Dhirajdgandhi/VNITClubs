@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>
+      {{ company.displayname }}
+    </title>
+
+{% include "homeheader.html" %}   
+</head>
+{% load staticfiles %}
+<body background="{% static 'IMAGES/background.jpg' %}">
+
+<!-- Loader image 
+            <div id="overlay">
+            {% load staticfiles %}
+                 <img src="{% static 'IMAGES/loader.png' %}" alt="Loading" />
+            </div>
+      -->
+
+{% include "headercontent.html" %}  
+   
+<!-- Start of the container section -->
+<div class="container-fluid" id="content1">
+<div class="col-md-2" ></div>
+<div class="col-md-8">
+
+
+{% for i in exp_intern_list  %}
+<table class="table table-hover">
+    <tbody>
+    <tr>
+        <td id="linkdata" >
+        
+        <article id="" class="post-137294 post type-post status-publish format-standard hentry category-interview-experiences tag-amazon">
+				<header class="entry-header">
+						<h2 class="entry-title">
+                				<a href="/exp_intern/{{ i.id }}/" rel="bookmark">{{ i.company_id.company_name }} intern experience | Set {{ i.company_id.job_exp_count }}</a>
+                			&nbsp	
+            <span style="font-size:80%;color:#00800F" class="entry-title" >
+                    {% if i.onoffcampus == 1 %}
+                            ( On Campus )
+                    {% else %}  
+                            ( Off Campus )           
+                    {% endif %}
+                </span>
+
+<div class="post-date">{{ i.timestamp.date }}</div>
+                		
+	</h2>
+  </header>
+
+<!-- entry-header -->
+
+				
+		<div class="entry-summary">
+				<!-- Ico nic One home page thumbnail with custom excerpt -->
+                <div class="excerpt-thumb">
+                </div>
+    			<p>It consisted of {{ i.num_of_rounds }} rounds. {% if i.profile != "" %} Profile : {{ i.profile }}{% endif %}{% if i.criteria != "" %}. Criteria : {{ i.criteria }}{% endif %}.<br> Round 1 details : {{ i.round1_text | slice:":250"  }} .... <span class="read-more"><a href="/exp_intern/{{ i.id }}/">Read More &raquo;</a></span></p>
+		
+          </div><!-- .entry-summary -->
+				
+		
+
+		<footer class="entry-meta">
+        		
+                <span>Category:
+                     <a href="" rel="category tag">Internship Experiences</a>
+                </span> 
+    
+                <span>Tags: 
+                    <a href="" rel="Visit co">{{ i.company_id.company_name }}</a>
+                </span>
+             <span>Author :</span>
+                <span style="color:#060 !important">
+                     {{ i.userid.firstname }} | {{ i.userid.email }} | {{ i.userid.dept }}
+                </span>
+
+   	    </footer><!-- .entry-meta -->
+
+	</article><!-- #post -->
+
+        	</td>
+	</tr>
+    </tbody>
+  </table>
+{% endfor %}
+
+
+
+
+
+
+
+<!-- Dividing mage page into no. of Pages -->
+<div class="pagination">
+    <span class="step-links">
+        {% if exp_intern_list.has_previous %}
+            <a href="?page={{ exp_intern_list.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ exp_intern_list.number }} of {{ exp_intern_list.paginator.num_pages }}.
+        </span>
+
+        {% if exp_intern_list.has_next %}
+            <a href="?page={{ exp_intern_list.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <div class="col-md-3"><p><strong>Recent Visits to the Campus </strong></p>
+             <div style="width:50%;float:left;">
+                <ul style="list-style:square outside;">
+                
+                <p><strong>Job/Placement Companies</strong></p>
+                {% for dept in visit_to_department %}
+                	<li>{{ dept.displayname }} <span>{{ dept.session }}</span>
+                	</li>
+                {% endfor %}
+                <hr style="height:1px;border:none;color:#333;background-color:#333;">
+             
+                </ul>
+            </div>
+        </div>
+
+</div>
+</div>
+
+  </body>
+</html>
+

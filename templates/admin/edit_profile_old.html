@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <title>Edit your profile </title></head>
+  <body  onload=
+"create_div({{jobexp_obj.count}})">
+
+<script>
+
+
+function display_rounds(packages,cgpa,num_of_rounds,round1,round2,round3,round4,round5,round6,other_comments,j)
+{
+//,j)
+alert('function');
+	
+
+	var s= "";
+    	document.getElementById("displayrounds"+j).innerHTML='';
+alert('rounds' );
+	var i=1;
+
+	while (i<= num_of_rounds) {
+//alert(i);
+//	document.getElementById("roundinfo").visibility = true; 
+		
+	list=round1.split("<br>***<br>");
+//alert(list[0]+list[1]+list[2]);
+        s+= "<label for='round'"+i+"'>Round " + i + " details :</label> <select name='round"+i+"type'><option value='"+list[0]+"' default>"+list[0]+"</option><option value='Technical' default>Technical</option><option value='HR'>HR</option></select><br><label for='round'"+i+"time'>Time in minutes :</label><input type='text' name='round"+i+"time' value='"+list[1]+"'></input><br><textarea width='75%' height='20%' name='round"+i+"' value='"+list[2]+"'>"+list[2]+"</textarea><br><br>"; //Create one textbox as HTML
+	i++;
+    }
+    document.getElementById("displayrounds"+j).innerHTML=s;
+	
+}
+
+
+function create_div(exp_count,obj)
+{
+alert('fun');
+	var i=1;
+	var s= '';
+
+	//var i=exp_count;
+	//document.getElementById("displayrounds").innerHTML=i;
+	
+	for(i=1;i<=exp_count;i++) { 
+		
+		var ele = document.createElement("div");
+		ele.setAttribute("id","displayrounds"+i);
+		ele.innerHTML="";
+		displayrounds.appendChild(ele);		
+			
+		
+alert(i);
+	}
+}
+
+
+</script>
+
+
+
+{% csrf_token %}
+	 <form method="post" action="">
+{% csrf_token %}
+  		First name:<br>
+  		<input type="text" value="{{ person_obj.firstname }}" name="fname">
+  		<br>
+  		Last name:<br>
+  		<input type="text" value="{{ person_obj.lastname }}" name="lname">
+		<br>
+		Email:<br>
+		<input type="text" value="{{ person_obj.email }}" name="email">
+		<br>
+		Mobile1:<br>
+		<input type="text" value="{{ person_obj.telephone1 }}" name="telephone1">
+		<br>
+		Mobile2:<br>
+		<input type="text" value="{{ person_obj.telephone2 }}" name="telephone2">
+		<br>
+		College id:<br>
+		<input type="text" style="color:grey" readonly value="{{ person_obj.clg_id }}" name="clg_id">
+		<br>
+		Department:<br>
+<select readonly style="color:grey">
+<option default value="{{ person_obj.dept }}">{{ person_obj.dept }}</option>
+</select>
+<br>
+		
+		<br>
+		Roll Number:<br>
+		<input type="text" style="color:grey" readonly value="{{ person_obj.roll_no }}" name="roll_no">
+		<br>
+
+<hr>
+
+Change Passsword:<br>
+		<input type="password" value="{{ login_obj.password }}" name="password1">
+		<br>
+Passsword(again):<br>
+		<input type="password" value="{{ login_obj.password }}" name="password2">
+		<br>
+		<input type="submit" name="submit" value="SAVE DETAILS" />
+
+
+
+<hr>
+
+<p>Internship Experience details : </p>
+
+
+{% with exp as jobexp_obj.count %}
+
+{% if exp == 0 %}
+<p> No contributions to edit </p>
+{% endif %}
+
+{% endwith %}
+
+
+
+
+<br><br>
+
+<div id="displayrounds"> </div>
+
+
+{% for i in jobexp_obj %}
+<input type="button" value="{{forloop.counter}}"
+ onclick="display_rounds('{{i.package}}',{{i.cgpa}},{{i.num_of_rounds}},'{{i.round1_text}}','{{i.round2_text}}','{{i.round3_text}}','{{i.round4_text}}','{{i.round5_text}}','{{i.round6_text}}','{{i.other_comments}}',{{forloop.counter}})"></p>
+{% endfor %}
+
+<!-- 
+
+-->
+
+<hr>	
+
+<p>Job Experience details : </p>
+
+<br><br>
+	
+	<a href="/home/">Home</a>
+<br><br>
+<a href="/login/">Login</a>
+<br>
+
+</form> 
+
+
+  </body>
+  </html>

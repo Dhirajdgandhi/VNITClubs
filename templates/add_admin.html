@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>
+     Add TNP Head
+    </title>
+
+
+{% include "homeheader.html" %}
+
+
+</head>
+{% load staticfiles %}
+{% load app_filters %}
+{% include "headercontent.html" %}
+
+<body>
+
+    <div class="row">
+        <div class="col-md-offset-2 col-md-4 col-sm-12 " style="background-color:white !important;margin:2%;">
+            <div class="panel panel-info" style="margin:2%;">
+{#            <div class="panel panel-info">#}
+              <div class="panel-heading">Current Admins</div>
+              <div class="panel-body">
+                {% if admin_list%}
+                   <ol>
+                    {% for admin in admin_list %}
+                        <li>
+                            <b>{{ admin.firstname}}</b>
+                            <b>{{ admin.lastname}}</b>
+                            <i>{{ admin.deptid|deptname }}</i>
+                            (<b>ID:</b>{{ admin.clg_id }})
+                        </li>
+                    {% endfor %}
+                   </ol>
+                 {% else %}
+                    <h1>No Admins</h1>
+                {% endif %}
+              </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12" style="background-color:white !important;margin:2%;">
+            <form class="form-inline" style="margin:2%;" method="post" >
+                {% csrf_token %}
+                <label for="user_id" class="control-label" style="margin-top: 2%;">Input The UserId:</label><br/><br/>
+                <input type="number" class="form-control mb-2 mr-sm-2 mb-sm-0" id="user_id" name="user_id" placeholder="Ex: 18475" >
+                <input type="button"  id="get_user_btn" class="btn btn-primary" value="Get User Info"onclick="getUser()"></input>
+{#                <input type="hidden" name="1" value=1>#}
+
+
+                <div id="disp" style="display: none; margin-left: 3%;margin-top: 3%;">
+                     <b>First Name : </b><div id="firstname" style="display:inline"></div><br>
+                     <b>Last Name : </b><div id="lastname" style="display:inline"></div><br>
+                     <b>Department : </b><div id="dept_name" style="display:inline"></div><br>
+                     <b>Roll No. : </b><div id="rollno" style="display:inline"></div><br>
+                     <b>Role : </b><div id="role_id_short" style="display:inline"></div>
+                    <button id="make_admin_btn" class="btn btn-warning"  style="display:none;" type="submit">Make Admin</button>
+                    <button id="remove_admin_btn" class="btn btn-danger" style="display:none;" type="submit">Remove Admin</button>
+                </div>
+                <div id="finalmessage" style="display: none;margin-top:3%;margin-left: 3%">
+                    <p id="message"> </p>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-2 col-sm-12"></div>
+    </div>
+
+<footer style="margin-top: 20px">
+    <div class="footer-main-wrap">
+    </div>
+</footer>
+
+<script>
+     var user_ki_id;
+        $('#addtnpheadform').on("keyup keypress", function(e){
+        var keyCode = e.keyCode || e.which;
+        if(keyCode === 13)
+        {
+            e.preventDefault();
+            return false;
+        }
+    });
+function getUser()
+{
+    var id = document.getElementById('user_id').value;
+    user_ki_id = id;
+
+{#    document.getElementById('disp').style.display = 'block';#}
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200)
+    {
+        var data = JSON.parse(xhttp.responseText);
+{#        var data1 = JSON.parse(xhttp.responseText);#}
+{#        console.log(data);#}
+{#        var data = data1[0];#}
+{#        var new1= data1[1];#}
+
+         if(data['isvalid'] == 'False')
+         {
+             alert('UserID is Invalid ');
+         }
+         else
+         {
+                document.getElementById('disp').style.display = 'block';
+                document.getElementById('firstname').innerHTML = data['fname']; //new1['new'];
+                document.getElementById('dept_name').innerHTML = data['dept_name'];
+                document.getElementById('lastname').innerHTML =  data['lname'];
+                document.getElementById('rollno').innerHTML =  data['roll_no'];
+                document.getElementById('role_id_short').innerHTML =  data['role_id'];
+
+                if(data['role_id'] == "Admin")
+                {
+                    document.getElementById('make_admin_btn').style.display = 'none';
+                    document.getElementById('remove_admin_btn').style.display = 'block';
+                    document.getElementById('finalmessage').style.display = 'block';
+                    document.getElementById('finalmessage').style.color = 'green';
+                    document.getElementById('message').innerHTML = '' ;
+                }
+
+                else
+                {
+                    document.getElementById('make_admin_btn').style.display = 'block';
+                    document.getElementById('remove_admin_btn').style.display = 'none';
+                    document.getElementById('message').innerHTML = '' ;
+
+                }
+         }
+
+
+    }
+  }
+  xhttp.open("GET", id, true);
+  xhttp.send();
+}
+
+ function makeAdmin()
+ {
+        var xhttp = new XMLHttpRequest();
+        var id = document.getElementById('user_id').value;
+        xhttp.onreadystatechange = function()
+        {
+            if (xhttp.readyState == 4 && xhttp.status == 200)
+            {
+                var data = JSON.parse(xhttp.responseText);
+                document.getElementById('finalmessage').style.display = 'block';
+                document.getElementById('finalmessage').style.color = 'green';
+
+                if (data['role_id'] == 'Admin')
+                {
+                    document.getElementById('message').innerHTML = ' Successfully done!!!';
+                    document.getElementById('role_id_short').innerHTML = 'Admin';
+                    document.getElementById('make_admin_btn').style.display = 'none';
+                    document.getElementById('remove_admin_btn').style.display = 'block';
+                }
+                else
+                {
+                    document.getElementById('message').innerHTML = ' Successfully done!!!';
+                    document.getElementById('role_id_short').innerHTML = 'Student';
+                    document.getElementById('make_admin_btn').style.display = 'block';
+                    document.getElementById('remove_admin_btn').style.display = 'none';
+                }
+            }
+        }
+        xhttp.open("GET",'make_Admin/'+ id, true);
+        xhttp.send();
+ }
+
+</script>
+
+  </body>
+</html>
+

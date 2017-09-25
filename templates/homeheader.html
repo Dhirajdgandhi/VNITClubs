@@ -1,0 +1,113 @@
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, post-check=0, pre-check=0" /> 
+<meta charset="UTF-8">
+  <meta name="description" content="Student Portal VNIT, Nagpur">
+  <meta name="keywords" content="Student Portal VNIT Nagpur, Student Portal VNIT,Student Portal vnit, VNIT Nagpur, VNIT">
+<meta http-equiv="Pragma" content="no-cache" />
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="rgb(24,31,69)")
+<!-- Script for Loader image -->
+
+
+<!-- CSS -->
+{% load staticfiles %}
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="{% static 'CSS/bootstrap.min.css' %}">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+ 
+<!-- Glyphicons -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" media="screen" href="{% static 'CSS/bootstrap.min.css' %}">
+
+<link rel="stylesheet" media="screen" href="{% static 'CSS/bootstrap-theme.min.css' %}">
+<!-- Shake effect -->
+<link rel="stylesheet" type="text/css" href="{% static 'CSS/homepage.css' %}" />
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="{% static 'CSS/shar.css' %}" />
+
+<!-- End of CSS -->
+
+
+<!-- SCRIPTS -->
+ 
+<!-- Latest compiled and minified JavaScript -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Shake effect -->
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<!-- Script for validation -->
+<script type="text/javascript" src="{% static 'JS/validation.js' %}"></script>
+
+<!-- Script for register -->
+<script type="text/javascript">
+
+$(document).ready(function(){
+    $("#myBtn2").click(function(){
+        $("#myModal2").modal();
+
+    });
+});
+</script>
+
+<!-- Script for login -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#myBtn").click(function(){
+        $("#myModal").modal().showModalDialog();
+    });
+});
+
+</script>
+
+
+<!-- Script for forgotpassword -->
+
+<script>
+$(document).ready(function(){
+    $("#myBtn4").click(function(){
+        $("#myModal4").modal().showModalDialog();
+    });
+});
+
+</script>
+
+<script>
+
+function showhide(span,input)
+{      var c=document.getElementById(span).className;
+            
+            if (c=="fa fa-eye")
+            {
+                /* $("#"+input).effect("shake"); */
+                $("#"+span).removeClass("fa-eye").addClass("fa-eye-slash");           
+                $("#"+input).attr({type:"text"});
+            }
+            else
+            {
+                $("#"+span).removeClass("fa-eye-slash").addClass("fa-eye");
+                $("#"+input).prop("type","password"); //You can do it either by using attr or prop whichever way u wish.
+            }
+}
+
+
+</script>
+
+<script>
+$(window).load(function(){
+   // PAGE IS FULLY LOADED  
+   // FADE OUT YOUR OVERLAYING DIV
+   $('#overlay').fadeOut();
+});
+</script>
+
+
+
+

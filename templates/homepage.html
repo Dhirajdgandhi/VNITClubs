@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>
+     Student Portal
+    </title>
+
+
+{% include "homeheader.html" %}  
+
+
+</head>
+<body style="background-color: #EFEFEF;">
+
+<script src="//fast.appcues.com/27087.js"></script>
+
+<script>
+    // NOTE: These values should be specific to the current user.
+    Appcues.identify("27087", { // Unique identifier for current user
+        name: "Dhiraj Gandhi", // Current user's name
+        email: "ddgandhi.96@gmail.com", // Current user's email
+        created_at: 1500030379, // Unix timestamp of user signup date
+
+        // Additional user properties.
+        // is_trial: "${user.is_trial}",
+        // plan: "${user.plan}"
+    });
+</script>
+
+
+{% load staticfiles %}
+
+{% include "headercontent.html" %}
+  
+    
+<!-- Start of the container section -->
+
+<div class="container-fluid" id="content1" style="background-color: #EFEFEF !important;">
+
+<!-- This is shifted under edit profile section 
+<div class="col-md-2" >
+
+{% if loginas == "HOD" %}
+
+Already existing programs of your department :
+
+<li><button type="button" id="myBtn4" class="btn btn-default btn-lg margin-top" >Add Program</button></li>
+{% include "addProgrammodal.html" %}
+
+
+{% for i in deptobj %}
+   <div>{{ i.short_name }} : {{ i.degree_level }} : {{ i.program }} </div> 
+{% endfor %}
+
+
+{% else %}
+
+     {% if loginas == "Admin" %}
+
+            Hello Admin 
+<br>
+<button type="button" onclick="location.href='admin_request/'" id="AdminRequest" class="btn btn-default btn-lg margin-top" >Requests</button></li>
+
+      {% endif %}
+
+         {% if loginas == "TNP Head" %}
+        
+<br>
+<button type="button" onclick="location.href='exp_request/'" id="ExpRequest" class="btn btn-default btn-lg margin-top" >Exp Requests</button></li>
+
+        {% endif %}
+
+
+{% endif %} 
+
+</div>
+-->
+
+
+<div class="col-md-2"></div>
+<div class="col-md-8">
+
+<ul class="nav nav-tabs ">
+    <li ><a data-toggle="tab" href="#interntab">Internship<sup>{{ exp_intern_list | length }}</sup></a></li>
+    <li ><a data-toggle="tab" href="#jobtab">Job<sup>{{ exp_job_list | length }}</sup></a></li>
+  </ul>
+<br>
+<div class="tab-content">
+
+
+<div id="interntab" class="tab-pane fade in">
+{% for exp in exp_intern_list  %}
+    {% with exp as i %}
+            {% include "intern_experience.html" %}
+    {% endwith %}
+{% endfor %}
+</div>
+
+<div id="jobtab" class="tab-pane fade in ">
+{% for exp in exp_job_list  %}
+    {% with exp as i %}
+            {% include "job_experience.html" %}
+    {% endwith %}
+{% endfor %}
+</div>
+</div> <!-- End of tab-content-->
+<!--
+    <span class="step-links">
+      
+<ul class="pagination nav navbar-nav">background-color:white;
+    {% if exp_intern_list.has_previous %}
+            <li><a href="?page={{ exp_intern_list.previous_page_number }}">Prev</a></li>
+    {% endif %}
+    {% for page in exp_intern_list.paginator.page_range %}
+        <li class="{% if exp_intern_list.number == page  %}active{% endif %}"><a href="?page={{page }}">{{ page }}</a></li>
+    {% endfor %}
+
+    {% if exp_intern_list.has_next %}
+        <li> <a href="?page={{ exp_intern_list.next_page_number }}">Next</a></li>
+    {% endif %}
+ </ul>
+
+    </span>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <div class="col-md-*" ></div>
+
+</div>
+</div>
+
+
+
+<footer>
+<div class="footer-main-wrap">
+</div>
+</footer>
+
+  </body>
+</html>
+

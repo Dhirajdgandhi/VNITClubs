@@ -1,0 +1,90 @@
+<!-- Accept Company Modal -->
+  <div class="modal fade" id="accept{{ request_obj.id }}" tabindex='-1' role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3><span class="glyphicon glyphicon-lock "></span>&nbsp Accept Company </h3>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+{% csrf_token %}
+          <form role="form" method="POST" action="" name="accept{{ request_obj.id }}">
+{% csrf_token %}
+
+<div class="row">
+            <div class="col-md-6 form-group">
+              <label for="company_name"><span class="glyphicon"></span>Company name</label>
+              <input name="company_name" type="text" class="form-control" id="company_name" value="{{ request_obj.company_id.company_name }}" placeholder="Enter Company Name" required>
+	<font color='red'> <DIV id="cnr_acm"> </DIV> </font>            
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label for="short_name"><span class="glyphicon"></span>Company Short name</label>
+              <input name="short_name" type="text" class="form-control" id="short_name"  placeholder="Enter Short Name" required>
+	<font color='red'> <DIV id="snr_acm"> </DIV> </font>             
+            </div>
+</div>
+
+
+            <div class="form-group">
+              <label for="long_name"><span class="glyphicon"></span>Company Long name</label>
+              <input name="long_name" type="text" class="form-control" id="long_name"  placeholder="Enter Long Name" required>
+<font color='red'> <DIV id="lnr_acm"> </DIV> </font>             
+            </div>
+
+            <div class="form-group">
+              <label for="display_name"><span class="glyphicon"></span>Company Display name</label>
+              <input name="display_name" type="text" class="form-control" id="display_name"  placeholder="Enter Display Name" required>
+<font color='red'> <DIV id="dnr_acm"> </DIV> </font>             
+            </div>
+{% load app_filters %}
+<div class="row">
+     <div class="col-md-6 form-group">
+              <label for="dept"><span class="glyphicon"></span>Department</label>
+            {% if request_obj.intern_exp_id %}
+              <input name="dept" readonly type="text" class="form-control" id="dept" value="{{ request_obj.intern_exp_id.userid.deptid | deptname }}" >
+             {% else %}
+              <input name="dept" readonly type="text" class="form-control" id="dept" value="{{ request_obj.job_exp_id.userid.deptid | deptname}}" >
+            {% endif %}            
+            </div>
+
+
+             <div class="col-md-6 form-group">
+                <label for="session" >Session  </label>
+                 <input class="form-control" id="session" name="session" readonly value="{{ request_obj.session }}"/>
+                     <!--   <option value="2016-17">2016-17</option>
+                        <option value="2015-16">2015-16</option>
+                        <option value="2014-15">2014-15</option>
+                        <option value="2013-14">2013-14</option>
+                    </select> -->
+
+            </div>
+</div>
+
+
+<div class="row">      
+    <div class="col-md-6 form-group">
+                  <label for="startdate"><span class="glyphicon"></span>Startdate</label>
+       <input name="startdate" type="date" required class="form-control" id="startdate" value="{{ request_obj.company_id.startdate.date }}" placeholder="Enter session" required>
+                </div>
+           
+    <div class="col-md-6 form-group">
+                  <label for="recentdate"><span class="glyphicon"></span>Recentdate</label>
+                  <input name="recentdate" required type="date" class="form-control" id="recentdate" value="{{ request_obj.company_id.recentdate.date }}" placeholder="Enter session" required>
+                </div>
+</div>
+
+
+              <button type="submit" name="button" onclick="validate_accept_company_modal({{ request_obj.id }});" value="Accept|{{request_obj.id}}" class="btn btn-success btn-block "><span class="glyphicon glyphicon-off"></span> Add Company </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+        
+        </div>
+      </div>
+
+</div>
+</div>
+<!-- Accept Company Modal Ends -->

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <title>
+ 
+     Company Requests
+    </title>
+
+
+{% include "homeheader.html" %}  
+
+<script>
+    
+        $(document).ready(function(){
+
+        });
+    
+
+</script>  
+</head>
+{% load staticfiles %}
+
+<!-- Loader image 
+            <div id="overlay">
+            {% load staticfiles %}
+                 <img src="{% static 'IMAGES/loader.png' %}" alt="Loading" />
+            </div>
+      -->
+
+{% include "headercontent.html" %}  
+   <body>
+
+{% load app_filters %}
+{% csrf_token %}
+          <form role="form" method="POST" action="">
+{% csrf_token %}
+
+            <div class="form-group">
+<!-- Start of the container section -->
+<div class="container-fluid" id="content1">
+<br>
+<div class="row">
+<div class="col-md-1" ></div>
+
+<div class="col-md-6">
+<div class="row">
+    <div class="col-md-12">
+        <ul class="nav nav-tabs ">
+            <li ><a data-toggle="tab" href="#internship">Internship</a></li>
+            <li ><a data-toggle="tab" href="#job">Job</a></li>
+        </ul>
+    </div>
+</div>
+<div class="tab-content">
+
+
+<div id="internship" class="tab-pane fade in" >
+<br>
+                {% for request_obj in intern_req_list %}
+                <div  class="intern accept_company_request_box">
+                
+                 <div class="row">
+                <div class="col-md-12">
+                <strong>Name : </strong> {{ request_obj.intern_exp_id.userid.firstname }} {{ request_obj.intern_exp_id.userid.lastname }}
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-12">
+              <strong>Company name : </strong>  {{ request_obj.company_id.company_name }}
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-12">
+              <strong>Department name : </strong> {{ request_obj.intern_exp_id.userid.deptid | deptname }}
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-12">
+              {% if request_obj.intern_exp_id  %}
+                <strong>Internship </strong>  <span class="glyphicon glyphicon-ok"></span>
+              {% else %}
+                <strong>Job </strong> <span class="glyphicon glyphicon-ok" style="color:green"></span>
+              {% endif %}
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-3">
+              {% if request_obj.intern_exp_id.onoffcampus %}
+                <strong>On Campus</strong>
+              {% else %}
+                <strong>Off Campus</strong>
+              {% endif %}
+                </div>
+                <div class="col-md-2 col-xs-4">
+                 {% if request_obj.company_id.valid == 0 %}
+                 <button type="button"  value="Accept|{{ request_obj.id }}" style="text-transform: none;" data-toggle="modal" data-target="#accept{{ request_obj.id }}" class="btn-xs btn-md btn-success  ">Accept </button>
+
+{% include "accept_company_modal.html" %}
+
+                {% endif %}
+                </div>
+
+                <div class="col-md-2 col-xs-3">
+                 <button type="button" value="List|{{ request_obj.id }}" style="text-transform: none;" data-toggle="modal" data-target="#list{{ request_obj.id }}" class="btn-xs btn-md btn-primary  "><span style="padding-left: 2px; padding-right: 2px";>List</span> </button>
+
+ {% include "admin_comp_req_list_modal.html" %}
+             </div>
+                <div class="col-md-2 col-xs-4">
+                 <button name="button" value="Reject|{{ request_obj.id }}" style="text-transform: none;" type="submit" class="btn-xs btn-md btn-danger ">Reject </button>
+                         </div>
+
+                <div class="col-md-3 post-date" style="font-size: small">{{ request_obj.intern_exp_id.timestamp.date }}</div>
+
+                </div>
+                </div>
+                    <br>
+{#              <strong>Name : </strong> {{ request_obj.intern_exp_id.userid.firstname }} {{ request_obj.intern_exp_id.userid.lastname }}#}
+{#<br><strong>Company name : </strong>  {{ request_obj.company_id.company_name }} #}
+{# <br><strong>Department name : </strong> {{ request_obj.intern_exp_id.userid.deptid | deptname }} #}
+{#{% if request_obj.intern_exp_id  %}#}
+{# <br><strong>Internship </strong>  <span class="glyphicon glyphicon-ok" style="color:green"></span>#}
+{#{% else %}#}
+{#<br><strong>Job </strong> <span class="glyphicon glyphicon-ok" style="color:green"></span>#}
+{#{% endif %}#}
+{#<br><strong>Session:</strong> {{ request_obj.session }}#}
+{#<br>#}
+{#                    {% if request_obj.intern_exp_id.onoffcampus %}#}
+{#    <strong>On Campus</strong>#}
+{#    {% else %}#}
+{#    <strong>Off Campus</strong>#}
+{#    {% endif %}#}
+{##}
+{##}
+{#                <div class="col-md-2 col-xs-4 col-xs-offset-4 ">#}
+{#                {% if request_obj.company_id.valid == 1 %}#}
+{#                 <button type="button"  value="Accept|{{ request_obj.id }}" data-toggle="modal" data-target="#accept{{ request_obj.id }}" class="btn btn-success  ">ACCEPT </button>#}
+{#                #}
+{#                               #}
+{#{% include "accept_company_modal.html" %}#}
+{#               {% endif %}#}
+{#                </div>#}
+{#                #}
+{#                <div class="col-md-2 col-xs-4 col-xs-pull-4 ">#}
+{#                 <button type="button" value="List|{{ request_obj.id }}" data-toggle="modal" data-target="#list{{ request_obj.id }}" class="btn btn-primary  ">LIST </button>#}
+{#                        #}
+{# {% include "admin_comp_req_list_modal.html" %}#}
+{##}
+{#           #}
+{#             </div>#}
+{#                <div class="col-md-2 col-xs-4 ">#}
+{#                 <button name="button" value="Reject|{{ request_obj.id }}" type="submit" class="btn btn-danger  ">REJECT </button>#}
+{#                         </div>         #}
+{#                #}
+{#                       #}
+{#                #}
+{#                <div class=" post-date">{{ request_obj.intern_exp_id.timestamp.date }}</div>#}
+{##}
+{#                    </div>#}
+{#                <br>#}
+
+                {% endfor %}
+
+  </div>
+
+    <div id="job" class="tab-pane fade in ">
+<br>
+                     {% for request_obj in job_req_list %}
+                
+                
+                <div class="job accept_company_request_box" >
+                <div class="row">
+                <div class="col-md-12">
+              <strong>Name : </strong> {{ request_obj.job_exp_id.userid.firstname }} {{ request_obj.job_exp_id.userid.lastname }}
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-12">
+              <strong>Company name : </strong>  {{ request_obj.company_id.company_name }}
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-12">
+              <strong>Department name : </strong> {{ request_obj.job_exp_id.userid.deptid | deptname }}
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-12">
+              {% if request_obj.intern_exp_id  %}
+                <strong>Internship </strong>  <span class="glyphicon glyphicon-ok"></span>
+              {% else %}
+                <strong>Job </strong> <span class="glyphicon glyphicon-ok" style="color:green"></span>
+              {% endif %}
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-3">
+              {% if request_obj.job_exp_id.onoffcampus %}
+                <strong>On Campus</strong>
+              {% else %}
+                <strong>Off Campus</strong>
+              {% endif %}
+                </div>
+                <div class="col-md-2 col-xs-4">
+                 {% if request_obj.company_id.valid == 0 %}
+                 <button type="button"  value="Accept|{{ request_obj.id }}" style="text-transform: none;" data-toggle="modal" data-target="#accept{{ request_obj.id }}" class="btn-xs btn-success ">Accept </button>
+
+{% include "accept_company_modal.html" %}
+
+                {% endif %}
+                </div>
+
+                <div class="col-md-2 col-xs-3">
+                 <button type="button" value="List|{{ request_obj.id }}" style="text-transform: none;" data-toggle="modal" data-target="#list{{ request_obj.id }}" class="btn-xs btn-primary ">List </button>
+
+ {% include "admin_comp_req_list_modal.html" %}
+             </div>
+                <div class="col-md-2 col-xs-4">
+                 <button name="button" value="Reject|{{ request_obj.id }}" style="text-transform: none;" type="submit" class="btn-xs btn-danger ">Reject </button>
+                         </div>
+
+                <div class="col-md-3 post-date" style="font-size: small">{{ request_obj.job_exp_id.timestamp.date }}</div>
+
+                </div>
+                </div>
+{#<br><strong>Company name : </strong>  {{ request_obj.company_id.company_name }} #}
+{# <br><strong>Department name : </strong> {{ request_obj.job_exp_id.userid.deptid | deptname }} #}
+{#{% if request_obj.intern_exp_id  %}#}
+{# <br><strong>Internship </strong>  <span class="glyphicon glyphicon-ok"></span>#}
+{#{% else %}#}
+{#<br><strong>Job </strong> <span class="glyphicon glyphicon-ok" style="color:green"></span>#}
+{#{% endif %}#}
+{#<br><strong>Session:</strong> {{ request_obj.session }}#}
+{#<br>{% if request_obj.job_exp_id.onoffcampus %}#}
+{#    <strong>On Campus</strong>#}
+{#    {% else %}#}
+{#    <strong>Off Campus</strong>#}
+{#    {% endif %}#}
+           
+</div>
+{#                <div class="col-md-2">#}
+{#                 {% if request_obj.company_id.valid == 0 %}#}
+{#                 <button type="button"  value="Accept|{{ request_obj.id }}" data-toggle="modal" data-target="#accept{{ request_obj.id }}" class="btn btn-success btn-block ">ACCEPT </button>#}
+{#                #}
+{#{% include "accept_company_modal.html" %}#}
+{#                #}
+{#                {% endif %}#}
+{#                </div>#}
+{#                #}
+{#                <div class="col-md-2">#}
+{#                 <button type="button" value="List|{{ request_obj.id }}" data-toggle="modal" data-target="#list{{ request_obj.id }}" class="btn btn-primary btn-block ">LIST </button>#}
+{#            #}
+{# {% include "admin_comp_req_list_modal.html" %}#}
+{#             </div>#}
+{#                <div class="col-md-2">#}
+{#                 <button name="button" value="Reject|{{ request_obj.id }}" type="submit" class="btn btn-danger btn-block ">REJECT </button>#}
+{#                         </div>         #}
+{#                #}
+{#                <div class="col-md-* post-date">{{ request_obj.job_exp_id.timestamp.date }}</div>#}
+{#                #}
+{#                </div>#}
+                <br>
+            
+               
+                {% endfor %}
+</div>
+
+
+  </div>
+
+  <div class="col-md-*" ></div>
+
+</div>
+
+
+</div>
+
+<footer>
+<div class="footer-main-wrap">
+</div>
+</footer>
+
+
+<form>
+  </body>
+</html>
+
