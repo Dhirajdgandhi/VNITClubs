@@ -5,6 +5,7 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="clubsapp.views.csrf" />
+          <option value="portalapp.views.django" />
         </list>
       </option>
     </inspection_tool>

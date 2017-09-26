@@ -53,7 +53,7 @@ urlpatterns = [
     url(r'^forgotpass/(?P<comp_id>[0-9]+)/intern/$','portalapp.views.forgotpass'),
 		
 	 url(r'^home/aboutus/$','portalapp.views.aboutus'),
-    url ( r'^clubs/$' , 'clubsapp.views.page_not_found' ) ,
+    url ( r'^clubs/$' , 'clubsapp.views.clubsMain' ) ,
 ]
 
 '''  

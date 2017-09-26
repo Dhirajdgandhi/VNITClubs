@@ -183,6 +183,7 @@ $(document).ready(function() {
             {% endfor %}
             </ul>
         </li>
+           <li><a href="/clubs">Clubs</a></li>
       </ul>
 {% load app_filters %}
       <ul class="nav navbar-nav navbar-right">
@@ -275,20 +276,20 @@ experience_saved="{{experience_saved}}"
     <p class="container sp" style="font-size: 40px; text-align: center; color: black; background-color: white">Student Portal</p>
 <!--
  <section class="cover-image js-menu-shift"><div class="layer"><h1 class="h1">VNIT Student Portal</h1></div></section>
-   -->      
-
-         {% elif pagename != "" %}
+   -->
+         {% elif page_name != "" %}
          
          <section class="cover-image js-menu-shift"><div class="layer"><h1 class="h1">{{ page_name }} {% if exp_type != "" %} {{ exp_type }} {% endif %}</h1></div></section>
-         
+
+
          {% endif %}   
 
 {% if page_name == "homepage" %} <!-- Display top only for mainpage -->
 <hr style="height: 10px;border: 0;	box-shadow: 0 10px 10px -10px grey inset;">
 {% endif %}
 <!-- End of HEader section -->
-
-<br>
+<!--
+<br>-->
 
 <script>
     if(screen.width > 767){

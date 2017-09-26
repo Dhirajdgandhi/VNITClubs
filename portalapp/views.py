@@ -56,7 +56,6 @@ def aboutus(request):
 
     return render_to_response('aboutus.html',args)
 
-
 @csrf_protect
 def register(request):
 	if request.method == 'POST':
