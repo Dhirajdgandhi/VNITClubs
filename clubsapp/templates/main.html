@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+      {% load staticfiles %}
+
+{% include "homeheader.html" %}
+      <meta charset="utf-8">
+      <title>Clubs @ VNIT</title>
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+      <!-- Favicon ================== -->
+      <!-- Standard -->
+      <link rel="shortcut icon" href="{% static 'IMG/icon.png">
+      <!-- Retina iPad Touch Icon-->
+      <link rel="apple-touch-icon" sizes="144x144" href="{% static 'IMG/icon.png' %}">
+      <!-- Retina iPhone Touch Icon-->
+      <link rel="apple-touch-icon" sizes="114x114" href="{% static 'IMG/icon.png' %}">
+      <!-- Standard iPad Touch Icon-->
+      <link rel="apple-touch-icon" sizes="72x72" href="{% static 'IMG/icon.png' %}">
+      <!-- Standard iPhone Touch Icon-->
+      <link rel="apple-touch-icon" sizes="57x57" href="{% static 'IMG/icon.png' %}">
+
+      <!--  Resources style ================== -->
+      <link href="{% static 'CSS/theme-Dark.css' %}" rel="stylesheet" type="text/css" media="all"/>
+
+      <link href="{% static 'CSS/singlePageTemplate.css' %}" rel="stylesheet" type="text/css">
+      <link href="{% static 'CSS/homepage.css' %}" rel="stylesheet" type="text/css">
+      <link href="{% static 'CSS/shar.css' %}" rel="stylesheet" type="text/css">
+
+      <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+      <script>var __adobewebfontsappname__="dreamweaver"</script>
+      <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    </head>
+    <body>
+
+
+{% include "headercontent.html" %}
+      <section class="animsition">
+
+        <div id="Sides">
+          <div id="leftSide">
+
+          <div id="home" class="gradient">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <!--<ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+              </ol>-->
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+
+                <div class="item">
+                  <img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/14079992_1199589560063514_5129600759812714956_n.jpg?oh=04a1394f2c5c7e6b6a0cd462fe02f25c&oe=5A4A557C" alt="New York">
+                </div>
+
+                <div class="item">
+                  <img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/21032448_1576844722337994_3081322064681161298_n.jpg?oh=7d91582a151723fcb1a4a0b975694425&oe=5A53106E" alt="Chicago">
+                </div>
+
+                <div class="item active">
+                  <img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/21767957_1609033589119107_7666551367602122504_n.jpg?oh=d95e0b8857628873107220e7eac8c177&oe=5A4992D8" alt="Los Angeles">
+                </div>
+
+              </div>
+              <div class="h-content" id="head">
+              <h1>STUDENT CLUBS</h1>
+              <p id="intro">Welcome to the first ever Website for clubs of VNIT. Here you can browse through all the clubs, the latest ongoing events and many more . . .</p>
+            <div class="drag"><i class="	glyphicon glyphicon-arrow-right" id="scrollbutton"></i></div><br><br>
+            </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div id="rightSide">
+
+          <section class="cover-image js-menu-shift" id="subhead"><div class="layer"><h1 class="h1"> Clubs of VNIT  </h1><div class="drag"><i class="	glyphicon glyphicon-arrow-left" id="scrollbutton2"></i></div></div></section>
+          <div class="project">
+            <hr style="height: 10px;border: 0;	box-shadow: 0 10px 10px -10px grey inset;">
+            <ul class="gallery project_navigation">
+              <li class="item col-lg-4 col-sm-6 col-xs-12">
+                <figure>
+                  <!-- Your picture -->
+                  <img src="{% static 'IMG/astronomy.jpg' %}" alt="Astro Club" class="img-responsive" />
+                  <!-- Picture's description below this one -->
+                  <figcaption class="caption">
+                    <div class="photo-details">
+                      <div id="photo-heading">Mag.com</div>
+                      <p>We’re the official Magazine Committee (or since most of you recognize us by our swanky title: mag.com..</p>
+                      <a href="/mag.html" class="highlight" id="golden">VIEW MORE</a>
+                    </div>
+
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="item col-lg-4 col-sm-6 col-xs-12">
+                <figure>
+                  <!-- Your picture -->
+                  <img src="{% static 'IMG/tesla.jpg' %}" alt="Astro Club" class="img-responsive" />
+                  <!-- Picture's description below this one -->
+                  <figcaption class="caption">
+                    <div class="photo-details">
+                      <div id="photo-heading">Mag.com</div>
+                      <p>We’re the official Magazine Committee (or since most of you recognize us by our swanky title: mag.com..</p>
+                      <a href="#project1" class="highlight" id="golden">VIEW MORE</a>
+                    </div>
+
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="item col-lg-4 col-sm-6 col-xs-12">
+                <figure>
+                  <!-- Your picture -->
+                  <img src="{% static 'IMG/quiz.jpg' %}" alt="Astro Club" class="img-responsive" />
+                  <!-- Picture's description below this one -->
+                  <figcaption class="caption">
+                    <div class="photo-details">
+                      <div id="photo-heading">Mag.com</div>
+                      <p>We’re the official Magazine Committee (or since most of you recognize us by our swanky title: mag.com..</p>
+                      <a href="#project1" class="highlight" id="golden">VIEW MORE</a>
+                    </div>
+
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="item col-lg-4 col-sm-6 col-xs-12">
+                <figure>
+                  <!-- Your picture -->
+                  <img src="{% static 'IMG/velocity.jpg' %}" alt="Astro Club" class="img-responsive" />
+                  <!-- Picture's description below this one -->
+                  <figcaption class="caption">
+                    <div class="photo-details">
+                      <div id="photo-heading">Mag.com</div>
+                      <p>We’re the official Magazine Committee (or since most of you recognize us by our swanky title: mag.com..</p>
+                      <a href="#project1" class="highlight" id="golden">VIEW MORE</a>
+                    </div>
+
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="item col-lg-4 col-sm-6 col-xs-12">
+                <figure>
+                  <!-- Your picture -->
+                  <img src="{% static 'IMG/velocity.jpg' %}" alt="Astro Club" class="img-responsive" />
+                  <!-- Picture's description below this one -->
+                  <figcaption class="caption">
+                    <div class="photo-details">
+                      <div id="photo-heading">Mag.com</div>
+                      <p>We’re the official Magazine Committee (or since most of you recognize us by our swanky title: mag.com..</p>
+                      <a href="#project1" class="highlight" id="golden">VIEW MORE</a>
+                    </div>
+
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="item col-lg-4 col-sm-6 col-xs-12">
+                <figure>
+                  <!-- Your picture -->
+                  <img src="{% static 'IMG/music.jpg' %}" alt="Astro Club" class="img-responsive" />
+                  <!-- Picture's description below this one -->
+                  <figcaption class="caption">
+                    <div class="photo-details">
+                      <div id="photo-heading">Mag.com</div>
+                      <p>We’re the official Magazine Committee (or since most of you recognize us by our swanky title: mag.com..</p>
+                      <a href="#project1" class="highlight" id="golden">VIEW MORE</a>
+                    </div>
+
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="item col-lg-4 col-sm-6 col-xs-12">
+                <figure>
+                  <!-- Your picture -->
+                  <img src="{% static 'IMG/prayaas.jpg' %}" alt="Astro Club" class="img-responsive" />
+                  <!-- Picture's description below this one -->
+                  <figcaption class="caption">
+                    <div class="photo-details">
+                      <div id="photo-heading">Mag.com</div>
+                      <p>We’re the official Magazine Committee (or since most of you recognize us by our swanky title: mag.com..</p>
+                      <a href="#project1" class="highlight" id="golden">VIEW MORE</a>
+                    </div>
+
+                  </figcaption>
+                </figure>
+              </li>
+
+            </ul>
+
+            <ul class="project_info">
+
+
+            </ul>
+          </div>
+
+          <div class="pricing">
+            <p>Stay tuned for more updates</p>
+          </div>
+
+
+        </div>
+        </div>
+      </section>
+
+      <script src="{% static 'JS/jquery-1.11.3.min.js' %}"></script>
+      <script src="{% static 'JS/bootstrap.min.js' %}"></script>
+      <script src="{% static 'JS/animsition.min.js' %}"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+      <script src="{% static 'JS/jquery.magnific-popup.min.js' %}"></script>
+      <script src="{% static 'JS/jquery.countdown.min.js' %}"></script>
+      <script src="{% static 'JS/twitterFetcher_min.js' %}"></script>
+      <script src="{% static 'JS/masonry.pkgd.min.js' %}"></script>
+      <script src="{% static 'JS/imagesloaded.pkgd.min.js' %}"></script>
+      <script src="{% static 'JS/jquery.flexslider-min.js' %}"></script>
+
+      <script src="{% static 'JS/jqinstapics.min.js' %}"></script>
+      <script src="{% static 'JS/script.js' %}"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+      <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+      <script>
+
+//scroll
+    // script is now loaded and executed.
+    // put your dependent JS here.
+      /* ------------------------------------- */
+  /* ScrollToTop   ................... */
+  /* ------------------------------------- */
+
+    $('.up').on('click', function() {
+      $('#rightSide').animate({
+          scrollTop: 0
+      }, 500,'easeInExpo');
+      if($(window).width() < 1024) {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500,'easeInExpo');
+      }
+      return false;
+    });
+
+
+
+
+
+    $("#scrollbutton2").on("click",function(){
+      $('#Sides').animate({
+                    scrollLeft: -$("#rightSide").offset().left
+                }, 900,'easeInOutCubic');
+    });
+    $("#scrollbutton").on("click",function(){
+      $('#Sides').animate({
+                    scrollLeft: $("#rightSide").offset().left
+                }, 1000,'easeInOutCubic');
+    });
+
+
+      </script>
+
+
+  </body>
+</html>
+

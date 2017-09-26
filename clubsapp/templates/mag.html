@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+       {% load staticfiles %}
+
+      {% include "homeheader.html" %}
+
+      <meta charset="utf-8">
+      <title>Clubs at VNIT</title>
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+      <!-- Favicon ================== -->
+      <!-- Standard -->
+      <link rel="shortcut icon" href="{% static 'IMG/icon.png' %}">
+      <!-- Retina iPad Touch Icon-->
+      <link rel="apple-touch-icon" sizes="144x144" href="{% static 'IMG/icon.png' %}">
+      <!-- Retina iPhone Touch Icon-->
+      <link rel="apple-touch-icon" sizes="114x114" href="{% static 'IMG/icon.png' %}">
+      <!-- Standard iPad Touch Icon-->
+      <link rel="apple-touch-icon" sizes="72x72" href="{% static 'IMG/icon.png' %}">
+      <!-- Standard iPhone Touch Icon-->
+      <link rel="apple-touch-icon" sizes="57x57" href="{% static 'IMG/icon.png' %}">
+
+      <!--  Resources style ================== -->
+      <link href="{% static 'CSS/theme-Dark.css' %}" rel="stylesheet" type="text/css" media="all"/>
+
+      <link href="{% static 'CSS/singlePageTemplate.css' %}" rel="stylesheet" type="text/css">
+      <link href="{% static 'CSS/homepage.css' %}" rel="stylesheet" type="text/css">
+      <link href="{% static 'CSS/shar.css' %}" rel="stylesheet" type="text/css">
+
+      <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+      <script>var __adobewebfontsappname__="dreamweaver"</script>
+      <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    </head>
+
+
+    <body id="body">
+
+      {% include "headercontent.html" %}
+      <!--  <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              &lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+
+              </div>
+
+              &lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="background-color: #181F45;">
+                <ul class="nav navbar-nav">
+                  <li><a href="/home">Home <span class="sr-only">(current)</span></a></li>
+                  <li><a href="/home/aboutus">About</a></li>
+                  <li class="dropdown">
+                      <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="background: #181F45 !important; "> Departments</a>
+                      <ul class="dropdown-menu">
+
+
+
+
+                      </ul>
+                  </li>
+                  <li class="dropdown" style="background-color: #181F45 !important;">
+                      <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="background: #181F45 !important;"> Internships </a>
+                      <ul class="dropdown-menu">
+
+
+
+                      </ul>
+                  </li>
+                  <li class="dropdown">
+                      <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="background: #181F45 !important;"> Jobs  </a>
+                      <ul class="dropdown-menu columns">
+
+
+
+                      </ul>
+                  </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                  <li id="nav1"><a href="/home/contribute" style="margin:8px;padding:10px;" class="highlight" onfocus=" "><span style="color: #FFC107;">Contribute</span>	 </a></li>
+
+
+                      <li><button id="myBtn">Login</button></li>
+
+                </ul>
+              </div>&lt;!&ndash; /.navbar-collapse &ndash;&gt;
+            </div>&lt;!&ndash; /.container-fluid &ndash;&gt;
+        </nav>-->
+
+            <div id="project1" class="project_info_inner">
+                <div class="container-inner">
+
+
+                  <!-- Hero Section -->
+                  <section class="hero" id="hero">
+                    <h2 class="hero_header">MAG.COM</h2>
+                    <p class="tagline">Official Magazine Committee</p>
+                  </section>
+
+                  <!-- my -->
+                  <section class="about" id="about">
+                    <h2 class="heading2">What's Mag.Com</h2>
+                    <p class="text_column">We’re the official Magazine Committee (or since most of you recognize us by our swanky title: mag.com, we’d prefer to use that in substitution) of VNIT. Our job includes everything from designing, editing and writing the official college magazine: Insight, to hosting and executing the literary events and to making the newsletters for the college. Work at mag.com is all about learning and having fun.(Our USP is that everyone is treated an equal at mag be it a first or final year; we don't believe in 'Sirs' and 'Ma'ams'!) </p>
+                  </section>
+                  <!-- mentors -->
+                  <footer>
+
+                        <div class="footer_column" id="team">
+                          <h3><b>ABCD EFGH</b></h3>
+                          <img src="https://www.w3schools.com/css/img_avatar.png" alt="" class="cards" id="mempic">
+                          <p>Faculty Coordinator<br><strong>MAG.COM</strong></p>
+                        </div>
+                        <div class="footer_column">
+                          <h3><b>HIJK LMNO</b></h3>
+                          <img src="https://www.w3schools.com/css/img_avatar.png" alt="" class="cards"  id="mempic">
+                          <p>Club President<br><strong>MAG.COM</strong></p>
+                        </div>
+
+                  </footer>
+
+
+
+                  <!-- Work -->
+                  <section id="work" class="work">
+                    <h2 class="heading2">Work</h2>
+                    <div class="event-inner">
+                      <p class="text_column">Here are a few mentions of the amazing work by Mag.Com club:</p>
+                      <div class="project">
+                      <div class="project_navigation">
+                        <div class="item col-sm-6 col-xs-12">
+                          <figure>
+                            <!-- Your picture -->
+                            <img src="{% static 'IMG/pic4.jpg' %}"  alt="Iridescence" class="img img-responsive" />
+                            <!-- Picture's description below this one -->
+                            <figcaption class="caption">
+                              <div class="photo-details">
+                                <h4>Iridescence</h4>
+                                <span>The Art Club</span>
+                              </div>
+                              <a href="{% static 'IMG/pic4.jpg' %}" target="_blank" class="highlight"   id="golden">VIEW</a>
+
+                            </figcaption>
+                          </figure>
+                        </div>
+                        <div class="item col-sm-6 col-xs-12">
+                          <figure>
+                            <!-- Your picture -->
+                            <img src="{% static 'IMG/pic4.jpg"  alt="Iridescence" class="img img-responsive" />
+                            <!-- Picture's description below this one -->
+                            <figcaption class="caption">
+                              <div class="photo-details">
+                                <h4>Iridescence</h4>
+                                <span>The Art Club</span>
+                              </div>
+                              <a href="{% static 'IMG/pic4.jpg" target="_blank" class="highlight"   id="golden">VIEW</a>
+
+                            </figcaption>
+                          </figure>
+                        </div>
+                        <div class="item col-sm-6 col-xs-12">
+                          <figure>
+                            <!-- Your picture -->
+                            <img src="{% static 'IMG/pic4.jpg"  alt="Iridescence" class="img img-responsive" />
+                            <!-- Picture's description below this one -->
+                            <figcaption class="caption">
+                              <div class="photo-details">
+                                <h4>Iridescence</h4>
+                                <span>The Art Club</span>
+                              </div>
+                              <a href="{% static 'IMG/pic5.jpg' %}" target="_blank" class="highlight"   id="golden">VIEW</a>
+
+                            </figcaption>
+                          </figure>
+                        </div>
+                        <div class="item col-sm-6 col-xs-12">
+                          <figure>
+                            <!-- Your picture -->
+                            <img src="{% static 'IMG/pic4.jpg"  alt="Iridescence" class="img img-responsive" />
+                            <!-- Picture's description below this one -->
+                            <figcaption class="caption">
+                              <div class="photo-details">
+                                <h4>Iridescence</h4>
+                                <span>The Art Club</span>
+                              </div>
+                              <a href="{% static 'IMG/pic5.jpg' %}" target="_blank" class="highlight"   id="golden">VIEW</a>
+
+                            </figcaption>
+                          </figure>
+                        </div>
+                      </div>
+
+
+
+                    </div>
+                    </div>
+                  </section>
+
+                    <!-- Events -->
+                  <section id="events" class="events">
+
+                    <div class="event-inner">
+                      <div class="quick">
+                        <div class="quickcontact">
+                          <h2>Upcoming Events</h2>
+
+                          <div class="event-fill">
+                            <div class="event-left">
+                              <div class = "event-date-month">SEP</div>
+                              <div class = "event-date-num">22</div>
+                            </div>
+                            <div class="event-right">
+                              <div class="event-heading">
+                                <h3 class ="event-hcontent">
+                                  Recruitment for MAG.COM
+                                </h3>
+                            </div>
+                              <div class="event-details">
+                                <div class="event-details-time">1700 IST</div>
+                                <div class="event-details-place">VNIT, CSE Dept.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="event-fill">
+                            <div class="event-left">
+                              <div class = "event-date-month">SEP</div>
+                              <div class = "event-date-num">22</div>
+                            </div>
+                            <div class="event-right">
+                              <div class="event-heading">
+                                <h3 class ="event-hcontent">
+                                  Recruitment for MAG.COM
+                                </h3>
+                            </div>
+                              <div class="event-details">
+                                <div class="event-details-time">1700 IST</div>
+                                <div class="event-details-place">VNIT, CSE Dept.</div>
+                              </div>
+                            </div>
+                          </div><div class="event-fill">
+                            <div class="event-left">
+                              <div class = "event-date-month">SEP</div>
+                              <div class = "event-date-num">22</div>
+                            </div>
+                            <div class="event-right">
+                              <div class="event-heading">
+                                <h3 class ="event-hcontent">
+                                  Recruitment for MAG.COM
+                                </h3>
+                            </div>
+                              <div class="event-details">
+                                <div class="event-details-time">1700 IST</div>
+                                <div class="event-details-place">VNIT, CSE Dept.</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="quickid">
+                          <h2>Past Events</h2>
+                          <div class="event-fill">
+                            <div class="event-left">
+                              <div class = "event-date-month">SEP</div>
+                              <div class = "event-date-num">22</div>
+                            </div>
+                            <div class="event-right">
+                              <div class="event-heading">
+                                <h3 class ="event-hcontent">
+                                  Recruitment for MAG.COM
+                                </h3>
+                            </div>
+                              <div class="event-details">
+                                <div class="event-details-time">1700 IST</div>
+                                <div class="event-details-place">VNIT, CSE Dept.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="event-fill">
+                            <div class="event-left">
+                              <div class = "event-date-month">SEP</div>
+                              <div class = "event-date-num">22</div>
+                            </div>
+                            <div class="event-right">
+                              <div class="event-heading">
+                                <h3 class ="event-hcontent">
+                                  Recruitment for MAG.COM
+                                </h3>
+                            </div>
+                              <div class="event-details">
+                                <div class="event-details-time">1700 IST</div>
+                                <div class="event-details-place">VNIT, CSE Dept.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="event-fill">
+                            <div class="event-left">
+                              <div class = "event-date-month">SEP</div>
+                              <div class = "event-date-num">22</div>
+                            </div>
+                            <div class="event-right">
+                              <div class="event-heading">
+                                <h3 class ="event-hcontent">
+                                  Recruitment for MAG.COM
+                                </h3>
+                            </div>
+                              <div class="event-details">
+                                <div class="event-details-time">1700 IST</div>
+                                <div class="event-details-place">VNIT, CSE Dept.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="event-fill">
+                            <div class="event-left">
+                              <div class = "event-date-month">SEP</div>
+                              <div class = "event-date-num">22</div>
+                            </div>
+                            <div class="event-right">
+                              <div class="event-heading">
+                                <h3 class ="event-hcontent">
+                                  Recruitment for MAG.COM
+                                </h3>
+                            </div>
+                              <div class="event-details">
+                                <div class="event-details-time">1700 IST</div>
+                                <div class="event-details-place">VNIT, CSE Dept.</div>
+                              </div>
+                            </div>
+                          </div><div class="event-fill">
+                            <div class="event-left">
+                              <div class = "event-date-month">SEP</div>
+                              <div class = "event-date-num">22</div>
+                            </div>
+                            <div class="event-right">
+                              <div class="event-heading">
+                                <h3 class ="event-hcontent">
+                                  Recruitment for MAG.COM
+                                </h3>
+                            </div>
+                              <div class="event-details">
+                                <div class="event-details-time">1700 IST</div>
+                                <div class="event-details-place">VNIT, CSE Dept.</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <!-- Gallery -->
+                  <section id="gallery">
+                    <h2 class="heading2">Gallery</h2>
+                    <div class="project">
+                      <div class="project_navigation">
+                        <div class="item  col-sm-4 col-xs-12">
+                          <figure>
+                            <!-- Your picture -->
+                            <img src="{% static 'IMG/pic5.jpg' %}"  alt="Iridescence" class="img img-responsive" />
+                            <!-- Picture's description below this one -->
+
+                          </figure>
+                        </div>
+                        <div class="item col-sm-4 col-xs-12">
+                          <figure>
+                            <!-- Your picture -->
+                            <img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/20799329_1371794426251889_8423880719191283148_n.jpg?oh=4eaa22f9a36640c5807e3a98f23d459a&oe=5A520882"  alt="Iridescence" class="img img-responsive" />
+                            <!-- Picture's description below this one -->
+
+                          </figure>
+                        </div>
+                        <div class="item  col-sm-4 col-xs-12">
+                          <figure>
+                            <!-- Your picture -->
+                            <img src="https:scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/13925188_1015695891861746_5231678419508593087_n.jpg?oh=cd3ededa01833821455b5d6beb7ce6fe&oe=5A54134B"  alt="Iridescence" class="img img-responsive" />
+                            <!-- Picture's description below this one -->
+
+                          </figure>
+                        </div>
+                        <div class="item  col-sm-4 col-xs-12">
+                          <figure>
+                            <!-- Your picture -->
+                            <img src="{% static 'IMG/pic5.jpg' %}"  alt="Iridescence" class="img img-responsive" />
+                            <!-- Picture's description below this one -->
+                          </figure>
+                        </div>
+                        <div class="item   col-sm-4 col-xs-12">
+                          <figure>
+                            <!-- Your picture -->
+                            <img src="{% static 'IMG/pic5.jpg' %}"  alt="Iridescence" class="img img-responsive" />
+                            <!-- Picture's description below this one -->
+                          </figure>
+                        </div>
+                        <div class="item   col-sm-4 col-xs-12">
+                          <figure>
+                            <!-- Your picture -->
+                            <img src="{% static 'IMG/pic5.jpg' %}"  alt="Iridescence" class="img img-responsive" />
+                            <!-- Picture's description below this one -->
+                          </figure>
+                        </div>
+                      </div>
+
+
+
+                    </div>
+                  </section>
+
+
+
+
+
+                  <!-- Parallax Section -->
+                  <div id="code">
+
+                    <section id="coninfo">
+                      <div>
+                        <h2 class="heading2">Contact Us!!</h2>
+                        <form class="myform" action="">
+                            <input type="text" placeholder="Name" name="name" required><br>
+                            <input type="email" placeholder="Email" name="email" required><br>
+                            <input type="text" placeholder="Message" name="message" id="message" required><br>
+                            <input type="submit" class="button button1" value="Submit">
+                        </form>
+                      </div>
+                    </section>
+                  </div>
+
+
+
+
+                </div>
+              </div>
+
+    </body>
+
+
+      <script src="{% static 'JS/jquery-1.11.3.min.js' %}"></script>
+      <script src="{% static 'JS/bootstrap.min.js' %}"></script>
+      <script src="{% static 'JS/animsition.min.js' %}"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+      <script src="{% static 'JS/jquery.magnific-popup.min.js' %}"></script>
+      <script src="{% static 'JS/jquery.countdown.min.js' %}"></script>
+      <script src="{% static 'JS/twitterFetcher_min.js' %}"></script>
+      <script src="{% static 'JS/masonry.pkgd.min.js' %}"></script>
+      <script src="{% static 'JS/imagesloaded.pkgd.min.js' %}"></script>
+      <script src="{% static 'JS/jquery.flexslider-min.js' %}"></script>
+
+      <script src="{% static 'JS/jqinstapics.min.js' %}"></script>
+      <script src="{% static 'JS/script.js' %}"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+      <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+      <script>
+
+        //scroll
+            // script is now loaded and executed.
+            // put your dependent JS here.
+              /* ------------------------------------- */
+          /* ScrollToTop   ................... */
+          /* ------------------------------------- */
+
+            $('.up').on('click', function() {
+              $('#rightSide').animate({
+                  scrollTop: 0
+              }, 500,'easeInExpo');
+              if($(window).width() < 1024) {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 500,'easeInExpo');
+              }
+              return false;
+            });
+
+
+
+
+
+            $("#scrollbutton2").on("click",function(){
+              $('#Sides').animate({
+                            scrollLeft: -$("#rightSide").offset().left
+                        }, 900,'easeInOutCubic');
+            });
+            $("#scrollbutton").on("click",function(){
+              $('#Sides').animate({
+                            scrollLeft: $("#rightSide").offset().left
+                        }, 1000,'easeInOutCubic');
+            });
+
+
+      </script>
+
+
+  </body>
+</html>
