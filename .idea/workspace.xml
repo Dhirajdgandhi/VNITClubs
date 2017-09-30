@@ -2,193 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bfe9060-ca32-4fbf-8379-61a5ee0d3fad" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/animsition.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/default-skin/default-skin.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/default-skin/default-skin.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/default-skin/default-skin.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/default-skin/preloader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/flexslider.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/fonts/flexslider-icon.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/fonts/flexslider-icon.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/fonts/flexslider-icon.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/fonts/flexslider-icon.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/fonts/got.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/fonts/ionicons.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/fonts/ionicons.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/fonts/ionicons.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/fonts/ionicons.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/homepage.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/icon.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/ionicons.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/jquery.mCustomScrollbar.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/magnific-popup.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/scss/_media.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/scss/_mixins.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/scss/_style.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/scss/_var.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/scss/theme-Dark.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/scss/theme-FuchiStudio.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/scss/theme-Gossime.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/scss/theme-MariBlue.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/scss/theme-Mosqlue.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/scss/theme-Mountise.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/scss/theme-NeonSun.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/scss/theme-Rradilet.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/scss/theme-vooBush.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/shar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/singlePageTemplate.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/css/theme-Dark.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/1400-2000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/1400x2000.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/1920x1280.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/1920x1280.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/404.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/600x600.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/Game-of-Clubs.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/IICHE.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/MAG_Head.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/agency-particles.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/agency.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/app.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/app1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/app2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/app3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/app4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/app5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/app6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/art.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/astronomy.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/avatar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/avatar1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/bride-shoes.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/bride.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/bride.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/capture.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/client.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/client1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/client2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/client3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/client4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/coffee-photo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/couple.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/cross-jesus-wedding-crucifix.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/dance.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/description.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/description.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/description.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/drama.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/entrepreneur.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/event.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/facebook.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/favicon-114.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/favicon-144.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/favicon-57.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/favicon-72.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/favicon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/food-couple-sweet-married.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/food-plate-yellow-white.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/googleplus.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/groom.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/guitar.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/hand-taking-photo-photography-vintage.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/iPhone.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/icon-zoom-dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/icon-zoom-out-dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/icon-zoom-out.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/icon-zoom.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/icon_map.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/ieee.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/instagram.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/iphone.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/iphone1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/iphone2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/iphone3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/linkedin.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/loago.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/logo2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/mag_cover.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/mag_logo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/mag_team.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/member.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/member1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/member2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/member3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/music.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/person-woman-art-creative.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/pexels-photo-14075.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/pexels-photo-14075.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/pexels-photo-24407.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/pexels-photo-29858.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/pexels-photo-41498.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/pexels-photo-41498.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/pexels-photo-51358.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/pexels-photo-51358.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/pexels-photo-57690.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/pexels-photo-57690.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/pexels-photo-99614.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/pexels-photo-99614.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/pic1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/pic2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/pic4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/pic5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/prayaas.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/preview.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/preview.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/programming.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/quiz.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/quotes.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/shells-massage-therapy-sand.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/soon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/table-chair.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/tesla.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/tower.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/tower.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/twitter.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/typing-vintage-technology-keyboard.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/velocity.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/wedding-location.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/wedding.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/wood-coffee-camera-desk-16510.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/wood-wooden-design-sculpture.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/img/writers.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/js/animsition.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/js/imagesloaded.pkgd.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/js/jqinstapics.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/js/jquery-1.11.3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/js/jquery.countdown.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/js/jquery.flexslider-min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/js/jquery.mCustomScrollbar.concat.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/js/jquery.magnific-popup.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/js/jquery.mousewheel.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/js/map.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/js/masonry.pkgd.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/js/npm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/js/particles.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/js/photoswipe-ui-default.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/js/photoswipe.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/js/script.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/js/spectragram.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/js/twitterFetcher_min.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/StudentPortalClubs.iml" afterPath="$PROJECT_DIR$/.idea/StudentPortalClubs.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clubsapp/static/CSS/theme-Dark.css" afterPath="$PROJECT_DIR$/clubsapp/static/CSS/theme-Dark.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clubsapp/templates/main.html" afterPath="$PROJECT_DIR$/clubsapp/templates/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/studentportal/settings.py" afterPath="$PROJECT_DIR$/studentportal/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -205,8 +23,18 @@
       <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clubsapp/templates/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="71" column="31" lean-forward="false" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+            <state relative-caret-position="307">
+              <caret line="71" column="30" lean-forward="false" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manage.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -215,8 +43,8 @@
       <file leaf-file-name="theme-Dark.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/clubsapp/static/CSS/theme-Dark.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="178" column="12" lean-forward="false" selection-start-line="178" selection-start-column="12" selection-end-line="178" selection-end-column="12" />
+            <state relative-caret-position="179">
+              <caret line="685" column="22" lean-forward="true" selection-start-line="685" selection-start-column="22" selection-end-line="685" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -292,32 +120,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="VNITClubs" type="b2602c69:ProjectViewProjectNode" />
               <item name="VNITClubs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VNITClubs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VNITClubs" type="462c0819:PsiDirectoryNode" />
-              <item name="clubsapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VNITClubs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VNITClubs" type="462c0819:PsiDirectoryNode" />
-              <item name="clubsapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VNITClubs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VNITClubs" type="462c0819:PsiDirectoryNode" />
-              <item name="clubsapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="CSS" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="VNITClubs" type="b2602c69:ProjectViewProjectNode" />
@@ -331,8 +141,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/Templates" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunDashboard">
@@ -354,7 +164,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="/usr/bin/python2.7" />
+      <option name="SDK_HOME" value="C:\Python27\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -381,18 +191,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-4" width="1366" height="731" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21969697" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2193646" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290938" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34158415" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.155" sideWeight="0.66837484" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26229507" sideWeight="0.66837484" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -463,6 +273,22 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/clubsapp/templates/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="71" column="31" lean-forward="false" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clubsapp/static/CSS/theme-Dark.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3026">
+          <caret line="178" column="12" lean-forward="false" selection-start-line="178" selection-start-column="12" selection-end-line="178" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/clubsapp/templates/main.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
@@ -614,18 +440,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/clubsapp/templates/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="71" column="31" lean-forward="false" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+        <state relative-caret-position="307">
+          <caret line="71" column="30" lean-forward="false" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/clubsapp/static/CSS/theme-Dark.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="178" column="12" lean-forward="false" selection-start-line="178" selection-start-column="12" selection-end-line="178" selection-end-column="12" />
+        <state relative-caret-position="179">
+          <caret line="685" column="22" lean-forward="true" selection-start-line="685" selection-start-column="22" selection-end-line="685" selection-end-column="22" />
           <folding />
         </state>
       </provider>
