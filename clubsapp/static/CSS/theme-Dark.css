@@ -64,7 +64,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: inherit;
   overflow:hidden;
 }
 
@@ -73,7 +73,7 @@ body {
   color: #fff;
   position: absolute;
   display: flex;
-  top:30%;
+  top:32%;
   left: 49%;
   height: 50px;
   font-size:30px;
@@ -172,7 +172,15 @@ width:-webkit-fill-available;
   }
 @media (max-width: 768px) {
   .h-content {
-
+    top:0;
+    display:block;
+  }
+  .h-content h1{
+    padding-top:15%;
+    font-size:45px;
+  }
+  .h-content #intro {
+    font-size: 18px;
   }
 
 }
@@ -677,6 +685,11 @@ footer {
 @media only screen and (max-width: 1600px) {
   .instagram_feed li {
     width: 33.33% !important; } }
+@media(min-width:1024px) and (max-width:1300px){
+  #scrollbutton{
+  top:45%;
+  }
+}
 @media only screen and (max-width: 1024px) {
   #leftSide {
     position: relative;
@@ -809,9 +822,20 @@ body{
 
     font-size: 0.75em;
      }
-#leftSide{
-  height:750px;
-}
+  #leftSide{
+    height:inherit;
+  }
+  .h-content #intro{
+
+    font-size:16px;
+    width:92%;
+
+  }
+  .h-content h1{
+
+    font-size:38px;
+    padding-top:10%;
+  }
   .main-logo {
     max-width: 180px; }
 
@@ -831,13 +855,14 @@ body{
 
   #countdown > div {
     padding: 15px 0 !important; } }
+
 @media only screen and (max-width: 320px) {
   body {
 
     font-size: 0.625em;
      }
 #leftSide{
-  height:900px;
+  height:inherit;
 }
 .photo-details #photo-heading {
           padding: 0;
