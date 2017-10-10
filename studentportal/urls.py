@@ -52,8 +52,8 @@ urlpatterns = [
     url(r'^register/(?P<comp_id>[0-9]+)/intern/$','portalapp.views.register'),
     url(r'^forgotpass/(?P<comp_id>[0-9]+)/intern/$','portalapp.views.forgotpass'),
 		
-	 url(r'^home/aboutus/$','portalapp.views.aboutus'),
-    url ( r'^clubs/$' , 'clubsapp.views.clubsMain' ) ,
+	url(r'^home/aboutus/$','portalapp.views.aboutus'),
+    url ( r'^clubs/' , include('clubsapp.urls') ) ,
 ]
 
 '''  

@@ -22,3 +22,9 @@ def clubsMain(request):
 
     return render_to_response ( 'main.html' , args )
 
+def clubsMag(request):
+    args = {'page_name': ""}
+    args.update ( csrf ( request ) )
+    args.update ( headerdb ( request ) )
+
+    return render_to_response ( 'mag.html' , args )

@@ -127,6 +127,26 @@ $( document ).ready(function() {
       });
     });
 
+  $(function() {
+      var $grid = $('.grid').imagesLoaded( function() {
+        $grid.masonry({
+          itemSelector: '.grid-item',
+
+
+        });
+      });
+
+
+
+      var $griditem= $grid.find('.grid-item');
+      $griditem.click(function() {
+        $(this).toggleClass('grid-item--gigante');
+        $(this).find('img').toggleClass('grid-item-img--gigante');
+        // trigger layout after item size changes
+        $grid.masonry();
+      });
+    });
+
  /* ------------------------------------- */
  /* Project Gallery   ................... */
  /* -------------------------------------

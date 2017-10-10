@@ -319,26 +319,7 @@ body {
 	font-size: 18px;
 	position:relative;
 }
-.sagar_p{
-	width: 100%;
-	height:auto;
-}
-.sagar_p img{
-	position: absolute;
 
-    left: 50%;
-    margin-left: -150px;
-
-    max-width: 300px;
-	max-height: 300px;
-	border-radius:50%;
-	margin-top:-10em;
-	border:10px solid #fff;
-}
-.about_p{
-	height:355px;
-	background-color:#fff;
-}
 /* About Section */
 
 .about {
@@ -369,22 +350,12 @@ body {
 #code{
 
 	background-image: url("https://somenuniquemag.files.wordpress.com/2016/07/notebook-writer-hd-wallpaper.jpg");
-		background-attachment: fixed;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-#code2{
-	background-color: #2D9AB7;
-	background-image: url(../images/parallax1.jpg);
-		background-attachment: fixed;
+	background-attachment: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 /* Parallax Section */
-.banner {
 
-
-}
 .parallax {
 	color: #FFFFFF;
 	text-align: right;
@@ -520,42 +491,6 @@ body {
 
 }
 
-/* More info */
-footer {
-	background-color: rgba(140, 127, 146, 0.62);
-	width:100%;
-	padding-top:10px;
-	padding-bottom:0px;
-}
-.footer_column {
-	width: 50%;
-	text-align: center;
-	padding-top: 30px;
-	float: left;
-}
-footer .footer_column h3 {
-	color: rgba(255, 255, 255, 0.9);;
-	text-align: center;
-
-}
-
-
-.cards {
-	width: 100%;
-	height: auto;
-	max-width: 300px;
-	max-height: 300px;
-	opacity:0.6;
-	border-radius:50%;
-}
-
-footer .footer_column p {
-	line-height: 25px;
-	font-weight: bold;
-	color: rgba(255, 255, 255, 0.8);
-	text-align :center;
-}
-
 .copyright {
 	text-align: center;
 	padding-top: 55px;
@@ -594,9 +529,6 @@ footer .footer_column p {
 	cursor: pointer;
 }
 
-footer {
-	display: inline-block;
-}
 .hidden {
 	display: none;
 }
@@ -746,60 +678,56 @@ footer {
 
 /* Small Desktops */
 @media (min-width: 768px) and (max-width: 1096px) {
-.text_column {
-	width: 100%;
-}
-.thumbnail {
-	width: 50%;
-}
-.text_column {
-	width: 100%;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
+	.thumbnail {
+		width: 50%;
+	}
+	.text_column {
+		width: 100%;
+		margin-top: 0px;
+		margin-right: 0px;
+		margin-bottom: 0px;
+		margin-left: 0px;
+		padding-top: 0px;
+		padding-right: 0px;
+		padding-bottom: 0px;
+		padding-left: 0px;
+	}
+
+	.parallax_para{
+		width:50%;
+	}
 }
 
-.parallax_para{
-	width:50%;
-}
-}
+@media (max-width:630px) {
 
-@media (max-width:630px)
-{
-
-.container header nav {
-	margin-top: -1em;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	width: 100%;
-	float: none;
-	overflow-x: hidden;
-	display: inline-block;
-	background: rgba(94, 50, 105, 0.67);
-}
-header nav ul {
-	padding: 0px;
-	float: none;
-}
-nav ul li {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	width: 100%;
-	text-align: center;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	border-top:none;
-	border-left:none;
-	border-right:none;
-}
+	.container header nav {
+		margin-top: -1em;
+		margin-right: 0px;
+		margin-bottom: 0px;
+		margin-left: 0px;
+		width: 100%;
+		float: none;
+		overflow-x: hidden;
+		display: inline-block;
+		background: rgba(94, 50, 105, 0.67);
+	}
+	header nav ul {
+		padding: 0px;
+		float: none;
+	}
+	nav ul li {
+		margin-top: 0px;
+		margin-right: 0px;
+		margin-bottom: 0px;
+		margin-left: 0px;
+		width: 100%;
+		text-align: center;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		border-top:none;
+		border-left:none;
+		border-right:none;
+	}
 }
 
 .resume{
@@ -1041,11 +969,7 @@ nav ul li {
 	background-color: black;
 }
 
-/*work*/
-#work {
-	background-color: whitesmoke;
-	font-size: 15px;
-}
+
 .event-right{
 
 	display:block;
@@ -1104,31 +1028,6 @@ nav ul li {
 {
 	border:3px solid rgb(24, 31, 69)
 }
-.myform2 input{
-	width:80%;
-	height:30px;
-	background-color:rgba(253, 253, 253, 1);
-	border-radius:0px;
-	margin-bottom:10px;
-	border:3px solid #fff;
-	padding-left:10px;
-	font-weight:bold;
-	color:#31708f;
-	transition: all 0.3s linear;
-
-}
-
-.myform2 input:focus{
-	background-color: #FEFEFE;
-	color: rgba(0, 0, 0, 0.74);
-	cursor: pointer;
-}
-.myform2 input:hover
-{
-	border:3px solid #286090;
-	color:#286090;
-	font-weight:inherit;
-}
 #message{
 	padding-bottom:150px;
 	padding-top:10px;
@@ -1137,7 +1036,7 @@ nav ul li {
 
 /* More info */
 footer {
-	background-color: rgba(140, 127, 146, 0.62);
+	background-color: #333;
 	width:100%;
 	padding-top:10px;
 	padding-bottom:0px;
@@ -1145,34 +1044,32 @@ footer {
 .footer_column {
 	width: 50%;
 	text-align: center;
-	padding-top: 30px;
+	padding-top: 20px;
 	float: left;
 }
 footer .footer_column h3 {
 	color: rgba(255, 255, 255, 0.9);;
 	text-align: center;
+	padding-bottom:20px;
 
 }
 
 .cards {
 	width: 100%;
 	height: auto;
-	max-width: 300px;
-	max-height: 300px;
-	opacity:0.6;
+	max-width: 200px;
+	max-height: 200px;
 	border-radius:50%;
 }
 
 footer .footer_column p {
-	padding-left: 30px;
-	padding-right: 30px;
-	line-height: 25px;
-	font-weight: bold;
-	margin-left: 20px;
-	margin-right: 20px;
-	color: rgba(255, 255, 255, 0.8);;
-	background-color: rgba(255, 255, 255, 0);
-	text-align :center;
+
+	color: #fff;
+	padding-bottom:20px;
+	font-size:18px;
+	font-weight:700;
+	justify-content:center;
+	display:flex;
 }
 
 .copyright {
@@ -1213,9 +1110,7 @@ footer .footer_column p {
 	cursor: pointer;
 }
 
-footer {
-	display: inline-block;
-}
+
 .hidden {
 	display: none;
 }
@@ -1555,18 +1450,23 @@ nav ul li {
 
 .quick{
 	width:100%;
+	padding:40px 30px 40px 30px;
+	background-image:url("../IMG/work.jpg");
+    background-attachment:fixed;
+    background-position:center;
+    background-size:auto;
 }
 
 .quickcontact{
 	width:100%;
 	margin-left:0px;
 	margin-right:0px;
-	background-color:rgb(245, 175, 175);
+	background-color:rgba(218, 210, 210, 0.96);
 	height:auto;
 	display:inline-block;
 	padding-top:10px;
 	padding-bottom:10;
-	padding-left:20px;
+	padding-left:40px;
 	padding-right:20px;
 	margin-bottom:-8px;
 }
@@ -1574,7 +1474,7 @@ nav ul li {
 	width:100%;
 	margin-left:0px;
 	margin-right:0px;
-	background-color:#ece7e7;
+	background-color:rgba(241, 123, 79, 0.98);
 	height:auto;
 	display:inline-block;
 	padding-top:10px;
@@ -1582,6 +1482,10 @@ nav ul li {
 	padding-left:20px;
 	padding-right:20px;
 	margin-bottom:-8px;
+}
+.quick h2{
+	font-size:25px;
+	border-top:
 }
 .idul{
 	padding-top:10px;
@@ -1602,39 +1506,86 @@ nav ul li {
 #mycarousel{
 	background-color:rgba(0,0,0,0);
 }
-@media (max-width:767px){
-	.quick{
-		text-align:center;
-	}
-	.quick h2{
-		text-align:center;
-		padding-top:25px;
-		padding-bottom:10px;
-		color:white
-	}
-	.quickcontact{
-		text-align:center;
-	}
 
-	.quickid{
-		text-align:center;
-	}
-	.parallax_para{
-		text-align:center;
-		width:80%;
-		line-height:18px;
-	}
+
+
+#gallery{
+	display:block;
+	background-color: whitesmoke;
+	padding-top: 45px;
 }
+.gallery-inner{
+	display:block;
+	position:relative;
+	background-color: black;
+}
+
+
+.event-right{
+
+	display:block;
+}
+
+
+.event-fill{
+	width:90%;
+	float:left;
+	display:flex;
+	padding-bottom:50px;
+
+}
+.event-left{
+	width:20%;
+}
+.event-date-month{
+	font-weight:bold;
+	color:#c74848;
+	font-size:18px;
+	text-align:left;
+
+}
+.event-date-num{
+	color:#292a2b;
+	font-size:20px;
+	font-weight:800;
+	text-align:justify;
+	margin-top: -10px;
+	letter-spacing:1px;
+	padding-left:0px;
+	padding-top:4px;
+
+
+}
+.event-right {
+	width: 80%;
+}
+
+.event-heading h3{
+	font-weight:400;
+	font-size:20px;
+	color:#121212;
+
+}
+.event-details{
+	font-size:14px;
+	color:#6389b7;
+}
+.event-details-time{
+	float:left;
+	padding-left:0px;
+	padding-right:20px;
+}
+
 @media (min-width:768px){
 	.panel-heading{
 	padding-top:20px;
 	padding-bottom:20px;
 }
 .quick h2{
-	font-weight:900;
-	color:#fff;
+	color:#121212;
 	padding-left:30px;
 	padding-bottom:30px;
+	font-size:30px;
 }
 	.quickcontact{
 	width:50%;
@@ -1654,71 +1605,37 @@ nav ul li {
 	padding-left:70px;
 }
 }
-@media (min-width:1200px){
-	.skills_icon{
-		padding-top:45px;
+
+@media (max-width:480px){
+	.quick{
+		text-align:center;
+	}
+	.quickcontact{
+		text-align:center;
+	}
+
+	.quickid{
+		text-align:center;
+	}
+	.parallax_para{
+		text-align:center;
+		width:80%;
+		line-height:18px;
+	}
+	.event-inner h2{
+		padding-bottom:10px;
+	}
+	.event-fill{
+		margin-bottom:-30px;
+	}
+	.event-details-time{
+		padding-left
 	}
 }
 
 
-#gallery{
-	display:block;
-	background-color: whitesmoke;
-	padding-top: 45px;
-}
-.gallery-inner{
-	display:block;
-	position:relative;
-	background-color: black;
-}
-
-/*work*/
-#work {
-	background-color: whitesmoke;
-	font-size: 15px;
-}
-.event-right{
-
-	display:block;
-}
-
-
-.event-fill{
-	width:90%;
-	float:left;
-	display:flex;
-	padding-bottom:50px;
-
-}
-.event-left{
-	width:20%;
-}
-.event-date-month{
-	font-weight:bold;
-	color:#ba4343;
-	font-size:x-large;
-	text-align:left;
-
-}
-.event-date-num{
-	color:#292a2b;
-	font-size:xx-large;
-	text-align:justify;
-	margin-top: -10px;
-	letter-spacing:3px;
-	padding-left:0px;
-	padding-top:4px;
-
-
-}
-.event-right {
-	width: 80%;
-}
-
-.event-heading h3{
-	font-weight:bold;
-
-}
-.event-details{
-	font-size:medium;
+@media (min-width:1200px){
+	.skills_icon{
+		padding-top:45px;
+	}
 }

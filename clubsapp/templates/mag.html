@@ -28,6 +28,7 @@
       <link href="{% static 'CSS/singlePageTemplate.css' %}" rel="stylesheet" type="text/css">
       <link href="{% static 'CSS/homepage.css' %}" rel="stylesheet" type="text/css">
       <link href="{% static 'CSS/shar.css' %}" rel="stylesheet" type="text/css">
+      <link href="{% static 'CSS/work.css' %}" rel="stylesheet" type="text/css">
 
       <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
       <script>var __adobewebfontsappname__="dreamweaver"</script>
@@ -115,12 +116,12 @@
                         <div class="footer_column" id="team">
                           <h3><b>ABCD EFGH</b></h3>
                           <img src="https://www.w3schools.com/css/img_avatar.png" alt="" class="cards" id="mempic">
-                          <p>Faculty Coordinator<br><strong>MAG.COM</strong></p>
+                          <p>Faculty Coordinator</p>
                         </div>
                         <div class="footer_column">
                           <h3><b>HIJK LMNO</b></h3>
                           <img src="https://www.w3schools.com/css/img_avatar.png" alt="" class="cards"  id="mempic">
-                          <p>Club President<br><strong>MAG.COM</strong></p>
+                          <p>Club President</p>
                         </div>
 
                   </footer>
@@ -128,78 +129,143 @@
 
 
                   <!-- Work -->
+                 <!-- Work -->
                   <section id="work" class="work">
-                    <h2 class="heading2">Work</h2>
-                    <div class="event-inner">
-                      <p class="text_column">Here are a few mentions of the amazing work by Mag.Com club:</p>
-                      <div class="project">
-                      <div class="project_navigation">
-                        <div class="item col-sm-6 col-xs-12">
-                          <figure>
-                            <!-- Your picture -->
-                            <img src="{% static 'IMG/pic4.jpg' %}"  alt="Iridescence" class="img img-responsive" />
-                            <!-- Picture's description below this one -->
-                            <figcaption class="caption">
-                              <div class="photo-details">
-                                <h4>Iridescence</h4>
-                                <span>The Art Club</span>
-                              </div>
-                              <a href="{% static 'IMG/pic4.jpg' %}" target="_blank" class="highlight"   id="golden">VIEW</a>
+                    <h2 class="work-heading">Work</h2>
 
-                            </figcaption>
-                          </figure>
-                        </div>
-                        <div class="item col-sm-6 col-xs-12">
-                          <figure>
-                            <!-- Your picture -->
-                            <img src="{% static 'IMG/pic4.jpg"  alt="Iridescence" class="img img-responsive" />
-                            <!-- Picture's description below this one -->
-                            <figcaption class="caption">
-                              <div class="photo-details">
-                                <h4>Iridescence</h4>
-                                <span>The Art Club</span>
+                      <div class="panel-group" id="accordion">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                              <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                    Collapsible Group 1</a>
+                                  </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse in">
+                                  <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                  commodo consequat.</div>
+                                </div>
                               </div>
-                              <a href="{% static 'IMG/pic4.jpg" target="_blank" class="highlight"   id="golden">VIEW</a>
-
-                            </figcaption>
-                          </figure>
-                        </div>
-                        <div class="item col-sm-6 col-xs-12">
-                          <figure>
-                            <!-- Your picture -->
-                            <img src="{% static 'IMG/pic4.jpg"  alt="Iridescence" class="img img-responsive" />
-                            <!-- Picture's description below this one -->
-                            <figcaption class="caption">
-                              <div class="photo-details">
-                                <h4>Iridescence</h4>
-                                <span>The Art Club</span>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                              <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                    Collapsible Group 1</a>
+                                  </h4>
+                                </div>
+                                <div id="collapse2" class="panel-collapse collapse in">
+                                  <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                  commodo consequat.</div>
+                                </div>
                               </div>
-                              <a href="{% static 'IMG/pic5.jpg' %}" target="_blank" class="highlight"   id="golden">VIEW</a>
-
-                            </figcaption>
-                          </figure>
-                        </div>
-                        <div class="item col-sm-6 col-xs-12">
-                          <figure>
-                            <!-- Your picture -->
-                            <img src="{% static 'IMG/pic4.jpg"  alt="Iridescence" class="img img-responsive" />
-                            <!-- Picture's description below this one -->
-                            <figcaption class="caption">
-                              <div class="photo-details">
-                                <h4>Iridescence</h4>
-                                <span>The Art Club</span>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                              <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                    Collapsible Group 1</a>
+                                  </h4>
+                                </div>
+                                <div id="collapse3" class="panel-collapse collapse in">
+                                  <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                  commodo consequat.</div>
+                                </div>
                               </div>
-                              <a href="{% static 'IMG/pic5.jpg' %}" target="_blank" class="highlight"   id="golden">VIEW</a>
+                            </div><div class="col-lg-3 col-md-4 col-sm-6">
+                              <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                                    Collapsible Group 1</a>
+                                  </h4>
+                                </div>
+                                <div id="collapse4" class="panel-collapse collapse in">
+                                  <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                  commodo consequat.</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                              <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                    Collapsible Group 1</a>
+                                  </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse in">
+                                  <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                  commodo consequat.</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                              <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+                                    Collapsible Group 1</a>
+                                  </h4>
+                                </div>
+                                <div id="collapse6" class="panel-collapse collapse in">
+                                  <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                  commodo consequat.</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                              <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+                                    Collapsible Group 1</a>
+                                  </h4>
+                                </div>
+                                <div id="collapse6" class="panel-collapse collapse in">
+                                  <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                  commodo consequat.</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                              <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+                                    Collapsible Group 1</a>
+                                  </h4>
+                                </div>
+                                <div id="collapse6" class="panel-collapse collapse in">
+                                  <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                  commodo consequat.</div>
+                                </div>
+                              </div>
+                            </div>
 
-                            </figcaption>
-                          </figure>
-                        </div>
+                          </div>
                       </div>
 
-
-
-                    </div>
-                    </div>
                   </section>
 
                     <!-- Events -->
@@ -353,60 +419,52 @@
                   </section>
 
                   <!-- Gallery -->
-                  <section id="gallery">
+                  <!-- Gallery -->
+                  <section id="gallery_club projectNavigation">
                     <h2 class="heading2">Gallery</h2>
-                    <div class="project">
-                      <div class="project_navigation">
-                        <div class="item  col-sm-4 col-xs-12">
-                          <figure>
-                            <!-- Your picture -->
-                            <img src="{% static 'IMG/pic5.jpg' %}"  alt="Iridescence" class="img img-responsive" />
-                            <!-- Picture's description below this one -->
 
-                          </figure>
-                        </div>
-                        <div class="item col-sm-4 col-xs-12">
-                          <figure>
-                            <!-- Your picture -->
-                            <img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/20799329_1371794426251889_8423880719191283148_n.jpg?oh=4eaa22f9a36640c5807e3a98f23d459a&oe=5A520882"  alt="Iridescence" class="img img-responsive" />
-                            <!-- Picture's description below this one -->
+                    <div class="grid">
 
-                          </figure>
-                        </div>
-                        <div class="item  col-sm-4 col-xs-12">
-                          <figure>
-                            <!-- Your picture -->
-                            <img src="https:scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/13925188_1015695891861746_5231678419508593087_n.jpg?oh=cd3ededa01833821455b5d6beb7ce6fe&oe=5A54134B"  alt="Iridescence" class="img img-responsive" />
-                            <!-- Picture's description below this one -->
+                      <div class="grid-item">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
 
-                          </figure>
-                        </div>
-                        <div class="item  col-sm-4 col-xs-12">
-                          <figure>
-                            <!-- Your picture -->
-                            <img src="{% static 'IMG/pic5.jpg' %}"  alt="Iridescence" class="img img-responsive" />
-                            <!-- Picture's description below this one -->
-                          </figure>
-                        </div>
-                        <div class="item   col-sm-4 col-xs-12">
-                          <figure>
-                            <!-- Your picture -->
-                            <img src="{% static 'IMG/pic5.jpg' %}"  alt="Iridescence" class="img img-responsive" />
-                            <!-- Picture's description below this one -->
-                          </figure>
-                        </div>
-                        <div class="item   col-sm-4 col-xs-12">
-                          <figure>
-                            <!-- Your picture -->
-                            <img src="{% static 'IMG/pic5.jpg' %}"  alt="Iridescence" class="img img-responsive" />
-                            <!-- Picture's description below this one -->
-                          </figure>
-                        </div>
                       </div>
+                      <div class="grid-item">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" />
 
+                      </div>
+                      <div class="grid-item">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" />
 
+                      </div>
+                      <div class="grid-item">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
 
+                      </div>
+                      <div class="grid-item">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
+
+                      </div>
+                      <div class="grid-item">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
+
+                      </div>
+                      <div class="grid-item">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
+
+                      </div>
+                      <div class="grid-item">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
+
+                      </div>
+                      <div class="grid-item">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" />
+
+                      </div>
                     </div>
+
+
+
                   </section>
 
 
