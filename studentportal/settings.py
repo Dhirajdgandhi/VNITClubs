@@ -26,7 +26,14 @@ SECRET_KEY = 'uics1l*7tnrwc0#wl705d4tluz@bn!-qxh$^qcsz(*qdl7z4zr'
 DEBUG = True
 TEMPLATE_DEBUG=DEBUG
 
-ALLOWED_HOSTS = ['127.0.0.1', '192.168.2.79', '0.0.0.0','studentportal.vnit.ac.in', 'www.studentportal.vnit.ac.in', '210.212.165.236', '10.18.0.8']
+ALLOWED_HOSTS = ['127.0.0.1',
+                 '192.168.2.79',
+                 '0.0.0.0',
+                 'studentportal.vnit.ac.in',
+                 'www.studentportal.vnit.ac.in',
+                 '210.212.165.236',
+                 '10.18.0.8'
+                 ]
 
 #Email settings
 EMAIL_USE_TLS = True
@@ -109,28 +116,29 @@ DATABASES = {
 }
 
 '''
-#
+
+DATABASES = {
+    'default': {
+       'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'portal_storage',
+        'USER' : 'studentportal',
+        'PASSWORD' : 'studentportal123',
+        'HOST' : 'localhost',
+        'PORT' : '3306',
+    }
+}
+
+
 # DATABASES = {
 #     'default': {
-#        'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'portal_storage',
-#         'USER' : 'studentportal',
-#         'PASSWORD' : 'studentportal123',
+#        'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
+#         'USER' : 'root',
+#         'PASSWORD' : 'root',
 #         'HOST' : 'localhost',
 #         'PORT' : '3306',
 #     }
 # }
-
-
-DATABASES = {
-    'default': {
-       'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
-        'USER' : 'root',
-        'PASSWORD' : 'root',
-        'HOST' : 'localhost',
-        'PORT' : '3306',
-    }
 
 '''
 DATABASES = {

@@ -1,8 +1,6 @@
-from django.conf.urls import include, url
-from . import views
+from django.conf.urls import url
 
 urlpatterns = [
-
-    url(r'^$', views.clubsMain ),
-    url(r'^mag$', views.clubsMag ),
+    url(r'^$' , 'clubsapp.views.clubs' ),
+    url(r'^(?P<clubName>.*)/$', 'clubsapp.views.clubHome'),
 ]
