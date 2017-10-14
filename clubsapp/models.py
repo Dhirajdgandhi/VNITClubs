@@ -32,8 +32,12 @@ class Club ( models.Model ):
     yearOfStart = models.DateField ( null=True )
     president = models.ForeignKey ( Personinformation , related_name="president" )
     clubType = models.TextField ( max_length=45 , null=True )
-    facultyInCharge = models.ForeignKey ( Personinformation , related_name="facultyInCharge" )
-    Contact = models.ForeignKey ( ContactDetails )
+    facultyInCharge1 = models.ForeignKey ( Personinformation , related_name="facultyInCharge1" )
+    facultyInCharge2 = models.ForeignKey(Personinformation, related_name="facultyInCharge2", null=True )  #some clubs have two f.i
+    Contact = models.ForeignKey ( ContactDetails )   #foreign key to ContactDetails
+    Event = models.ForeignKey ( Event )    #foreign key to Event
+    Work = models.ForeignKey ( Work ) #foreign key to work
+    ClubMember = models.ForeignKey ( ClubMember) #foreign key to ClubMember
 
     def __unicode__ ( self ):
         return self.longName
@@ -63,16 +67,19 @@ class Event ( models.Model ):
     shortName = models.TextField ( max_length=45 , null=True )
     longName = models.TextField ( max_length=45 , null=True )
     displayName = models.TextField ( max_length=45 , null=True )
-    photograph = models.ForeignKey ( Photos )
-    place = models.TextField ( )
+    place = models.TextField (max_length=100 , null=True )
+    time = models.TimeField ()
+
+
 
     def __unicode__ ( self ):
         return self.longName
 
 
-class Achievements ( models.Model ):
+class Work ( models.Model ):
     id = models.AutoField ( primary_key=True , null=False )
     club = models.ForeignKey ( Club , null=False )
+    heading = models.TextField ( max_length=100 , null = False)
     description = models.TextField ( null=False )
     date = models.DateField ( null=True )
 
