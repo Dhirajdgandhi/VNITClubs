@@ -1,5 +1,5 @@
 
-csv_filepathname="Company Details for batch 2016-2017 (1).csv"
+#csv_filepathname="Company Details for batch 2016-2017 (1).csv"
 #CSE_Personal_data_testing.csv
 #Student_portal-company_table.csv
 django_project_home = "/home/portal/studentportal/studentportal/"
