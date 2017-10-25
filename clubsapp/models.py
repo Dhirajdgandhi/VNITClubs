@@ -62,6 +62,9 @@ class Event ( models.Model ):
     displayName = models.TextField ( max_length=45 , null=True )
     place = models.TextField (max_length=100 , null=True )
     time = models.TimeField ()
+    day = models.TextField(max_length=2 , null=False)
+    month = models.TextField(max_length=3, null=False)
+    year = models.TextField(max_length=4, null=False)
 
     def __unicode__ ( self ):
         return self.longName
