@@ -8,7 +8,7 @@ class ContactDetails ( models.Model ):
     telephone2 = models.CharField ( max_length=15 , null=True )
 
     def __unicode__ ( self ):
-        return self.email + self.website
+        return self.email + ' ' + self.website
 
 class Post ( models.Model ):
     id = models.AutoField ( primary_key=True , null=False )
@@ -25,12 +25,12 @@ class Club ( models.Model ):
     shortName = models.TextField ( max_length=45 , null=True )
     longName = models.TextField ( max_length=45 , null=True )
     displayName = models.TextField ( max_length=45 , null=True )
-    aboutUs = models.TextField ( max_length=200 , null=True )
-    yearOfStart = models.DateField ( null=True )
+    aboutUs = models.TextField ( max_length=2000 , null=True )
+    yearOfStart = models.TextField( max_length=6,null=True )
     president = models.ForeignKey ( Personinformation , related_name="president" )
     clubType = models.TextField ( max_length=45 , null=True )
-    facultyInCharge1 = models.ForeignKey ( Personinformation , related_name="facultyInCharge1" )
-    facultyInCharge2 = models.ForeignKey ( Personinformation , related_name="facultyInCharge2", null=True )  #some clubs have two f.i
+    facultyInCharge1 = models.TextField ( max_length=50 )
+    facultyInCharge2 = models.TextField ( max_length=50 , null=True )  #some clubs have two f.i
     contact = models.ForeignKey ( ContactDetails )   #foreign key to ContactDetails
 
     def __unicode__ ( self ):
@@ -62,9 +62,7 @@ class Event ( models.Model ):
     displayName = models.TextField ( max_length=45 , null=True )
     place = models.TextField (max_length=100 , null=True )
     time = models.TimeField ()
-    day = models.TextField(max_length=2 , null=False)
-    month = models.TextField(max_length=3, null=False)
-    year = models.TextField(max_length=4, null=False)
+    date = models.DateField()
 
     def __unicode__ ( self ):
         return self.longName

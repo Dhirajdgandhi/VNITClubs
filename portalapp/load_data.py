@@ -52,6 +52,7 @@ for row in dataReader:
 	c.recentdate = row[10]
 	c.save()
 	'''
+
 	c = company_table()
 	# c.ID = row[0]
 	c.company_name = row[1]

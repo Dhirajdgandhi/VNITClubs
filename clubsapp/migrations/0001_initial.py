@@ -7,7 +7,7 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('portalapp', '0010_auto_20171018_1819'),
+        ('portalapp', '0001_initial'),
     ]
 
     operations = [
@@ -37,6 +37,8 @@ class Migration(migrations.Migration):
                 ('aboutUs', models.TextField(max_length=200, null=True)),
                 ('yearOfStart', models.DateField(null=True)),
                 ('clubType', models.TextField(max_length=45, null=True)),
+                ('facultyInCharge1', models.TextField(max_length=50)),
+                ('facultyInCharge2', models.TextField(max_length=50, null=True)),
             ],
         ),
         migrations.CreateModel(
@@ -90,6 +92,7 @@ class Migration(migrations.Migration):
                 ('displayName', models.TextField(max_length=45, null=True)),
                 ('place', models.TextField(max_length=100, null=True)),
                 ('time', models.TimeField()),
+                ('date', models.DateField()),
             ],
         ),
         migrations.CreateModel(
@@ -141,16 +144,6 @@ class Migration(migrations.Migration):
             model_name='club',
             name='contact',
             field=models.ForeignKey(to='clubsapp.ContactDetails'),
-        ),
-        migrations.AddField(
-            model_name='club',
-            name='facultyInCharge1',
-            field=models.ForeignKey(related_name='facultyInCharge1', to='portalapp.Personinformation'),
-        ),
-        migrations.AddField(
-            model_name='club',
-            name='facultyInCharge2',
-            field=models.ForeignKey(related_name='facultyInCharge2', to='portalapp.Personinformation', null=True),
         ),
         migrations.AddField(
             model_name='club',

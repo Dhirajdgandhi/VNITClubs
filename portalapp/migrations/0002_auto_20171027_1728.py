@@ -8,23 +8,23 @@ import datetime
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('portalapp', '0010_auto_20171018_1819'),
+        ('portalapp', '0001_initial'),
     ]
 
     operations = [
         migrations.AlterField(
             model_name='experience_internship',
             name='timestamp',
-            field=models.DateTimeField(default=datetime.datetime(2017, 10, 18, 21, 41, 35, 42000)),
+            field=models.DateTimeField(default=datetime.datetime(2017, 10, 27, 17, 28, 35, 524000)),
         ),
         migrations.AlterField(
             model_name='experience_placement',
             name='timestamp',
-            field=models.DateTimeField(default=datetime.datetime(2017, 10, 18, 21, 41, 35, 42000)),
+            field=models.DateTimeField(default=datetime.datetime(2017, 10, 27, 17, 28, 35, 521000)),
         ),
         migrations.AlterField(
             model_name='forgotpasskeys',
             name='timestamp',
-            field=models.DateTimeField(default=datetime.datetime(2017, 10, 18, 21, 41, 35, 58000)),
+            field=models.DateTimeField(default=datetime.datetime(2017, 10, 27, 17, 28, 35, 528000)),
         ),
     ]
