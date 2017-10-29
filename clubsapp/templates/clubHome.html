@@ -221,22 +221,22 @@
                       <div class="">
                         <div class="quick">
                           <h1>Events</h1>
-
+                          {% load date_parse %}
 
                           {% for event in data%}
 
                           <div class="event-block">
                             <div class="event-fill">
                               <div class="event-left">
-                                <div class = "event-date-month">SEP</div>
-                                <div class = "event-date-num">22</div>
+                                <div class = "event-date-month">{{event.start_time|to_month}}</div>
+                                <div class = "event-date-num">{{event.start_time|to_day}}</div>
                               </div>
                               <div class="event-right">
                                 <div class="event-heading">
                                   <h3 class ="event-hcontent">{{event.name}}</h3>
                                 </div>
                                 <div class="event-details">
-                                  <div class="event-details-time">1700 IST</div>
+                                  <div class="event-details-time">{{event.start_time|to_time}}</div>
                                   <div class="event-details-place">{{event.place.name}}</div>
                                 </div>
                               </div>

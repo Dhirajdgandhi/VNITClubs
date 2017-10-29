@@ -6,6 +6,7 @@
         <list>
           <option value="clubsapp.views.csrf" />
           <option value="portalapp.views.django" />
+          <option value="clubsapp.templatetags.dateutil.parser" />
         </list>
       </option>
     </inspection_tool>
