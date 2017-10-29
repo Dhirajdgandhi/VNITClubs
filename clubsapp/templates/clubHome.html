@@ -29,6 +29,7 @@
       <link href="{% static 'CSS/homepage.css' %}" rel="stylesheet" type="text/css">
       <link href="{% static 'CSS/shar.css' %}" rel="stylesheet" type="text/css">
       <link href="{% static 'CSS/work.css' %}" rel="stylesheet" type="text/css">
+      <link href="{% static 'CSS/event.css' %}" rel="stylesheet" type="text/css">
 
       <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
       <script>var __adobewebfontsappname__="dreamweaver"</script>
@@ -212,158 +213,46 @@
 
                   </section>
 
+
                     <!-- Events -->
                   <section id="events" class="events">
 
                     <div class="event-inner">
-                      <div class="quick">
-                        <div class="quickcontact">
-                          <h2>Upcoming Events</h2>
+                      <div class="">
+                        <div class="quick">
+                          <h1>Events</h1>
 
-                          <div class="event-fill">
-                            <div class="event-left">
-                              <div class = "event-date-month">SEP</div>
-                              <div class = "event-date-num">22</div>
-                            </div>
-                            <div class="event-right">
-                              <div class="event-heading">
-                                <h3 class ="event-hcontent">
-                                  Recruitment for MAG.COM
-                                </h3>
-                            </div>
-                              <div class="event-details">
-                                <div class="event-details-time">1700 IST</div>
-                                <div class="event-details-place">VNIT, CSE Dept.</div>
+
+                          {% for event in data%}
+
+                          <div class="event-block">
+                            <div class="event-fill">
+                              <div class="event-left">
+                                <div class = "event-date-month">SEP</div>
+                                <div class = "event-date-num">22</div>
                               </div>
+                              <div class="event-right">
+                                <div class="event-heading">
+                                  <h3 class ="event-hcontent">{{event.name}}</h3>
+                                </div>
+                                <div class="event-details">
+                                  <div class="event-details-time">1700 IST</div>
+                                  <div class="event-details-place">{{event.place.name}}</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class ="event-desp">
+                              {{event.description}}
                             </div>
                           </div>
-                          <div class="event-fill">
-                            <div class="event-left">
-                              <div class = "event-date-month">SEP</div>
-                              <div class = "event-date-num">22</div>
-                            </div>
-                            <div class="event-right">
-                              <div class="event-heading">
-                                <h3 class ="event-hcontent">
-                                  Recruitment for MAG.COM
-                                </h3>
-                            </div>
-                              <div class="event-details">
-                                <div class="event-details-time">1700 IST</div>
-                                <div class="event-details-place">VNIT, CSE Dept.</div>
-                              </div>
-                            </div>
-                          </div><div class="event-fill">
-                            <div class="event-left">
-                              <div class = "event-date-month">SEP</div>
-                              <div class = "event-date-num">22</div>
-                            </div>
-                            <div class="event-right">
-                              <div class="event-heading">
-                                <h3 class ="event-hcontent">
-                                  Recruitment for MAG.COM
-                                </h3>
-                            </div>
-                              <div class="event-details">
-                                <div class="event-details-time">1700 IST</div>
-                                <div class="event-details-place">VNIT, CSE Dept.</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="quickid">
-                          <h2>Past Events</h2>
-                          <div class="event-fill">
-                            <div class="event-left">
-                              <div class = "event-date-month">SEP</div>
-                              <div class = "event-date-num">22</div>
-                            </div>
-                            <div class="event-right">
-                              <div class="event-heading">
-                                <h3 class ="event-hcontent">
-                                  Recruitment for MAG.COM
-                                </h3>
-                            </div>
-                              <div class="event-details">
-                                <div class="event-details-time">1700 IST</div>
-                                <div class="event-details-place">VNIT, CSE Dept.</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="event-fill">
-                            <div class="event-left">
-                              <div class = "event-date-month">SEP</div>
-                              <div class = "event-date-num">22</div>
-                            </div>
-                            <div class="event-right">
-                              <div class="event-heading">
-                                <h3 class ="event-hcontent">
-                                  Recruitment for MAG.COM
-                                </h3>
-                            </div>
-                              <div class="event-details">
-                                <div class="event-details-time">1700 IST</div>
-                                <div class="event-details-place">VNIT, CSE Dept.</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="event-fill">
-                            <div class="event-left">
-                              <div class = "event-date-month">SEP</div>
-                              <div class = "event-date-num">22</div>
-                            </div>
-                            <div class="event-right">
-                              <div class="event-heading">
-                                <h3 class ="event-hcontent">
-                                  Recruitment for MAG.COM
-                                </h3>
-                            </div>
-                              <div class="event-details">
-                                <div class="event-details-time">1700 IST</div>
-                                <div class="event-details-place">VNIT, CSE Dept.</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="event-fill">
-                            <div class="event-left">
-                              <div class = "event-date-month">SEP</div>
-                              <div class = "event-date-num">22</div>
-                            </div>
-                            <div class="event-right">
-                              <div class="event-heading">
-                                <h3 class ="event-hcontent">
-                                  Recruitment for MAG.COM
-                                </h3>
-                            </div>
-                              <div class="event-details">
-                                <div class="event-details-time">1700 IST</div>
-                                <div class="event-details-place">VNIT, CSE Dept.</div>
-                              </div>
-                            </div>
-                          </div><div class="event-fill">
-                            <div class="event-left">
-                              <div class = "event-date-month">SEP</div>
-                              <div class = "event-date-num">22</div>
-                            </div>
-                            <div class="event-right">
-                              <div class="event-heading">
-                                <h3 class ="event-hcontent">
-                                  Recruitment for MAG.COM
-                                </h3>
-                            </div>
-                              <div class="event-details">
-                                <div class="event-details-time">1700 IST</div>
-                                <div class="event-details-place">VNIT, CSE Dept.</div>
-                              </div>
-                            </div>
-                          </div>
+                          {% endfor %}
                         </div>
                       </div>
                     </div>
                   </section>
 
-                  <!-- Gallery -->
-                  <!-- Gallery -->
+
+                  <!-- Gallery --
                   <section id="gallery_club projectNavigation">
                     <h2 class="heading2">Gallery</h2>
 
@@ -411,7 +300,7 @@
 
                   </section>
 
-
+<!-- gallery end -->
 
 
 
