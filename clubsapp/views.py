@@ -28,7 +28,7 @@ def clubs( request ):
 def fb_catch(url):
 
     #fb token
-    token = 'EAACEdEose0cBAOERMW3K7qov7F8Y0abyXwFYd1BJFIS8bHi6FYuYucysLWW4GhKjp5ZBvgp6yTVfP8ByG4uKgCDZAVODATPZBQEv1x8zkiC8tj0a5CCZAuyddz6BL8TVAG00urAAxYDgx45ZBrFDBtVHBRmdsVaQZBZBHeJl9MNBZBZCI2sRYHHeGP3nUhwqCdWgF200yf7mmrb0Xm1VPRY64'#updating url
+    token = 'EAACEdEose0cBABdsIX4MpKWAq1jBRibAdyM0Ne6EB0eXbNH5770IoidOYcp7aXZCpZBhZASd7ZCOJdayghhhPYEYjEAamZBvtP26taZAHhBejwr5a9NlgLGx44L2G7i2M3Iyz4Azrnxru0EdzqBUALAn5hYQtnZBxYNbdPUnj2B614ZAjJdc039RjDaQMx8OZCiQ07iZCMcWYcCOF2cqaKZA9zc'#updating url
     url = url + token
     #making req to fb
     jsondata = requests.get(url)
