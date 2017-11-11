@@ -232,9 +232,12 @@ width:-webkit-fill-available;
 /* ------------------------------------- */
 /* Project ................... */
 /* ------------------------------------- */
-.project, .portfolio, .swipe_portfolio {
-  position: relative;
-  padding: 15px 7.5px; }
+
+
+.price {
+  background: #1d2328; }
+
+
 #golden{
   color:#ffc107;
   padding:5px;
@@ -250,35 +253,38 @@ width:-webkit-fill-available;
     margin-bottom: 0px;
     cursor: pointer;
     height: auto;
+  }
+  .project .item img{
+    width:100%;
+    transition:all 0.9s;
 
+  }
+  .project .item:hover img{
+    transform:scale(1.1);
+    filter:blur(5px);
+
+  }
+  .project .item:hover .caption{
+    background-color:rgba(10, 17, 53, 0.58);
   }
     .project .item .caption {
       position: absolute;
-      width: calc(100% - 15px);
-      color: #fff;
-      overflow: hidden;
+      width: 100%;
       -webkit-transition: 0.3s;
       -ms-transition: 0.3s;
       -moz-transition: 0.3s;
       -o-transition: 0.3s;
-      transition: 0.3s;
-      background: rgb(247, 247, 247, 0);
-      top: 0;
-      height:-webkit-fill-available;
-      margin-top:20px;
+      transition: 2s;
+      height:inherit;
+      top:20%;
+      display:block;
 
 
     }
-
-    .project .item:hover .caption {
-        background-color:rgba(24, 31, 69, 0.8);
-      }
       .project .item .caption .photo-details {
         position: absolute;
-        top:0;
-        height:100%;
+        top:auto;
         text-align:center;
-
         -webkit-transition: 0.3s;
         -ms-transition: 0.3s;
         -moz-transition: 0.3s;
@@ -288,129 +294,25 @@ width:-webkit-fill-available;
         opacity:0;
 
       }
-      .project .item .caption .photo-details:hover{
+      .project .item:hover .caption .photo-details{
         opacity:1;
       }
         .photo-details #photo-heading {
           padding: 0;
-          margin: 12px;
-          background-color:rgba(42, 51, 97, 0);
-          font-size:30px;
+          top:0;
+          font-size:35px;
+          color:#f5f5f5
 
         }
         .photo-details p{
           text-align:center;
-          margin-left:30px;
-          margin-right:30px;
-          font-size:14px;
-          margin-bottom:12px;
+          margin-left:8%;
+          margin-right:8%;
+          font-size:16px;
+          color:#fff;
+          padding-bottom:20px;
 
         }
-
-      .project .item .caption .view {
-        margin: 20px 15px;
-        text-align: center;
-        height: 30px;
-        width: 60px;
-        line-height: 30px;
-        background: #181f45;
-        color: #fff;
-        font-size: 12px;
-        float: right;
-        font-weight: 600;
-
-      }
-
-    .project .item img {
-      width: 100%;
-
-    }
-  .project .project_info {
-    position: fixed;
-    z-index: 3;
-    top: 0;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    overflow: auto;
-    -webkit-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    -moz-transform: translateX(100%);
-    -o-transform: translateX(100%);
-    transform: translateX(100%);
-    -webkit-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; }
-    .project .project_info li {
-      display: none;
-      height: 100%;
-      width: 100%; }
-      .project .project_info li.is-visible {
-        display: block; }
-        .project .project_info li.is-visible .close {
-          -webkit-transform: translateX(0);
-          -ms-transform: translateX(0);
-          -moz-transform: translateX(0);
-          -o-transform: translateX(0);
-          transform: translateX(0);
-          opacity: 1; }
-      .project .project_info li img {
-        width: 100%; }
-      .project .project_info li .project_content {
-        padding: 10%; }
-  .project.show {
-    -webkit-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; }
-    .project.show .project_info {
-      -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-      -moz-transform: translateX(0);
-      -o-transform: translateX(0);
-      transform: translateX(0); }
-  .project .close {
-    position: sticky;
-    top: 0;
-    right: 0;
-    z-index: 3;
-    text-align: center;
-    height: 40px;
-    width: 40px;
-    overflow: hidden;
-    background: rgba(133, 136, 152, 0);
-    -webkit-transform: translateX(100px);
-    -ms-transform: translateX(100px);
-    -moz-transform: translateX(100px);
-    -o-transform: translateX(100px);
-    transform: translateX(100px);
-    -webkit-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
-    text-align: center;
-    opacity: 0;
-    transition-delay: .1s; }
-    .project .close i {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      -moz-transform: translate(-50%, -50%);
-      -o-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      font-size: 0.5em;
-      text-align: center;
-      color: #fff !important; }
-
-
-
 
 
 /* ------------------------------------- */
@@ -438,68 +340,6 @@ width:-webkit-fill-available;
   #contact p {
     color: #666666; }
 
-#contact_form {
-  margin-top: 30px !important;
-  width: 100%;
-  font-size: 14px; }
-  #contact_form div {
-    display: table;
-    padding: 0 5px; }
-  #contact_form .input-name, #contact_form .input-email, #contact_form .input-message, #contact_form .submit {
-    border: none;
-    margin-bottom: 10px;
-    padding: 10px;
-    width: 100%;
-    height: 45px;
-    border-radius: 3px;
-    color: #fff !important;
-    -webkit-transition: 0.2s;
-    -ms-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s;
-    font-weight: 600;
-    background: #1d2328;
-    color: #fff; }
-    #contact_form .input-name:focus, #contact_form .input-email:focus, #contact_form .input-message:focus, #contact_form .submit:focus {
-      background: #181f45; }
-  #contact_form .input-message {
-    height: 100px; }
-  #contact_form .submit {
-    position: relative;
-    background: #181f45;
-    width: 100%;
-    height: 40px;
-    width: 100%; }
-    #contact_form .submit:focus {
-      background: #181f45; }
-    #contact_form .submit:hover {
-      background: #07090a; }
-
-#form-messages {
-  padding: 0 5px;
-  margin: 10px 0; }
-  #form-messages .success, #form-messages .error {
-    background: #16a085;
-    padding: 1em;
-    display: none;
-    color: #fff;
-    font-weight: 700;
-    font-size: 12px; }
-  #form-messages .error {
-    background: #DF1D37; }
-
-address {
-  margin-top: 25px !important; }
-  address span {
-    color: #666666;
-    font-weight: 600;
-    display: inline-block;
-    font-size: 16px; }
-  address i {
-    font-size: 1.5em;
-    padding-right: 5px;
-    color: #181f45; }
 
 /* ------------------------------------- */
 /* Footer ................... */
@@ -538,46 +378,6 @@ footer {
 
 
 /* ------------------------------------- */
-/* Plugin styles ................... */
-/* ------------------------------------- */
-/* Particles */
-#particles-js {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  z-index: -1; }
-
-/* magnificPopup */
-.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
-  cursor: url("../img/icon-zoom-out.png"), pointer; }
-
-.mfp-title {
-  font-size: .75em;
-  text-transform: uppercase;
-  font-weight: 500; }
-
-/* photoSwipe */
-.pswp__ui--fit .pswp__top-bar,
-.pswp__ui--fit .pswp__caption {
-  background: #181f45; }
-
-.pswp__item {
-  cursor: url("../img/icon-zoom-out.png"), pointer; }
-
-.pswp--zoom-allowed .pswp__img {
-  cursor: url("../img/icon-zoom.png"), pointer; }
-
-.pswp__button--arrow--left:before, .pswp__button--arrow--right:before {
-  content: '';
-  top: 35px;
-  background-color: #181f45;
-  height: 30px;
-  width: 32px;
-  position: absolute; }
-
-/* ------------------------------------- */
 /* 8. Media Queries .................... */
 /* ------------------------------------- */
 @media only screen and (min-width: 2000px) {
@@ -598,85 +398,11 @@ footer {
     .project .item .caption .photo-details {
       padding: 0 0.9375em;
       bottom: 0.625em; }
-      .project .item .caption .photo-details span {
-        font-size: 0.75em; }
-    .project .item .caption .view {
-      margin: 1.875em 0.9375em;
-      height: 1.875em;
-      width: 3.75em;
-      line-height: 1.875em;
-      font-size: 0.75em; }
-  .project .item .close {
-    height: 0.625em !important;
-    width: 6.25em !important; }
-  .project .item:hover .photo-details {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0); }
-  .project .item:hover .caption {
-    -webkit-transform: translateY(-4.375em);
-    -ms-transform: translateY(-4.375em);
-    -moz-transform: translateY(-4.375em);
-    -o-transform: translateY(-4.375em);
-    transform: translateY(-4.375em); }
 
   .portfolio .item .caption .photo-details {
     padding: 0 0.9375em;
     bottom: 0.625em; }
-    .portfolio .item .caption .photo-details span {
-      font-size: 0.75em;
-      font-weight: 500; }
-
-  #subscribe-form .input-email {
-    font-size: 1em;
-    padding: 0px 20px;
-    height: 2.75em; }
-  #subscribe-form .input-submit {
-    height: 2.75em; }
-
-  #contact_form {
-    font-size: 0.875em; }
-    #contact_form div {
-      padding: 0 0.3125em; }
-    #contact_form .input-name, #contact_form .input-email, #contact_form .input-message, #contact_form .submit {
-      margin-bottom: 0.625em;
-      padding: 0.625em;
-      height: 2.8125em; }
-    #contact_form .input-message {
-      height: 6.25em; }
-    #contact_form .submit {
-      height: 2.5em; }
-
-  #form-messages {
-    padding: 0 0.3125em;
-    margin: 0.625em 0; }
-    #form-messages .success, #form-messages .error {
-      font-size: 0.75em; }
-
-  address {
-    margin-top: 1.5625em !important; }
-    address span {
-      font-size: 1em; }
-    address i {
-      padding-right: 0.3125em; }
-
-  #countdown .title {
-    padding: 0 0.9375em; }
-  #countdown address {
-    margin-top: 0.625em !important; }
-    #countdown address span {
-      font-size: 1em;
-      margin-bottom: 0.3125em; }
-    #countdown address i {
-      padding-right: 0.3125em; }
-
-  .launch-date {
-    height: 10em; }
-    .launch-date h2 {
-      margin-bottom: -0.3125em;
-      margin-top: -0.3125em; } }
+}
 @media only screen and (min-width: 2500px) {
   body {
 
@@ -740,17 +466,6 @@ body{
     font-size: 1em;
     line-height: 1.6; }
 
-  #contact_form .input-name, #contact_form .input-email, #contact_form .input-message, #contact_form .submit {
-    width: 100%; }
-
-  .launch-date {
-    height: 140px; }
-
-  address span {
-    padding: 5px 0; }
-
-  p {
-    font-size: 1em; } }
 
 
 @media screen and (max-device-width: 740px) and (orientation: landscape) {
@@ -790,33 +505,7 @@ body{
     top: 8%;
     max-width: 140px;
     margin-top: 20px; }
-
-  #homeCenter .main-logo {
-    left: calc(50% - 70px); }
-
-  .social_icons, #homeCenter .social_icons {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    font-size: 1em; }
-
-  #homeCenter .social_icons {
-    text-align: center;
-    left: 50%;
-    -webkit-transform: translate(-50%);
-    -ms-transform: translate(-50%);
-    -moz-transform: translate(-50%);
-    -o-transform: translate(-50%);
-    transform: translate(-50%); }
-
-  address span {
-    font-size: 14px; }
-  address i {
-    font-size: 1.2em; }
-
-  #countdown > div {
-    padding: 15px 0 !important; } }
+ }
 @media only screen and (max-width: 480px) {
   body {
 
@@ -836,25 +525,7 @@ body{
     font-size:38px;
     padding-top:10%;
   }
-  .main-logo {
-    max-width: 180px; }
-
-  #homeCenter .main-logo {
-    left: calc(50% - 90px); }
-
-  .instagram_feed li {
-    width: 50%; }
-
-  .service .feature {
-    padding: 15px 0; }
-
-  address span {
-    font-size: 1em; }
-  address i {
-    font-size: 1.2em; }
-
-  #countdown > div {
-    padding: 15px 0 !important; } }
+}
 
 @media only screen and (max-width: 320px) {
   body {
@@ -878,24 +549,4 @@ body{
           margin-bottom:8px;
 
         }
-
-  .main-logo {
-    max-width: 160px; }
-
-  #homeCenter .main-logo {
-    left: calc(50% - 80px); } }
-
-
-/* ------------------------------------- */
-/* Project ................... */
-/* ------------------------------------- */
-.project .item .caption .photo-details span {
-  color: #fff; }
-.project .item .caption .view {
-  background: #1d2328;
-  color: #fff; }
-
-.price {
-  background: #1d2328; }
-
-
+}

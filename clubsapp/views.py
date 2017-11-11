@@ -28,7 +28,7 @@ def clubs( request ):
 def fb_catch(url):
 
     #fb token
-    token = 'EAACEdEose0cBABdsIX4MpKWAq1jBRibAdyM0Ne6EB0eXbNH5770IoidOYcp7aXZCpZBhZASd7ZCOJdayghhhPYEYjEAamZBvtP26taZAHhBejwr5a9NlgLGx44L2G7i2M3Iyz4Azrnxru0EdzqBUALAn5hYQtnZBxYNbdPUnj2B614ZAjJdc039RjDaQMx8OZCiQ07iZCMcWYcCOF2cqaKZA9zc'#updating url
+    token = 'EAACEdEose0cBANxvisRgxeBHOshk3Tpw4ezEgrSXK7TcPycDVYU3ZBuBa4LePFa5lLClBX5FZCZBVixhhAACuppA0nCZCLGT3UsZCKvkjmGkPL6Efp8AxUk0lF3mKHcjiZAKyfSSok96YSxoOqxNZBZBiWOaWz7wy5IZBk9OVL652LZAhVSVXrAqMICpEnUnbZBCz5wB3J9f8uV2KbF99FN4UZCq' #updating url
     url = url + token
     #making req to fb
     jsondata = requests.get(url)
@@ -50,11 +50,14 @@ def clubHome(request,clubName):
     args.update ( csrf ( request ) )
     args.update ( headerdb ( request ) )
 
+    '''
     clubfbid = '125409010890443'
 
     eventurl = 'https://graph.facebook.com/v2.10/'+clubfbid+'/events?access_token='
     data = fb_catch(eventurl)
     args.update({'data': data['data']})
+    '''
+
     return render_to_response ( 'ClubHome.html' , args )
 
 '''
