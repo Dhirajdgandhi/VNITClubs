@@ -17,9 +17,13 @@ import datetime, dateutil.parser
 #     print user
 #     return HttpResponseRedirect ( 'clubs' )
 from portalapp.views import *
+from clubsapp.models import *
 
 def clubs( request ):
+
+    clubs = Club.objects.all()
     args = {'page_name': ""}
+    args.update({'clubs':clubs})
     args.update ( csrf ( request ) )
     args.update ( headerdb ( request ) )
 
@@ -44,9 +48,10 @@ def clubHome(request,clubName):
      # Take pagename, find in db ,extract data and use it here.
 
     #Use clubName to get exact CLubName
+    club_data = Club.objects.get(id=clubName)
 
     args = {'page_name': "",
-            'clubName':clubName}
+            'club_data':club_data}
     args.update ( csrf ( request ) )
     args.update ( headerdb ( request ) )
 
@@ -58,7 +63,7 @@ def clubHome(request,clubName):
     args.update({'data': data['data']})
     '''
 
-    return render_to_response ( 'ClubHome.html' , args )
+    return render_to_response ( 'ClubHome.html', args )
 
 '''
 access_token='EAACEdEose0cBAC4Jdyi8isEwZCm7hxWJ9rfAXFbJbGRBC2EnL62E0FZBxcQqN7WqAOZBvG9D5Vp3E3ZBGPQB6cLc0lazpa71ZCaZBch9zFnbGSl2rl1HffE0mNVjpLIKaeHS1OL6iEcjxTgPeYn2g6PqQP0Y6spAsZB8SoxZCkZCcAZA3YmZAdqHO0cGR02wiLmWlbCAR1l4WQV95kHRP6uB5VH'

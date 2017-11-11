@@ -82,111 +82,24 @@
           <section class="cover-image js-menu-shift" id="subhead"><div class="layer"><h1 class="h1"> Clubs of VNIT  </h1><div class="drag"><i class="	glyphicon glyphicon-arrow-left" id="scrollbutton2"></i></div></div></section>
           <div class="project">
             <ul class="gallery project_navigation">
-              <li class="item col-lg-4 col-sm-6 col-xs-12">
-                <figure>
-                  <!-- Your picture -->
-                  <img src="{% static 'IMG/astronomy.jpg' %}" alt="Astro Club" class="img-responsive" />
-                  <!-- Picture's description below this one -->
-                  <figcaption class="caption">
-                    <div class="photo-details">
-                      <div id="photo-heading">Mag.com</div>
-                      <p>We’re the official Magazine Committee (or since most of you recognize us by our swanky title: mag.com..</p>
-                      <a href="/clubs/mag" class="highlight" id="golden">VIEW MORE</a>
-                    </div>
+              {% for club in clubs%}
+                <li class="item col-lg-4 col-sm-6 col-xs-12">
+                    <figure>
+                      <!-- Your picture -->
+                      <img src="{% static 'IMG/astronomy.jpg' %}"  class="img-responsive" />
+                      <!-- Picture's description below this one -->
+                      <figcaption class="caption">
+                        <div class="photo-details">
+                          <div id="photo-heading">{{club}}</div>
+                          <p>{{club.aboutUs}}</p>
+                          <a href="/clubs/{{club.id}}" class="highlight" id="golden">VIEW MORE</a>
+                        </div>
 
-                  </figcaption>
-                </figure>
-              </li>
-              <li class="item col-lg-4 col-sm-6 col-xs-12">
-                <figure>
-                  <!-- Your picture -->
-                  <img src="{% static 'IMG/tesla.jpg' %}" alt="Astro Club" class="img-responsive" />
-                  <!-- Picture's description below this one -->
-                  <figcaption class="caption">
-                    <div class="photo-details">
-                      <div id="photo-heading">Mag.com</div>
-                      <p>We’re the official Magazine Committee (or since most of you recognize us by our swanky title: mag.com..</p>
-                      <a href="#project1" class="highlight" id="golden">VIEW MORE</a>
-                    </div>
+                      </figcaption>
+                    </figure>
+                </li>
+               {% endfor %}
 
-                  </figcaption>
-                </figure>
-              </li>
-              <li class="item col-lg-4 col-sm-6 col-xs-12">
-                <figure>
-                  <!-- Your picture -->
-                  <img src="{% static 'IMG/quiz.jpg' %}" alt="Astro Club" class="img-responsive" />
-                  <!-- Picture's description below this one -->
-                  <figcaption class="caption">
-                    <div class="photo-details">
-                      <div id="photo-heading">Mag.com</div>
-                      <p>We’re the official Magazine Committee (or since most of you recognize us by our swanky title: mag.com..</p>
-                      <a href="#project1" class="highlight" id="golden">VIEW MORE</a>
-                    </div>
-
-                  </figcaption>
-                </figure>
-              </li>
-              <li class="item col-lg-4 col-sm-6 col-xs-12">
-                <figure>
-                  <!-- Your picture -->
-                  <img src="{% static 'IMG/velocity.jpg' %}" alt="Astro Club" class="img-responsive" />
-                  <!-- Picture's description below this one -->
-                  <figcaption class="caption">
-                    <div class="photo-details">
-                      <div id="photo-heading">Mag.com</div>
-                      <p>We’re the official Magazine Committee (or since most of you recognize us by our swanky title: mag.com..</p>
-                      <a href="#project1" class="highlight" id="golden">VIEW MORE</a>
-                    </div>
-
-                  </figcaption>
-                </figure>
-              </li>
-              <li class="item col-lg-4 col-sm-6 col-xs-12">
-                <figure>
-                  <!-- Your picture -->
-                  <img src="{% static 'IMG/velocity.jpg' %}" alt="Astro Club" class="img-responsive" />
-                  <!-- Picture's description below this one -->
-                  <figcaption class="caption">
-                    <div class="photo-details">
-                      <div id="photo-heading">Mag.com</div>
-                      <p>We’re the official Magazine Committee (or since most of you recognize us by our swanky title: mag.com..</p>
-                      <a href="#project1" class="highlight" id="golden">VIEW MORE</a>
-                    </div>
-
-                  </figcaption>
-                </figure>
-              </li>
-              <li class="item col-lg-4 col-sm-6 col-xs-12">
-                <figure>
-                  <!-- Your picture -->
-                  <img src="{% static 'IMG/music.jpg' %}" alt="Astro Club" class="img-responsive" />
-                  <!-- Picture's description below this one -->
-                  <figcaption class="caption">
-                    <div class="photo-details">
-                      <div id="photo-heading">Mag.com</div>
-                      <p>We’re the official Magazine Committee (or since most of you recognize us by our swanky title: mag.com..</p>
-                      <a href="#project1" class="highlight" id="golden">VIEW MORE</a>
-                    </div>
-
-                  </figcaption>
-                </figure>
-              </li>
-              <li class="item col-lg-4 col-sm-6 col-xs-12">
-                <figure>
-                  <!-- Your picture -->
-                  <img src="{% static 'IMG/prayaas.jpg' %}" alt="Astro Club" class="img-responsive" />
-                  <!-- Picture's description below this one -->
-                  <figcaption class="caption">
-                    <div class="photo-details">
-                      <div id="photo-heading">Mag.com</div>
-                      <p>We’re the official Magazine Committee (or since most of you recognize us by our swanky title: mag.com..</p>
-                      <a href="#project1" class="highlight" id="golden">VIEW MORE</a>
-                    </div>
-
-                  </figcaption>
-                </figure>
-              </li>
 
             </ul>
 

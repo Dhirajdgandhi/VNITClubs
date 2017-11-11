@@ -43,6 +43,7 @@ body {
 	padding-top:345px;
 	padding-bottom:266px;
 	background-color:rgba(8, 9, 19, 0.8);
+	text-transform: uppercase;
 
 }
 .hero_name {
