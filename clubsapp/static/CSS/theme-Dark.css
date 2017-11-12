@@ -268,22 +268,19 @@ width:-webkit-fill-available;
     background-color:rgba(10, 17, 53, 0.58);
   }
     .project .item .caption {
-      position: absolute;
+      position:absolute;
       width: 100%;
       -webkit-transition: 0.3s;
       -ms-transition: 0.3s;
       -moz-transition: 0.3s;
       -o-transition: 0.3s;
       transition: 2s;
-      height:inherit;
-      top:20%;
-      display:block;
-
-
+      top: 0%;
+      height:100%
     }
       .project .item .caption .photo-details {
         position: absolute;
-        top:auto;
+        top:20%;
         text-align:center;
         -webkit-transition: 0.3s;
         -ms-transition: 0.3s;
