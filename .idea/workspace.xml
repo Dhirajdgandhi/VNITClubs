@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bfe9060-ca32-4fbf-8379-61a5ee0d3fad" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fb_data.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clubsapp/models.py" afterPath="$PROJECT_DIR$/clubsapp/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clubsapp/static/CSS/event.css" afterPath="$PROJECT_DIR$/clubsapp/static/CSS/event.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clubsapp/static/CSS/singlePageTemplate.css" afterPath="$PROJECT_DIR$/clubsapp/static/CSS/singlePageTemplate.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clubsapp/templates/clubHome.html" afterPath="$PROJECT_DIR$/clubsapp/templates/clubHome.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/studentportal/settings.py" afterPath="$PROJECT_DIR$/studentportal/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clubsapp/views.py" afterPath="$PROJECT_DIR$/clubsapp/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,22 +32,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="event.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clubsapp/static/CSS/event.css">
+      <file leaf-file-name="load_data.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/load_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2261">
-              <caret line="133" column="20" lean-forward="false" selection-start-line="133" selection-start-column="20" selection-end-line="133" selection-end-column="20" />
+            <state relative-caret-position="389">
+              <caret line="93" column="8" lean-forward="false" selection-start-line="93" selection-start-column="8" selection-end-line="101" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="singlePageTemplate.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clubsapp/static/CSS/singlePageTemplate.css">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clubsapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="97" column="47" lean-forward="false" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
-              <folding />
+            <state relative-caret-position="323">
+              <caret line="46" column="4" lean-forward="true" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="39" />
+              <folding>
+                <element signature="e#596#825#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="date_parse.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clubsapp/templatetags/date_parse.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="8" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,28 +69,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clubsapp/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="43" column="33" lean-forward="false" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studentportal/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/studentportal/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="176" column="29" lean-forward="false" selection-start-line="176" selection-start-column="29" selection-end-line="176" selection-end-column="29" />
+            <state relative-caret-position="582">
+              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -88,8 +79,18 @@
       <file leaf-file-name="clubHome.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clubsapp/templates/clubHome.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1544">
-              <caret line="158" column="76" lean-forward="false" selection-start-line="158" selection-start-column="76" selection-end-line="158" selection-end-column="76" />
+            <state relative-caret-position="241">
+              <caret line="148" column="54" lean-forward="true" selection-start-line="148" selection-start-column="54" selection-end-line="148" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fb_data.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fb_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="41" column="64" lean-forward="false" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -130,6 +131,7 @@
       <find>.event</find>
       <find>background-i</find>
       <find>img</find>
+      <find>for</find>
     </findStrings>
     <replaceStrings>
       <replace>href=&quot;{% static 'CSS/</replace>
@@ -158,7 +160,6 @@
         <option value="$PROJECT_DIR$/clubsapp/templatetags/dateutil.py" />
         <option value="$PROJECT_DIR$/clubsapp/templatetags/date_parse.py" />
         <option value="$PROJECT_DIR$/load_data.py" />
-        <option value="$PROJECT_DIR$/clubsapp/views.py" />
         <option value="$PROJECT_DIR$/clubsapp/templates/VnitClubsHome.html" />
         <option value="$PROJECT_DIR$/clubsapp/static/JS/script.js" />
         <option value="$PROJECT_DIR$/clubsapp/static/CSS/posts.css" />
@@ -170,6 +171,8 @@
         <option value="$PROJECT_DIR$/studentportal/urls.py" />
         <option value="$PROJECT_DIR$/clubsapp/models.py" />
         <option value="$PROJECT_DIR$/studentportal/settings.py" />
+        <option value="$PROJECT_DIR$/clubsapp/views.py" />
+        <option value="$PROJECT_DIR$/fb_data.py" />
       </list>
     </option>
   </component>
@@ -215,7 +218,19 @@
             <path>
               <item name="VNITClubs" type="b2602c69:ProjectViewProjectNode" />
               <item name="VNITClubs" type="462c0819:PsiDirectoryNode" />
-              <item name="studentportal" type="462c0819:PsiDirectoryNode" />
+              <item name="clubsapp" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VNITClubs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VNITClubs" type="462c0819:PsiDirectoryNode" />
+              <item name="clubsapp" type="462c0819:PsiDirectoryNode" />
+              <item name="templatetags" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VNITClubs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VNITClubs" type="462c0819:PsiDirectoryNode" />
+              <item name="portalapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="VNITClubs" type="b2602c69:ProjectViewProjectNode" />
@@ -343,7 +358,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2624811" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2624811" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13071896" sideWeight="0.43267778" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -351,7 +366,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29248366" sideWeight="0.4969743" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18464053" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07026144" sideWeight="0.56732225" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30392158" sideWeight="0.56732225" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.05756579" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -374,7 +389,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29248366" sideWeight="0.4969743" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18464053" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07026144" sideWeight="0.56732225" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20953101" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2624811" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -424,7 +439,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/clubsapp/templates/main.html" />
     <entry file="file://$PROJECT_DIR$/clubsapp/templates/mag.html" />
     <entry file="file://$PROJECT_DIR$/clubsapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -571,20 +585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/load_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="31" column="45" lean-forward="false" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portalapp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6609">
-          <caret line="871" column="8" lean-forward="false" selection-start-line="871" selection-start-column="8" selection-end-line="871" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clubsapp/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -623,13 +623,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clubsapp/templatetags/date_parse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clubsapp/static/CSS/posts.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-117">
@@ -652,30 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clubsapp/static/CSS/singlePageTemplate.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="97" column="47" lean-forward="false" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clubsapp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="50" column="40" lean-forward="true" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clubsapp/templates/clubHome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1544">
-          <caret line="158" column="76" lean-forward="false" selection-start-line="158" selection-start-column="76" selection-end-line="158" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clubsapp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -684,25 +653,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studentportal/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/media/13627947_233877907008443_1686939702_n.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clubsapp/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="43" column="33" lean-forward="false" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/media/10725129_1806054716278003_242937214416191488_n.jpg">
@@ -719,6 +672,82 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="176" column="29" lean-forward="false" selection-start-line="176" selection-start-column="29" selection-end-line="176" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studentportal/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clubsapp/static/CSS/singlePageTemplate.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="97" column="47" lean-forward="false" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portalapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="868" column="0" lean-forward="true" selection-start-line="868" selection-start-column="0" selection-end-line="868" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clubsapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="46" column="4" lean-forward="true" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="39" />
+          <folding>
+            <element signature="e#596#825#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/load_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="93" column="8" lean-forward="false" selection-start-line="93" selection-start-column="8" selection-end-line="101" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clubsapp/templates/clubHome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="148" column="54" lean-forward="true" selection-start-line="148" selection-start-column="54" selection-end-line="148" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clubsapp/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="582">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clubsapp/templatetags/date_parse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="8" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fb_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="41" column="64" lean-forward="false" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
           <folding />
         </state>
       </provider>

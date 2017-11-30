@@ -29,19 +29,6 @@ def clubs( request ):
 
     return render_to_response ( 'VnitClubsHome.html' , args )
 
-def fb_catch(url):
-
-    #fb token
-    token = 'EAACEdEose0cBANxvisRgxeBHOshk3Tpw4ezEgrSXK7TcPycDVYU3ZBuBa4LePFa5lLClBX5FZCZBVixhhAACuppA0nCZCLGT3UsZCKvkjmGkPL6Efp8AxUk0lF3mKHcjiZAKyfSSok96YSxoOqxNZBZBiWOaWz7wy5IZBk9OVL652LZAhVSVXrAqMICpEnUnbZBCz5wB3J9f8uV2KbF99FN4UZCq' #updating url
-    url = url + token
-    #making req to fb
-    jsondata = requests.get(url)
-    #convert to python data
-    pydata = jsondata.json()
-    print pydata
-    return pydata
-
-
 
 
 def clubHome(request,clubName):
@@ -56,10 +43,7 @@ def clubHome(request,clubName):
     args.update ( headerdb ( request ) )
 
     '''
-    clubfbid = '125409010890443'
-
-    eventurl = 'https://graph.facebook.com/v2.10/'+clubfbid+'/events?access_token='
-    data = fb_catch(eventurl)
+    
     args.update({'data': data['data']})
     '''
 
