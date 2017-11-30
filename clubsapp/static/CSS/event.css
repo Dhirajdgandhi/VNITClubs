@@ -7,13 +7,88 @@
 .event-block {
 	padding-left: 20px;
 	padding-right: 20px;
-	padding-top: 10px;
+	padding-top: 1px;
 	padding-bottom: 10px;
-	margin-bottom:10px;
-	background-color: #d5d5d5;
+	margin-bottom:40px;
 	display:block;
 	position:relative;
+	z-index: 2;
 }
+
+.event-block::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #ffd6c3;
+  z-index: -1;
+  bottom: 0;
+  left:0;
+  transform-origin: left bottom;
+  transform: skewY(1deg);
+}
+
+.event-block::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #aaffc4;
+  z-index: -1;
+  bottom: 0;
+  left:0;
+  transform-origin: top left;
+  transform: skewY(-1deg);
+}
+
+.event-block-o {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 1px;
+	padding-bottom: 10px;
+	margin-bottom:40px;
+	display:block;
+	position:relative;
+	z-index: 2;
+}
+
+.event-block-o::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #ffd6c3;
+  z-index: -2;
+  bottom: 0;
+  left:0;
+  transform-origin: right bottom;
+  transform: skewY(1deg);
+}
+
+.event-block-o::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #aaffc4;
+  z-index: -1;
+  bottom: 0;
+  left:0;
+  transform-origin: top right;
+  transform: skewY(-1deg);
+}
+
+@media (min-width: 720px) {
+	.event-block {
+	margin-right: 15%;
+	margin-left: 15%;
+}
+.event-block-o {
+	margin-right: 15%;
+	margin-left: 15%;
+}
+}
+
 .event-fill{
 	width:100%;
 	position:relative;
@@ -23,12 +98,10 @@
 
 	position:relative;
 	margin-left:10%;
-	padding-top:3px;
-	padding-top:3px;
-
 }
 .event-left{
 	width:40px;
+	height:40px;
 	float:left;
 	position:relative;
 	z-index:2;
@@ -36,7 +109,8 @@
 .event-desp{
 	font-size:15px;
 	position:inherit;
-	margin-left:10%;
+	margin-top: 15px;
+	text-align:justify;
 }
 
 .event-heading h3{
@@ -45,17 +119,18 @@
 }
 .event-details{
 	font-size:medium;
+	text-align:centre;
 }
 
 .event-date-month{
 	color:#e84646;
-	font-size:18px;
+	font-size:20px;
 	text-align:left;
 
 }
 .event-date-num{
 	color:#292a2b;
-	font-size:20px;
+	font-size:30px;
 	font-weight:400;
 	text-align:justify;
 	margin-top: -10px;

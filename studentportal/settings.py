@@ -172,3 +172,6 @@ STATIC_ROOT = 'static'
 ''' STATICFILES_DIRS is the list of folder where Django will search for additional static files, in addition to each static folder of each app installed. '''
 ''' Since we have only the root static folder of the 'portalapp' we can comment the below '''
 #STATICFILES_DIRS = ["/home/studentportal/studentportal/portalapp/static",]
+MEDIA_URl = '/media/'
+''' MEDIA_ROOT is the folder where every uploaded files will be stored after a manage.py collectstatic '''
+MEDIA_ROOT = 'clubsapp/media/'

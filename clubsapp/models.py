@@ -10,15 +10,6 @@ class ContactDetails ( models.Model ):
     def __unicode__ ( self ):
         return self.email + ' ' + self.website
 
-class Post ( models.Model ):
-    id = models.AutoField ( primary_key=True , null=False )
-    shortName = models.TextField ( max_length=45 , null=True )
-    longName = models.TextField ( max_length=45 , null=True )
-    displayName = models.TextField ( max_length=45 , null=True )
-
-    def __unicode__ ( self ):
-        return self.longName
-
 
 class Club ( models.Model ):
     id = models.AutoField ( primary_key=True , null=False )
@@ -40,7 +31,6 @@ class Club ( models.Model ):
 class ClubMember ( models.Model ):
     id = models.AutoField ( primary_key=True , null=False )
     basicDetails = models.ForeignKey ( Personinformation )
-    post = models.ForeignKey ( Post )
     photograph = models.ImageField ( )
     dateOfJoin = models.DateField ( null=True )
     dateOfLeave = models.DateField ( null=True )
@@ -51,21 +41,20 @@ class ClubMember ( models.Model ):
 
 class Photos ( models.Model ):
     id = models.AutoField ( primary_key=True , null=False )
-    photograph = models.ImageField ( )
-    details = models.TextField ( max_length=45 , null=True )
+    photograph = models.FileField (null=True, blank=True )
+    details = models.TextField ( max_length=100 , null=True )
     dateOfCapture = models.DateField ( null=True )
 
 class Event ( models.Model ):
     id = models.AutoField ( primary_key=True , null=False )
-    shortName = models.TextField ( max_length=45 , null=True )
-    longName = models.TextField ( max_length=45 , null=True )
-    displayName = models.TextField ( max_length=45 , null=True )
+    heading = models.TextField ( max_length=45 , null=True )
+    description = models.TextField ( null=True )
     place = models.TextField (max_length=100 , null=True )
-    time = models.TimeField ()
-    date = models.DateField()
+    time = models.TimeField (null = True)
+    date = models.DateField(null = True)
 
     def __unicode__ ( self ):
-        return self.longName
+        return self.heading
 
 class Activity ( models.Model ):
     id = models.AutoField ( primary_key=True , null=False )
@@ -89,11 +78,6 @@ class ClubActivityRelationship( models.Model ):
 class ClubPhotoRelationship( models.Model ):
     id = models.AutoField ( primary_key=True , null=False )
     club = models.ForeignKey ( Club , null=False )
-    photo = models.ForeignKey ( Photos , null=False )
-
-class EventPhotoRelationship( models.Model ):
-    id = models.AutoField ( primary_key=True , null=False )
-    event = models.ForeignKey ( Event , null=False )
     photo = models.ForeignKey ( Photos , null=False )
 
 class ActivityPhotoRelationship ( models.Model ):

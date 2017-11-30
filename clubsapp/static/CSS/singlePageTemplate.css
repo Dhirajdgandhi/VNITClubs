@@ -41,7 +41,7 @@ body {
 	margin-left: 0px;
 	padding-top:230px;
 	letter-spacing: 3px;
-	font-size: 100px;
+	font-size: 80px;
 	font-weight:200;
 	height:100%;
 	background-color:rgba(13, 15, 23, 0.62);
@@ -95,15 +95,9 @@ body {
 	left:40%;
 	top:88%;
 	margin-top:1px;
-	background-color:rgba(255, 193, 7, 0.9);
-	border-radius:40px 40px 0px 0px;
+	background-color:rgba(208, 202, 224, 0.54);
+	border-radius:100% 100% 0px 0px;
 	transition:2s;
-	text-align:-webkit-center;
-	border: antiquewhite;
-	border-style:dotted dotted groove;
-	border-width:2px 2px 4px 2px;
-	border-color:white;
-
 }
 .scroll img{
 	position:absolute;
@@ -121,6 +115,12 @@ body {
 	margin-top: 0px;
 	padding-bottom:40px;
 	font-size:15px;
+}
+@media (min-width: 720px) {
+	.about {
+		padding-right: 20%;
+		padding-left: 20%;
+	}
 }
 /* Stats Gallery */
 .heading2{
