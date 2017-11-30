@@ -1,0 +1,73 @@
+
+
+
+
+/*NEW POSTS CSS*/
+#Post{
+  padding-bottom:40px;
+  padding-top:30px;
+  background-color:#fff;
+}
+#Post h1{
+  margin-bottom:20px;
+}
+#divPost {
+    border-style: solid;
+    border-width: 0px 1px 1px 0px;
+    border-color: lightgrey;
+    border-radius: 1px;
+}
+#Post h1{
+    font-size: 45px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.postDescription{
+  color:#545454;
+}
+#postHead{
+  color:#545454;
+  letter-spacing:1px;
+}
+#postHead h3{
+  color:#121212;
+}
+@media (min-width: 480px){
+#divImage {
+  height: 300px;
+}}
+
+#divImage img{
+    max-width:100%;
+    max-height: 300px;
+    position:relative;
+    transition:1.2s;
+    filter:grayscale(0.9);
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#divImage:hover img{
+  filter:grayscale(0);
+}
+
+.postDescription {
+    padding: 3px;
+}
+
+
+/*Show more*/
+.more_text {
+  display: none;
+  transition: .25s ease;
+}
+
+.read_more {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  color: #666;
+  font-size: .9em;
+  line-height: 2;
+}

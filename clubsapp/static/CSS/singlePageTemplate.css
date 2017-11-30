@@ -39,11 +39,12 @@ body {
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
-	letter-spacing: 2px;
-	font-size: 70px;
-	padding-top:345px;
-	padding-bottom:266px;
-	background-color:rgba(8, 9, 19, 0.8);
+	padding-top:230px;
+	letter-spacing: 3px;
+	font-size: 100px;
+	font-weight:200;
+	height:100%;
+	background-color:rgba(13, 15, 23, 0.62);
 
 }
 .hero_name {
@@ -69,8 +70,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-
 }
 
 .light {
@@ -81,12 +80,35 @@ body {
 .tagline {
 	text-align: center;
 	color: #FFFFFF;
-	margin-top: -14em;
+	margin-top: -12em;
 	font-weight: lighter;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-size: 18px;
+	font-size: 20px;
 	position:relative;
+}
+.scroll{
+	width:20%;
+	max-width:300px;
+	height:12%;
+	position:absolute;
+	left:40%;
+	top:88%;
+	margin-top:1px;
+	background-color:rgba(255, 193, 7, 0.9);
+	border-radius:40px 40px 0px 0px;
+	transition:2s;
+	text-align:-webkit-center;
+	border: antiquewhite;
+	border-style:dotted dotted groove;
+	border-width:2px 2px 4px 2px;
+	border-color:white;
+
+}
+.scroll img{
+	position:absolute;
+	top:30%;
+	margin-left:-32px;
 }
 
 /* About Section */
@@ -123,8 +145,11 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+/* Parallax Section */
 
-/*contact*/
+
+/*contact-form*/
+
 #coninfo{
 	padding-left: 25px;
 	padding-right: 25px;
@@ -133,8 +158,16 @@ body {
 	background-color: #5c5d67;
 	margin-top: 0px;
 	padding-bottom:120px;
-	width:100%;
+	width:50%;
+	height:500px;
 }
+
+@media (max-width:600px) {
+	#coninfo {
+		width: 100%;
+	}
+}
+
 #coninfo h2{
 	text-align:center;
 	color:white;
@@ -177,9 +210,60 @@ body {
 }
 
 #message{
-	padding-bottom:150px;
+	padding-bottom:50px;
 	padding-top:10px;
 
+}
+
+/*contact-info*/
+
+#coninfo2{
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 35px;
+	display: inline-block;
+	background-color: #6e6e6e;
+	margin-top: 0px;
+	padding-bottom:120px;
+	width:50%;
+	float: right;
+	height:500px;
+}
+
+@media (max-width:600px) {
+	#coninfo2 {
+		width: 100%;
+	}
+}
+
+#coninfo2 h2{
+	text-align:center;
+	color:white;
+	font-size:50px;
+	padding-bottom:40px;
+	padding-top:35px;
+}
+#coninfo2 p{
+	text-align:center;
+	color:white;
+	font-size:20px;
+	padding-bottom:5px;
+	padding-top:5px;
+}
+#coninfo2 a{
+	text-align:left;
+	color:aliceblue;
+	font-size:20px;
+	padding-bottom:5px;
+	padding-top:5px;
+}
+#coninfo2 a:hover{
+	text-align:left;
+	color:#000060;
+	font-size:20px;
+	padding-bottom:5px;
+	padding-top:5px;
+	text-decoration:none;
 }
 
 .copyright {
@@ -312,7 +396,7 @@ body {
 .button {
 	max-width: 150px;
 	padding-top:20px;
-	margin-top: 40px;
+	margin-top: 10px;
 	padding-bottom: 35px;
 	text-align: center;
 	vertical-align: middle;
@@ -435,6 +519,10 @@ body {
 		padding-bottom:10px;
 		color:white
 	}
+	.scroll{
+		width:26%;
+		left:37%;
+	}
 
 }
 
@@ -453,7 +541,7 @@ body {
 		border:3px solid rgb(24, 31, 69)
 	}
 	#message{
-		padding-bottom:150px;
+		padding-bottom:50px;
 		padding-top:10px;
 
 	}

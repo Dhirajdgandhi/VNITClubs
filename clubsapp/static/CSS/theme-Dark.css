@@ -7,7 +7,6 @@
 @import url(magnific-popup.css);
 @import url(flexslider.css);
 @import url(animsition.min.css);
-@import url(photoswipe.css);
 @import url(default-skin/default-skin.css);
 @import url(jquery.mCustomScrollbar.min.css);
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800");
@@ -102,7 +101,7 @@ body {
   margin: auto;
 }
 #Sides{
-width:-webkit-fill-available;
+width:100%;
   position:absolute;
   display:block;
   overflow:hidden;
@@ -196,38 +195,6 @@ width:-webkit-fill-available;
 #homeCenter .main-logo {
   left: calc(50% - 100px); }
 
-.social_icons, #homeCenter .social_icons {
-  position: absolute;
-  left: 0;
-  bottom: 50px;
-  width: 100%;
-  font-size: 1em;
-  padding-left: 10%;
-  z-index: 2;
-  color: #fff; }
-  .social_icons li, #homeCenter .social_icons li {
-    display: inline; }
-    .social_icons li i, #homeCenter .social_icons li i {
-      font-size: 1.4em;
-      transition: all .3s;
-      display: inline-block;
-      padding: 15px; }
-      .social_icons li i:hover, #homeCenter .social_icons li i:hover {
-        color: black;
-        transition: .1s; }
-
-#homeCenter .social_icons {
-  text-align: center;
-  left: 50%;
-  padding: 0;
-  -webkit-transform: translate(-50%);
-  -ms-transform: translate(-50%);
-  -moz-transform: translate(-50%);
-  -o-transform: translate(-50%);
-  transform: translate(-50%); }
-
-
-
 
 /* ------------------------------------- */
 /* Project ................... */
@@ -265,22 +232,29 @@ width:-webkit-fill-available;
 
   }
   .project .item:hover .caption{
-    background-color:rgba(10, 17, 53, 0.58);
+    background-color:rgba(24, 31, 69, 0.39);
   }
-    .project .item .caption {
-      position:absolute;
+
+   .project .item .caption {
+      position: absolute;
       width: 100%;
+      overflow: hidden;
       -webkit-transition: 0.3s;
       -ms-transition: 0.3s;
       -moz-transition: 0.3s;
       -o-transition: 0.3s;
       transition: 2s;
-      top: 0%;
-      height:100%
+      background: rgb(247, 247, 247, 0);
+      top: 0;
+      height:-webkit-fill-available;
+      height:-moz-fill-available;
+
+
     }
       .project .item .caption .photo-details {
         position: absolute;
-        top:20%;
+        top:2%;
+        margin-bottom:auto;
         text-align:center;
         -webkit-transition: 0.3s;
         -ms-transition: 0.3s;
@@ -291,7 +265,7 @@ width:-webkit-fill-available;
         opacity:0;
 
       }
-      .project .item:hover .caption .photo-details{
+      .project .item .caption .photo-details:hover{
         opacity:1;
       }
         .photo-details #photo-heading {
@@ -311,7 +285,6 @@ width:-webkit-fill-available;
 
         }
 
-
 /* ------------------------------------- */
 /* Pricing ................... */
 /* ------------------------------------- */
@@ -320,58 +293,6 @@ width:-webkit-fill-available;
   padding: 10% 8%;
   background: #181f45;
   color: #fff; }
-
-
-
-
-/* ------------------------------------- */
-/* Contact Form ................... */
-/* ------------------------------------- */
-#contact {
-  width: 100%;
-  padding: 10% calc(8% + 5px);
-  background: #f5f5f5;
-  color: #000; }
-  #contact h2 {
-    font-weight: 400; }
-  #contact p {
-    color: #666666; }
-
-
-/* ------------------------------------- */
-/* Footer ................... */
-/* ------------------------------------- */
-footer {
-  position: relative;
-  bottom: 0;
-  display: table;
-  width: 100%;
-  padding: 5%;
-  background: #181f45;
-  color: #fff; }
-  footer p {
-    display: table-cell;
-    vertical-align: middle;
-    font-size: 0.75em;
-    font-weight: 500 !important; }
-  footer .drag {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    font-size: 1.2em;
-    -webkit-transition: 0.2s;
-    -ms-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s; }
-    footer .drag:hover {
-      -webkit-transform: translateY(-10px);
-      -ms-transform: translateY(-10px);
-      -moz-transform: translateY(-10px);
-      -o-transform: translateY(-10px);
-      transform: translateY(-10px); }
-
-
 
 
 /* ------------------------------------- */
@@ -463,6 +384,17 @@ body{
     font-size: 1em;
     line-height: 1.6; }
 
+  #contact_form .input-name, #contact_form .input-email, #contact_form .input-message, #contact_form .submit {
+    width: 100%; }
+
+  .launch-date {
+    height: 140px; }
+
+  address span {
+    padding: 5px 0; }
+
+  p {
+    font-size: 1em; } }
 
 
 @media screen and (max-device-width: 740px) and (orientation: landscape) {
@@ -547,3 +479,4 @@ body{
 
         }
 }
+

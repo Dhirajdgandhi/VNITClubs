@@ -116,6 +116,7 @@ $( document ).ready(function() {
     transition: function(url){ window.location.href = url; }
   });
 
+
   /* ------------------------------------- */
   /* Masonry Grid    ................... */
   /* ------------------------------------- */
@@ -146,6 +147,29 @@ $( document ).ready(function() {
         $grid.masonry();
       });
     });
+
+
+//manage header height of club page
+$(function(){
+  var x = window.innerHeight - $('.hero').offset().top;
+  document.getElementById('hero').style.height = x +"px";
+  $('.hero').append('<div class="scroll" id="scroll"><img src="img/arrows.png"/></div>');
+
+});
+$(window).resize(function(){
+  location.reload();
+});
+//sliding scroll
+$(function(){
+  $('.scroll').click(function(){
+    $('body, html').animate({
+      scrollTop: $('.about').offset().top
+    },1200);
+  });
+});
+
+
+
 
  /* ------------------------------------- */
  /* Project Gallery   ................... */
@@ -658,7 +682,6 @@ $(function() {
 
 });
 
-
 $(function(){ /* to make sure the script runs after page load */
 
 	$('.event-desp').each(function(event) { /* select all divs with the item class */
@@ -714,8 +737,38 @@ $(function(){ /* to make sure the script runs after page load */
 
     });
 });
-//$(document).ready(function(){
-  //$('.jsslide').bxSlider();
-//});
 
+$(function(){ /* to make sure the script runs after page load */
+
+	$('.postDescription').each(function(event) { /* select all divs with the item class */
+
+        var max_length = 150;
+        /* set the max content length before a read more link will be added */
+
+        if ($(this).html().length > max_length) { /* check for content length */
+
+            var short_content = $(this).html().substr(0, max_length);
+            /* split the content in two parts */
+            var long_content = $(this).html().substr(max_length);
+
+            $(this).html(short_content +
+                '<a href="#" class="read_more">..read more</a>' +
+                '<span class="more_text">' + long_content + '</span>');
+            /* Alter the html to allow the read more functionality */
+
+            $(this).find('a.read_more').click(function (event) { /* find the a.read_more element within the new html and bind the following code to it */
+
+                event.preventDefault();
+                /* prevent the a from changing the url */
+                $(this).hide();
+                /* hide the read more button */
+                $(this).parents('.postDescription').find('.more_text').show();
+                /* show the .more_text span */
+
+            });
+
+        }
+
+    });
+});
 
