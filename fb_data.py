@@ -7,7 +7,9 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'studentportal.settings'
 print "bfr import models"
 from clubsapp.models import *
 from datetime import datetime
+from django.http import HttpResponseRedirect
 import requests
+import urllib2
 import json
 import datetime
 import dateutil.parser
@@ -20,18 +22,17 @@ def to_date(time):
     m = dateutil.parser.parse(time)
     return m.strftime('%dd/%MM/%yyyy')
 
+# fb token
+token = 'EAACEdEose0cBAGg48RVWh1xX07GfZCIsevZCRMi2eDRZBy2gtZBpDA6W7r4LPsRecHuX3Y4z8Db3V9p4gDZBL62os5aiH894ZBZB8qaRm97DAAraw44IzSus9fBeNZB459zVEtm7aSpXqg9ElBClGphuNksUpI2jqIaZBoeEokVjpK5XnuslDPZAx6p2TJ8HeY9M17488pmZAtuCrdTdeyvK3AQ'  # updating url
 def fb_catch(url):
 
-    url = url + token
     #making req to fb
-    jsondata = requests.get(url)
+    jsondata = urllib2.urlopen(url)
     #convert to python data
-    pydata = jsondata.json()
+    pydata = json.load(jsondata)
     print pydata
     return pydata
 
-# fb token
-token = 'EAACEdEose0cBAKypb0HDOBsiJhE8348bij4ZCgegFRoAow1n5bWzuE83QPD6bCZBwMwbpJy3ahGZADfnVf03uV5KC4CqOMUHzhO72FgeN9n9XrvOuri4BIhZAbYB1ZCBa02ZBqZCWK15GTFYEvZA2PdgzeEDIdshsJDx3UzGWmWxpmzZAsHjuOHzM7EZCPz3RZAA8Vx0ZBu3Tto4t4D5fuU3TN2F'  # updating url
 '''
 clubs = Club()
 fbids = clubs.fb_id
@@ -46,15 +47,15 @@ eventdata= eventdata['data']
 
 for data in eventdata:
     event = Event()
-    event.heading = data.name
-    event.description = data.description
-    event.place = data.place.name
+    event.heading = data['name']
+    event.description = data['description']
+    event.place = data['place']['name']
 
-    event.date = to_date(data.start_time)
-    event.time =to_date(data.start_time)
+    event.date = to_date(data['start_time'])
+    event.time =to_date(data['start_time'])
 
     cer = ClubEventRelationship()
-    cerclub = Club.object.get(fb_id=fbid)
+    cerclub = Club.object.get(pk=1)
     print cerclub
     cer.club = cerclub
     cerevent = event
