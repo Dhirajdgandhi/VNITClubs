@@ -17,13 +17,14 @@ print "aftr"
 
 def to_time(time):
     m = dateutil.parser.parse(time)
-    return m.strftime('%HH:%mm')
+    return m.strftime('%HH')
 def to_date(time):
     m = dateutil.parser.parse(time)
-    return m.strftime('%dd/%MM/%yyyy')
+    return m.strftime('%dd')
 
 # fb token
-token = 'EAACEdEose0cBAGg48RVWh1xX07GfZCIsevZCRMi2eDRZBy2gtZBpDA6W7r4LPsRecHuX3Y4z8Db3V9p4gDZBL62os5aiH894ZBZB8qaRm97DAAraw44IzSus9fBeNZB459zVEtm7aSpXqg9ElBClGphuNksUpI2jqIaZBoeEokVjpK5XnuslDPZAx6p2TJ8HeY9M17488pmZAtuCrdTdeyvK3AQ'  # updating url
+token = 'EAACEdEose0cBACzj6W5X7pYb839f8QtMlVwu5021lIbtFIb8TWMGrX398JrprUd8voN9zYoBpFYT0APxkFgrAFZB8LqgutIXCJ3BfumVKoMhIGIogXySgLIhjlzqgX2EZAuGhXr0D4wZAl7IDdmxWbbeBeK9DYf3fioZCfIJDntR4Y8KgSJqBx6SKZBoCA6Nyf5xZAT9j6rPBnvZC7f27WQ'
+#making HTTP request to graph API
 def fb_catch(url):
 
     #making req to fb
@@ -48,18 +49,23 @@ eventdata= eventdata['data']
 for data in eventdata:
     event = Event()
     event.heading = data['name']
+    print event.heading + " loading..."
     event.description = data['description']
     event.place = data['place']['name']
 
-    event.date = to_date(data['start_time'])
-    event.time =to_date(data['start_time'])
+    #event.date = to_date(data['start_time'])
+    #event.time =to_date(data['start_time'])
+    event.save()
 
     cer = ClubEventRelationship()
-    cerclub = Club.object.get(pk=1)
-    print cerclub
+    cerclub = Club.objects.get(pk=1)
     cer.club = cerclub
+    print cerclub
+
     cerevent = event
     print cerevent
     cer.event = cerevent
     cer.save()
-    event.save()
+    print "DONE"
+
+print "complete"

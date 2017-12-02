@@ -7,13 +7,12 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('clubsapp', '0002_auto_20171027_1728'),
+        ('clubsapp', '0001_initial'),
     ]
 
     operations = [
-        migrations.AlterField(
+        migrations.RemoveField(
             model_name='club',
-            name='yearOfStart',
-            field=models.TextField(max_length=6, null=True),
+            name='fbId',
         ),
     ]

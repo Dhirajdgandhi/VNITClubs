@@ -7,7 +7,7 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('portalapp', '0001_initial'),
+        ('portalapp', '0007_auto_20171202_1043'),
     ]
 
     operations = [
@@ -34,11 +34,12 @@ class Migration(migrations.Migration):
                 ('shortName', models.TextField(max_length=45, null=True)),
                 ('longName', models.TextField(max_length=45, null=True)),
                 ('displayName', models.TextField(max_length=45, null=True)),
-                ('aboutUs', models.TextField(max_length=200, null=True)),
-                ('yearOfStart', models.DateField(null=True)),
+                ('aboutUs', models.TextField(max_length=2000, null=True)),
+                ('yearOfStart', models.TextField(max_length=6, null=True)),
                 ('clubType', models.TextField(max_length=45, null=True)),
                 ('facultyInCharge1', models.TextField(max_length=50)),
                 ('facultyInCharge2', models.TextField(max_length=50, null=True)),
+                ('fbId', models.TextField(max_length=30, null=True)),
             ],
         ),
         migrations.CreateModel(
@@ -87,53 +88,26 @@ class Migration(migrations.Migration):
             name='Event',
             fields=[
                 ('id', models.AutoField(serialize=False, primary_key=True)),
-                ('shortName', models.TextField(max_length=45, null=True)),
-                ('longName', models.TextField(max_length=45, null=True)),
-                ('displayName', models.TextField(max_length=45, null=True)),
+                ('heading', models.TextField(max_length=45, null=True)),
+                ('description', models.TextField(null=True)),
                 ('place', models.TextField(max_length=100, null=True)),
-                ('time', models.TimeField()),
-                ('date', models.DateField()),
-            ],
-        ),
-        migrations.CreateModel(
-            name='EventPhotoRelationship',
-            fields=[
-                ('id', models.AutoField(serialize=False, primary_key=True)),
-                ('event', models.ForeignKey(to='clubsapp.Event')),
+                ('time', models.TimeField(null=True)),
+                ('date', models.DateField(null=True)),
             ],
         ),
         migrations.CreateModel(
             name='Photos',
             fields=[
                 ('id', models.AutoField(serialize=False, primary_key=True)),
-                ('photograph', models.ImageField(upload_to=b'')),
-                ('details', models.TextField(max_length=45, null=True)),
+                ('photograph', models.FileField(null=True, upload_to=b'', blank=True)),
+                ('details', models.TextField(max_length=100, null=True)),
                 ('dateOfCapture', models.DateField(null=True)),
             ],
-        ),
-        migrations.CreateModel(
-            name='Post',
-            fields=[
-                ('id', models.AutoField(serialize=False, primary_key=True)),
-                ('shortName', models.TextField(max_length=45, null=True)),
-                ('longName', models.TextField(max_length=45, null=True)),
-                ('displayName', models.TextField(max_length=45, null=True)),
-            ],
-        ),
-        migrations.AddField(
-            model_name='eventphotorelationship',
-            name='photo',
-            field=models.ForeignKey(to='clubsapp.Photos'),
         ),
         migrations.AddField(
             model_name='clubphotorelationship',
             name='photo',
             field=models.ForeignKey(to='clubsapp.Photos'),
-        ),
-        migrations.AddField(
-            model_name='clubmember',
-            name='post',
-            field=models.ForeignKey(to='clubsapp.Post'),
         ),
         migrations.AddField(
             model_name='clubeventrelationship',
