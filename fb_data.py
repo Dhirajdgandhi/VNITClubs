@@ -23,7 +23,7 @@ def to_date(time):
     return m.strftime('%Y-%m-%d')
 
 # fb token
-token = 'EAACEdEose0cBAIQlKzu6P6soRgATKdnk7D0FRaBmGpcENjc0sU5hI3FuVArZARa6NZAEDtKIXsPADvUwZAZBl2VbxmFgiZCVx4vre4Rv0BYRr7LjGBeNu9DqyJMGgNgelqckZAr7iDvZC9ZBKI7EZB7yGlm1V9v8y479uRhtSeS4O9ZCVrxE3FJGwhSxJ5iNwSTHZBNTZCDn5Vr5agDKAxg1qdQj'
+token = 'EAACEdEose0cBAKg0LfaihN9mu5dQsZCblbhg6TURO3B63VEZAmWEkQ6hnd89oag2ZBEYZBrfOp5ZBxlWedMldVAe8FHQL51UvSBw3ANjWlVxO9t7feKXsxRJUAP09FRhS2BwPo1wSNjcYrclIHXKCTdWs6nJXaX6U1M07OXl7VYDkCzSmUnRpOQOkBe3ERlXwwblFPbJts5rEuoM6P8z0'
 #making HTTP request to graph API
 def fb_catch(url):
 
@@ -39,9 +39,15 @@ clubs = Club()
 fbids = clubs.fb_id
 for fbid in fbids:
 '''
-fbid = '125409010890443'
+
+
+#fbid = '125409010890443' #mag
+fbid = '1413870692209917' #ecell
+
+
+
 # url for getting events
-eventurl = 'https://graph.facebook.com/v2.11/' + fbid + '/events?limit=1&access_token='+token
+eventurl = 'https://graph.facebook.com/v2.11/' + fbid + '/events?limit=4&access_token='+token
 
 eventdata = fb_catch(eventurl)
 eventdata= eventdata['data']
@@ -58,7 +64,7 @@ for data in eventdata:
     event.save()
 
     cer = ClubEventRelationship()
-    cerclub = Club.objects.get(pk=1)
+    cerclub = Club.objects.get(pk=2)
     cer.club = cerclub
     print cerclub
 
