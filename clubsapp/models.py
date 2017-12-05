@@ -47,9 +47,9 @@ class Photos ( models.Model ):
 
 class Event ( models.Model ):
     id = models.AutoField ( primary_key=True , null=False )
-    heading = models.TextField ( max_length=45 , null=True )
-    description = models.TextField ( null=True )
-    place = models.TextField (max_length=100 , null=True )
+    heading = models.TextField ( max_length=100 , null=True )
+    description = models.TextField ( max_length=5000 , null=True )
+    place = models.TextField (max_length=200 , null=True )
     time = models.TimeField (null = True)
     date = models.DateField(null = True)
 

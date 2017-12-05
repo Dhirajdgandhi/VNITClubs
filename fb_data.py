@@ -17,13 +17,13 @@ print "aftr"
 
 def to_time(time):
     m = dateutil.parser.parse(time)
-    return m.strftime('%HH')
+    return m.strftime('%H:%M:%S')
 def to_date(time):
     m = dateutil.parser.parse(time)
-    return m.strftime('%dd')
+    return m.strftime('%Y-%m-%d')
 
 # fb token
-token = 'EAACEdEose0cBACzj6W5X7pYb839f8QtMlVwu5021lIbtFIb8TWMGrX398JrprUd8voN9zYoBpFYT0APxkFgrAFZB8LqgutIXCJ3BfumVKoMhIGIogXySgLIhjlzqgX2EZAuGhXr0D4wZAl7IDdmxWbbeBeK9DYf3fioZCfIJDntR4Y8KgSJqBx6SKZBoCA6Nyf5xZAT9j6rPBnvZC7f27WQ'
+token = 'EAACEdEose0cBAIQlKzu6P6soRgATKdnk7D0FRaBmGpcENjc0sU5hI3FuVArZARa6NZAEDtKIXsPADvUwZAZBl2VbxmFgiZCVx4vre4Rv0BYRr7LjGBeNu9DqyJMGgNgelqckZAr7iDvZC9ZBKI7EZB7yGlm1V9v8y479uRhtSeS4O9ZCVrxE3FJGwhSxJ5iNwSTHZBNTZCDn5Vr5agDKAxg1qdQj'
 #making HTTP request to graph API
 def fb_catch(url):
 
@@ -41,7 +41,7 @@ for fbid in fbids:
 '''
 fbid = '125409010890443'
 # url for getting events
-eventurl = 'https://graph.facebook.com/v2.11/' + fbid + '/events?access_token='+token
+eventurl = 'https://graph.facebook.com/v2.11/' + fbid + '/events?limit=1&access_token='+token
 
 eventdata = fb_catch(eventurl)
 eventdata= eventdata['data']
@@ -53,8 +53,8 @@ for data in eventdata:
     event.description = data['description']
     event.place = data['place']['name']
 
-    #event.date = to_date(data['start_time'])
-    #event.time =to_date(data['start_time'])
+    event.date = to_date(data['start_time'])
+    event.time =to_time(data['start_time'])
     event.save()
 
     cer = ClubEventRelationship()
