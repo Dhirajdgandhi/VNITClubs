@@ -23,7 +23,7 @@ def to_date(time):
     return m.strftime('%Y-%m-%d')
 
 # fb token
-token = 'EAACEdEose0cBAKg0LfaihN9mu5dQsZCblbhg6TURO3B63VEZAmWEkQ6hnd89oag2ZBEYZBrfOp5ZBxlWedMldVAe8FHQL51UvSBw3ANjWlVxO9t7feKXsxRJUAP09FRhS2BwPo1wSNjcYrclIHXKCTdWs6nJXaX6U1M07OXl7VYDkCzSmUnRpOQOkBe3ERlXwwblFPbJts5rEuoM6P8z0'
+token = 'EAACEdEose0cBAHRnPj08sWSAVb43mmHprzK6iCkyZAKZBbAPX8MmEvNdr53KTVYvYOZAPKsMl15S8NAfiuCQvZBGqr9UmwgbE4PIG7DcrO7mrGEr6ySNunRpT3RYWFveqwf3KpJRfKJQCpHaRiuZCVUbOPpUEV83o1M8Uf1G4qRFZAQWILpPna0eU9g8qzABQeu7ZCtVTGN5DU4kTTYF6av'
 #making HTTP request to graph API
 def fb_catch(url):
 
@@ -42,12 +42,21 @@ for fbid in fbids:
 
 
 #fbid = '125409010890443' #mag
-fbid = '1413870692209917' #ecell
+#fbid = '1413870692209917' #ecell
+#fbid = '' #ieee
+#fbid = '122188297874827' #prayaas
+#fbid = '558880000805766' #astro
+#fbid = '' #ivlabs
+#fbid = '174942216314910' #tesla
+#fbid = '' #grooves
+#fbid = '190530800978437' #iridecence
+#fbid = '302597396486782'#team v
+#fbid = '' #iiche
 
 
 
 # url for getting events
-eventurl = 'https://graph.facebook.com/v2.11/' + fbid + '/events?limit=4&access_token='+token
+eventurl = 'https://graph.facebook.com/v2.11/' + fbid + '/events?limit=6&access_token='+token
 
 eventdata = fb_catch(eventurl)
 eventdata= eventdata['data']
@@ -64,7 +73,7 @@ for data in eventdata:
     event.save()
 
     cer = ClubEventRelationship()
-    cerclub = Club.objects.get(pk=2)
+    cerclub = Club.objects.get(pk=10)
     cer.club = cerclub
     print cerclub
 
