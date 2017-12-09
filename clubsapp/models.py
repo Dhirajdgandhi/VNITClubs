@@ -19,6 +19,7 @@ class Club ( models.Model ):
     aboutUs = models.TextField ( max_length=2000 , null=True )
     yearOfStart = models.TextField( max_length=6,null=True )
     president = models.ForeignKey ( Personinformation , related_name="president" )
+
     clubType = models.TextField ( max_length=45 , null=True )
     facultyInCharge1 = models.TextField ( max_length=50 )
     facultyInCharge2 = models.TextField ( max_length=50 , null=True )  #some clubs have two f.i
@@ -58,7 +59,7 @@ class Event ( models.Model ):
 
 class Activity ( models.Model ):
     id = models.AutoField ( primary_key=True , null=False )
-    title = models.TextField ( null = False)
+    title = models.TextField ( null = True) #no need + need to change HTML
     description = models.TextField ( null=False )
     date = models.DateField ( null=True )
 

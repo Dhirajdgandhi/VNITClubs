@@ -7,7 +7,7 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('portalapp', '0007_auto_20171202_1043'),
+        ('portalapp', '0023_auto_20171209_2252'),
     ]
 
     operations = [
@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             name='Activity',
             fields=[
                 ('id', models.AutoField(serialize=False, primary_key=True)),
-                ('title', models.TextField()),
+                ('title', models.TextField(null=True)),
                 ('description', models.TextField()),
                 ('date', models.DateField(null=True)),
             ],
@@ -39,7 +39,6 @@ class Migration(migrations.Migration):
                 ('clubType', models.TextField(max_length=45, null=True)),
                 ('facultyInCharge1', models.TextField(max_length=50)),
                 ('facultyInCharge2', models.TextField(max_length=50, null=True)),
-                ('fbId', models.TextField(max_length=30, null=True)),
             ],
         ),
         migrations.CreateModel(
@@ -88,9 +87,9 @@ class Migration(migrations.Migration):
             name='Event',
             fields=[
                 ('id', models.AutoField(serialize=False, primary_key=True)),
-                ('heading', models.TextField(max_length=45, null=True)),
-                ('description', models.TextField(null=True)),
-                ('place', models.TextField(max_length=100, null=True)),
+                ('heading', models.TextField(max_length=100, null=True)),
+                ('description', models.TextField(max_length=5000, null=True)),
+                ('place', models.TextField(max_length=200, null=True)),
                 ('time', models.TimeField(null=True)),
                 ('date', models.DateField(null=True)),
             ],

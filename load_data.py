@@ -28,11 +28,9 @@ for row in dataReader:
         club.displayName = row[3]
         club.aboutUs = row[4]
         club.yearOfStart = row[5]
-
         personInfoObject = Personinformation.objects.get(clg_id=15616)
         print personInfoObject
         club.president = personInfoObject
-
         club.clubType = row[7]
         club.facultyInCharge1 = row[8]
         club.facultyInCharge2 = row[9]
@@ -41,6 +39,7 @@ for row in dataReader:
         club.contact = contact_detail
         club.save()
 
+        '''
         clubmember = ClubMember()
         clubmember.id = row[0]
         clubmember.basicDetails = row[1]
@@ -51,6 +50,7 @@ for row in dataReader:
         clubmember.dateOfJoin = row[4]
         clubmember.dateOfLeave = row[5]
         clubmember.save()
+        
 
         contact = ContactDetails()
         contact.id = row[0]
@@ -140,7 +140,7 @@ for row in dataReader:
         print aprphoto
         apr.photo = aprphoto
         apr.save()
-
+        '''
 
 
 

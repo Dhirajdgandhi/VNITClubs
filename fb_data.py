@@ -59,7 +59,7 @@ for fbid in fbids:
 eventurl = 'https://graph.facebook.com/v2.11/' + fbid + '/events?limit=6&access_token='+token
 
 eventdata = fb_catch(eventurl)
-eventdata= eventdata['data']
+eventdata = eventdata['data']
 
 for data in eventdata:
     event = Event()
@@ -69,7 +69,7 @@ for data in eventdata:
     event.place = data['place']['name']
 
     event.date = to_date(data['start_time'])
-    event.time =to_time(data['start_time'])
+    event.time = to_time(data['start_time'])
     event.save()
 
     cer = ClubEventRelationship()
