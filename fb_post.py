@@ -11,6 +11,7 @@ from django.http import HttpResponseRedirect
 from django.core.files import File
 from django.core.files.temp import NamedTemporaryFile
 import requests
+from urlparse import urlparse
 import urllib2, urllib
 import random, string
 import json
@@ -73,7 +74,10 @@ for data in postdata:
     activity = Activity()
     activity.title = fbid
     activity.date = to_date(data['created_time'])
-    activity.description = data['message']
+    try:
+        activity.description = data['message']
+    except KeyError:
+        continue
     activity.save()
 
     car = ClubActivityRelationship()
@@ -87,18 +91,26 @@ for data in postdata:
 
     print "downloading.. photo"
     photo = Photos()
-    url = data['full_picture'] #url
-    #assigning name to image
-    img_name = randomword(6) + ".jpg"
-    #creating a temporary file
-    img_temp = NamedTemporaryFile()
-    #making request, reading and writing into empty temp file
-    img_temp.write(urllib2.urlopen(url).read())
-    img_temp.flush()
-    #save the photo
-    photo.photograph.save(img_name, File(img_temp))
-    print "Downloaded and saved ;>"
-    photo.details = data['message']
+
+    try:
+        url = data['full_picture'] #url
+        #assigning name to image
+        img_name = carclub.shortName+ "_act"  + "_" + randomword(4) + ".jpg"
+        #creating a temporary file
+        img_temp = NamedTemporaryFile()
+        #making request, reading and writing into empty temp file
+        img_temp.write(urllib2.urlopen(url).read())
+        img_temp.flush()
+        #save the photo
+        photo.photograph.save(img_name, File(img_temp))
+        print "Downloaded and saved ;>"
+    except KeyError:
+        continue
+
+    try:
+        photo.details = data['message']
+    except KeyError:
+        continue
     photo.dateOfCapture = to_date(data['created_time'])
     photo.save()
 
