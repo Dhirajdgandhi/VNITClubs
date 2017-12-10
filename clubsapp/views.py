@@ -43,21 +43,11 @@ def clubHome(request,clubName):
     args.update ( headerdb ( request ) )
 
     '''
-    
     args.update({'data': data['data']})
     '''
+    activity_club = ClubActivityRelationship.objects.filter(club=club_data)
+    #activity_data = Activity.objects.filter(activity_club.activity)
+    args.update({'activity_data': activity_club})
 
     return render_to_response ( 'ClubHome.html', args )
 
-'''
-access_token='EAACEdEose0cBAC4Jdyi8isEwZCm7hxWJ9rfAXFbJbGRBC2EnL62E0FZBxcQqN7WqAOZBvG9D5Vp3E3ZBGPQB6cLc0lazpa71ZCaZBch9zFnbGSl2rl1HffE0mNVjpLIKaeHS1OL6iEcjxTgPeYn2g6PqQP0Y6spAsZB8SoxZCkZCcAZA3YmZAdqHO0cGR02wiLmWlbCAR1l4WQV95kHRP6uB5VH'
-app_id = "1552794168112376"                       # Obtained from https://developers.facebook.com/
-client_secret = "dc00b43c9493341844ee87f137821b02"         # Obtained from https://developers.facebook.com/
-
-link = "https://graph.facebook.com/oauth/access_token?grant_type=fb_exchange_token&client_id=" + app_id +"&client_secret=" + client_secret + "&fb_exchange_token=" + access_token
-s = requests.Session()
-token = s.get(link).content
-token = token.split("&")[0]                 # this strips out the expire info (now set set about 5184000 seconds, or 60 days)
-token = token.strip("access_token=")        # Strips out access token
-print token
-'''
