@@ -60,7 +60,7 @@ class Event ( models.Model ):
 class Activity ( models.Model ):
     id = models.AutoField ( primary_key=True , null=False )
     title = models.TextField ( null = True) #no need + need to change HTML
-    description = models.TextField ( null=False )
+    description = models.CharField ( max_length=5000,null=False )
     date = models.DateField ( null=True )
 
     def __unicode__ ( self ):

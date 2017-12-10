@@ -8,6 +8,8 @@ print "bfr import models"
 from clubsapp.models import *
 from datetime import datetime
 from django.http import HttpResponseRedirect
+from django.core.files import File
+from django.core.files.temp import NamedTemporaryFile
 import requests
 import urllib2, urllib
 import random, string
@@ -23,20 +25,13 @@ def to_date(time):
     m = dateutil.parser.parse(time)
     return m.strftime('%Y-%m-%d')
 
-print "1"
 #for generate random string
 def randomword(length):
    letters = string.ascii_lowercase
    return ''.join(random.choice(letters) for i in range(length))
 
-#retrive image from the URL
-def img_download(url):
-    name = randomword(10)
-    img_name = name + '.jpg'
-    #return urllib.urlretrieve(url, img_name)
-print"2"
 # fb token
-token = 'EAACEdEose0cBABNMqjnnBbUrlS4OZAVIwVxzfuL9tVUURLzvQoDYZCECdufIQAI1kAmDSfSuDv5xdKg7t4sBJ5xpoqYkkMhZANmguFkDPrGqPB0bYqokbncYSyqaU6Fvgdxd2xkSYFsxgk7G4hmBo2p9jmIyXHFWCgPTvagHkFU9ZAZBfexWs3LBMKXIeAJB1wVOleTvI5mLlSsEi9jWO'
+token = 'EAACEdEose0cBAFfKYg6pZCAMXTz4MmkVnpMvkSwKQuYjTMERssJG4odfXX6sckAZCKr6OQpSCB1g1Dd1DGA3zhsQ4SSoB59AmPw08hfp4BkCg9TBIZCzEA9rOqYWVLla6ZBNFTyvswQ8lfJHT74YQsu5bDxbQ92Ji96frH2sMqM6fqX8xi1aP3ARrZCQMThcLonYwkW7GRgZDZD'
 #making HTTP request to graph API
 def fb_catch(url):
 
@@ -46,7 +41,7 @@ def fb_catch(url):
     pydata = json.load(jsondata)
     print pydata
     return pydata
-print"3"
+
 '''
 clubs = Club()
 fbids = clubs.fb_id
@@ -90,17 +85,22 @@ for data in postdata:
     car.activity = caractivity
     car.save()
 
-
+    print "downloading.. photo"
     photo = Photos()
-    photograph_url = data['full_picture'] #url
-    #write a code to get image from url and save it into db
-    #example :  https://stackoverflow.com/questions/16174022/download-a-remote-image-and-save-it-to-a-django-model
-
-    photo.photograph = img_download(photograph_url)
+    url = data['full_picture'] #url
+    #assigning name to image
+    img_name = randomword(6) + ".jpg"
+    #creating a temporary file
+    img_temp = NamedTemporaryFile()
+    #making request, reading and writing into empty temp file
+    img_temp.write(urllib2.urlopen(url).read())
+    img_temp.flush()
+    #save the photo
+    photo.photograph.save(img_name, File(img_temp))
+    print "Downloaded and saved ;>"
     photo.details = data['message']
     photo.dateOfCapture = to_date(data['created_time'])
     photo.save()
-
 
     apr = ActivityPhotoRelationship()
     apractivity = Activity.objects.get(pk=activity.id)
