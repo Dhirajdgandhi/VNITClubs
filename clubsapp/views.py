@@ -45,7 +45,7 @@ def clubHome(request,clubName):
     '''
     args.update({'data': data['data']})
     '''
-    activity_club = ClubActivityRelationship.objects.filter(club=club_data)
+    activity_club = ClubActivityRelationship.objects.filter(club=club_data)[:4]
     #activity_data = Activity.objects.filter(activity_club.activity)
     args.update({'activity_data': activity_club})
 

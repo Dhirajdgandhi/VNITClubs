@@ -1,27 +1,17 @@
 
-
-
-
 /*NEW POSTS CSS*/
 #Post{
   padding-bottom:40px;
   padding-top:30px;
   background-color:#fff;
 }
-#Post h1{
-  margin-bottom:20px;
-}
-#divPost {
-    border-style: solid;
-    border-width: 0px 1px 1px 0px;
-    border-color: lightgrey;
-    border-radius: 1px;
-}
+
 #Post h1{
     font-size: 45px;
     text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
+    margin-bottom:20px;
 }
 .postDescription{
   color:#545454;
@@ -33,19 +23,20 @@
 #postHead h3{
   color:#121212;
 }
-@media (min-width: 480px){
-#divImage {
-  height: 300px;
-}}
 
+#divImage{
+    justify-content:center;
+    position:relative;
+}
 #divImage img{
     max-width:100%;
-    max-height: 300px;
+    max-height: 400px;
     position:relative;
     transition:1.2s;
     filter:grayscale(0.9);
     margin-top: auto;
     margin-bottom: auto;
+
 }
 
 #divImage:hover img{
@@ -70,4 +61,72 @@
   color: #666;
   font-size: .9em;
   line-height: 2;
+}
+
+
+/* Media*/
+
+@media (min-width: 768px){
+  #divPost{
+    border:#f1f1f1 solid 1px;
+    border-radius:2px;
+    padding-top:15px;
+    padding-bottom:15px;
+    text-align:center;
+    position:relative;
+  }
+  #divImage {
+    height:100%;
+    max-height: 500px;
+  }
+  #divImage img{
+    width:335px;
+
+  }
+
+}
+
+@media (min-width: 1200px){
+
+  #divImage img{
+    width:335px;
+    max-height:300px;
+    padding-top:20px;
+  }
+  #divPost{
+    border:0.1px 0.1px
+  }
+
+}
+
+@media (max-width:767px){
+  #Post{
+    background-color:#f6f6f6;
+  }
+  #Post h1{
+    color:#1f1f1f;
+  }
+  #divImage{
+    display:flex;
+    max-width:100%;
+    height:100%;
+  }
+  #divImage img{
+    height:100%;
+    width:100%;
+    max-height:100%;
+    max-height:600px;
+    filter:grayscale(0);
+    border-radius:4px;
+  }
+  #divPost{
+    margin-top:15px;
+    border-width: 1px 1px 1px 1px;
+    border-radius:4px;
+    border-color:#f1f1f1;
+    padding-top:18px;
+    padding-bottom:18px;
+    background-color:#fff;
+  }
+
 }

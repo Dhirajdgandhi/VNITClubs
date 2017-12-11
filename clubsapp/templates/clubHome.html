@@ -75,14 +75,11 @@
                     <h1>POSTS</h1>
                     {% load activity_photo %}
                     {% for post in activity_data%}
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"  id="divPost">
-                      <div class="" id="postHead">
-                        <h4>{{post.activity.date}}</h4>
-                      </div>
-                      <div id="divImage">
-                        <img src="{{post.activity.id|activityphoto}}"/>
-                      </div>
-                      <div class="postDescription">{{post.activity.description}}</div>
+                    <div class="col-lg-3 col-sm-6 col-xs-12"  id="divPost">
+                      <div class="" id="postHead"><h5>{{post.activity.date}}</h5></div>
+                      <div class="postDescription"><p>{{post.activity.description}}</p></div>
+                      <div id="divImage"><img src="{{post.activity.id|activityphoto}}"/></div>
+
                     </div>
                     {%endfor%}
 

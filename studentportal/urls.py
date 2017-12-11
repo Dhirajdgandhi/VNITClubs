@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
 from django.conf.urls import (  handler404, handler500 )
 handler404 = 'portalapp.views.page_not_found'
 handler500 = 'portalapp.views.server_error'
@@ -55,9 +57,12 @@ urlpatterns = [
 	url(r'^home/aboutus/$','portalapp.views.aboutus'),
     url ( r'^clubs/' , include('clubsapp.urls') ) ,
 ]
+# give url to media directory
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
 
 '''  
-
    
        url(r'^company/(?P<compid>[0-9]+)/$','portalapp.views.company'),
 

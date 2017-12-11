@@ -742,7 +742,7 @@ $(function(){ /* to make sure the script runs after page load */
 
 	$('.postDescription').each(function(event) { /* select all divs with the item class */
 
-        var max_length = 150;
+        var max_length = 180;
         /* set the max content length before a read more link will be added */
 
         if ($(this).html().length > max_length) { /* check for content length */
