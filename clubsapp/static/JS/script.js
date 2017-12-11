@@ -156,9 +156,9 @@ $(function(){
   $('.hero').append('<div class="scroll" id="scroll"><img src="img/arrows.png"/></div>');
 
 });
-$(window).resize(function(){
-  location.reload();
-});
+//$(window).resize(function(){
+  //location.reload();
+//});
 //sliding scroll
 $(function(){
   $('.scroll').click(function(){
