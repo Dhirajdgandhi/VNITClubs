@@ -59,14 +59,14 @@
                   <!-- mentors -->
                   <section class="mentors">
                     <div class="mentors_column" id="mentors_column">
-                      <h3><b>ABCD EFGH</b></h3>
+                      <h3><b>Faculty Coordinator</b></h3>
                       <img src="https://www.w3schools.com/css/img_avatar.png" alt="" class="cards" id="mempic"/>
-                      <p>Faculty Coordinator</p>
+                      <p>{{club_data.facultyInCharge1}}</p>
                     </div>
                     <div class="mentors_column">
-                      <h3><b>HIJK LMNO</b></h3>
+                      <h3><b>Club President</b></h3>
                       <img src="https://www.w3schools.com/css/img_avatar.png" alt="" class="cards"  id="mempic"/>
-                      <p>Club President</p>
+                      <p>ABC EFGH</p>
                     </div>
                   </section>
 
@@ -96,27 +96,25 @@
                           <h1>Events</h1>
                           {% load date_parse %}
 
-                          {% for event in data%}
+                          {% for data in event_data%}
 
-                          <div class="event-block-o">
+                          <div class={{forloop.counter|event_class}} id="event-block">
                             <div class="event-fill">
                               <div class="event-left">
-                                <div class = "event-date-month">{{event.start_time|to_month}}</div>
-                                <div class = "event-date-num">{{event.start_time|to_day}}</div>
+                                <div class = "event-date-month">{{data.event.date|to_month}}</div>
+                                <div class = "event-date-num">{{data.event.date|to_day}}</div>
                               </div>
                               <div class="event-right">
                                 <div class="event-heading">
-                                  <h3 class ="event-hcontent">{{event.name}}</h3>
+                                  <h3 class ="event-hcontent">{{data.event.name}}</h3>
                                 </div>
                                 <div class="event-details">
-                                  <div class="event-details-time">{{event.start_time|to_time}}</div>
-                                  <div class="event-details-place">{{event.place.name}}</div>
+                                  <div class="event-details-time">{{data.event.time|to_time}}</div>
+                                  <div class="event-details-place">{{data.event.place}}</div>
                                 </div>
                               </div>
                             </div>
-                            <div class ="event-desp">
-                              {{event.description}}
-                            </div>
+                            <div class ="event-desp">{{data.event.description}}</div>
                           </div>
                           {% endfor %}
                         </div>

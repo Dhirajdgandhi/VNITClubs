@@ -7,9 +7,9 @@
 .event-block {
 	padding-left: 20px;
 	padding-right: 20px;
-	padding-top: 1px;
+	padding-top: 12px;
 	padding-bottom: 10px;
-	margin-bottom:40px;
+	margin-bottom:25px;
 	display:block;
 	position:relative;
 	z-index: 2;
@@ -44,9 +44,9 @@
 .event-block-o {
 	padding-left: 20px;
 	padding-right: 20px;
-	padding-top: 1px;
+	padding-top: 15px;
 	padding-bottom: 10px;
-	margin-bottom:40px;
+	margin-bottom:25px;
 	display:block;
 	position:relative;
 	z-index: 2;
@@ -109,7 +109,8 @@
 .event-desp{
 	font-size:15px;
 	position:inherit;
-	margin-top: 15px;
+	margin-top: 10px;
+	padding-top:10px;
 	text-align:justify;
 }
 
@@ -119,24 +120,26 @@
 }
 .event-details{
 	font-size:medium;
-	text-align:centre;
+	text-align:left;
 }
 
 .event-date-month{
 	color:#e84646;
-	font-size:20px;
-	text-align:left;
+	font-size:22px;
+	text-align:center;
+
 
 }
 .event-date-num{
 	color:#292a2b;
-	font-size:30px;
+	font-size:28px;
 	font-weight:400;
 	text-align:justify;
-	margin-top: -10px;
+	margin-top: -15px;
 	letter-spacing:1px;
 	padding-left:0px;
 	padding-top:4px;
+	text-align:center;
 
 
 }
@@ -151,6 +154,7 @@
 .event-details{
 	font-size:12px;
 	color:#365b88;
+	padding-top:10px;
 }
 .event-details-time{
 	padding-right:20px;
