@@ -23,8 +23,8 @@ register.filter('to_time',to_time)
 def event_class(data):
 
     if data %2 == 0:
-        return "event-block-o"
+        return 'event-block-o animatable'
     else:
-        return "event-block"
+        return 'event-block animatable'
 
 register.filter('event_class',event_class)

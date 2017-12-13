@@ -20,7 +20,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  background: #ffd6c3;
+  background: #afd1e1;
   z-index: -1;
   bottom: 0;
   left:0;
@@ -33,7 +33,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  background: #aaffc4;
+  background: #d4cfcd;
   z-index: -1;
   bottom: 0;
   left:0;
@@ -57,7 +57,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  background: #ffd6c3;
+  background: #afd1e1;
   z-index: -2;
   bottom: 0;
   left:0;
@@ -70,7 +70,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  background: #aaffc4;
+  background: #d4cfcd;
   z-index: -1;
   bottom: 0;
   left:0;
@@ -161,6 +161,81 @@
 }
 
 
+.animatable {
+
+  /* initially hide animatable objects */
+  visibility: hidden;
+
+  /* initially pause animatable objects their animations  */
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -ms-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+/* show objects being animated */
+.animated {
+  visibility: visible;
+  animation:moveUp 3s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-animation:moveUp 3s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-animation:moveUp 3s cubic-bezier(0.4, 0, 0.2, 1);
+  -ms-animation:moveUp 3s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-animation:moveUp 3s cubic-bezier(0.4, 0, 0.2, 1);
+
+
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -ms-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state: running;
+}
+
+@-webkit-keyframes moveUp {
+	0% {
+		opacity: 0.8;
+		-webkit-transform: translateY(40px);
+	}	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+}
+
+@-moz-keyframes moveUp {
+	0% {
+		opacity: 0.8;
+		-moz-transform: translateY(40px);
+	}
+
+	100% {
+		opacity: 1;
+		-moz-transform: translateY(0);
+	}
+}
+
+@-o-keyframes moveUp {
+	0% {
+		opacity: 0.8;
+		-o-transform: translateY(40px);
+	}
+
+	100% {
+		opacity: 1;
+		-o-transform: translateY(0);
+	}
+}
+
+@keyframes moveUp {
+	0% {
+		opacity: 0.8;
+		transform: translateY(40px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
 
 
 

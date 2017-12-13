@@ -153,7 +153,7 @@ $( document ).ready(function() {
 $(function(){
   var x = window.innerHeight - $('.hero').offset().top;
   document.getElementById('hero').style.height = x +"px";
-  $('.hero').prepend('<div class="scroll" id="scroll"><img src="static/IMG/arrows.png"/></div>');
+  $('.hero').prepend('<div class="scroll" id="scroll"><img src="../../static/IMG/arrows.png"/></div>');
 
 });
 //$(window).resize(function(){
@@ -804,3 +804,36 @@ function show_overlay(mydata){
     }
 
 }
+
+
+jQuery(function($) {
+
+  // Function which adds the 'animated' class to any '.animatable' in view
+  var doAnimations = function() {
+
+    // Calc current offset and get all animatables
+    var offset = $(window).scrollTop() + $(window).height(),
+        $animatables = $('.animatable');
+
+    // Unbind scroll handler if we have no animatables
+    if ($animatables.size() == 0) {
+      $(window).off('scroll', doAnimations);
+    }
+
+    // Check all animatables and animate them if necessary
+		$animatables.each(function(i) {
+       var $animatable = $(this);
+			if (($animatable.offset().top + $animatable.height() - 20) < offset) {
+        $animatable.removeClass('animatable').addClass('animated');
+			}
+    });
+
+	};
+
+  // Hook doAnimations on scroll, and trigger a scroll
+	$(window).on('scroll', doAnimations);
+  $(window).trigger('scroll');
+
+});
+
+

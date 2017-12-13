@@ -92,19 +92,29 @@ body {
 	max-width:300px;
 	height:12%;
 	position:absolute;
-	left:40%;
+	left:50%;
 	top:88%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
 	margin-top:1px;
 	background-color:rgba(208, 202, 224, 0.54);
-	border-radius:100% 100% 0px 0px;
-	transition:2s;
+	border-radius:70% 70% 0% 0%;
+	transition:1s;
+}
+.scroll:hover{
+	background-color:rgba(210, 159, 5, 0.52);
 }
 .scroll img{
 	position:absolute;
-	top:30%;
-	margin-left:-32px;
+	top:20%;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
 }
-
 /* About Section */
 
 .about {
@@ -521,7 +531,6 @@ body {
 	}
 	.scroll{
 		width:26%;
-		left:37%;
 	}
 
 }
