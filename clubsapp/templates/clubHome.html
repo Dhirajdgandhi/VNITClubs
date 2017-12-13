@@ -75,11 +75,21 @@
                     <h1>POSTS</h1>
                     {% load activity_photo %}
                     {% for post in activity_data%}
+
                     <div class="col-lg-3 col-sm-6 col-xs-12"  id="divPost">
                       <div class="" id="postHead"><h5>{{post.activity.date}}</h5></div>
-                      <div class="postDescription"><p>{{post.activity.description}}</p></div>
-                      <div id="divImage"><img src="{{post.activity.id|activityphoto}}"/></div>
-
+                      <div class="postDescription"><p onclick="show_overlay({{post.activity.id}})">{{post.activity.description}}</p></div>
+                      <div id="divImage"><img src="{{post.activity.id|activityphoto}}" onerror="this.style.display='none'"/></div>
+                      <div id="overlay" class={{post.activity.id}}>
+                        <div class="over_post">
+                          <div id="overImage"><img src="{{post.activity.id|activityphoto}}" onerror="this.style.display='none'"/></div>
+                          <div class="post_right">
+                            <button id="over_post_button" onclick="hide_overlay()">X</button>
+                            <div class="" id="overHead"><h5>{{post.activity.date}}</h5></div>
+                            <div class="overDescription"><p>{{post.activity.description}}</p></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     {%endfor%}
 
@@ -192,9 +202,9 @@
                       <div>
                         <h2 class="heading2">Contact Info</h2>
                         <div>
-                          <p><i class="material-icons">call</i>&nbsp;&nbsp;&nbsp;9876543210</p>
-                          <p><i class="material-icons">mail_outline</i>&nbsp;&nbsp;&nbsp;mail@example.com</p>
-                          <p><i class="material-icons">language</i><a href="#">&nbsp;&nbsp;&nbsp;www.website.com</a></p>
+                          <p><i class="material-icons">call</i>   {{club_data.contact.telephone1}}<br>{{club_data.contact.telephone2}}</p>
+                          <p><i class="material-icons">mail_outline</i>   {{club_data.contact.email}}</p>
+                          <p><i class="material-icons">language</i>   <a href="{{club_data.contact.website}}">{{club_data.contact.website}}</a></p>
                         </div>
                       </div>
                     </section>

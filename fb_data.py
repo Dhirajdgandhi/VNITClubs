@@ -46,13 +46,13 @@ for fbid in fbids:
 #fbid = '' #ieee
 #fbid = '122188297874827' #prayaas
 #fbid = '558880000805766' #astro
-#fbid = '' #ivlabs
+#fbid = '1641158256150398' #ivlabs
 #fbid = '174942216314910' #tesla
 #fbid = '' #grooves
 #fbid = '190530800978437' #iridecence
 #fbid = '302597396486782'#team v
-#fbid = '' #iiche
-
+#fbid = '1492529371023579' #iiche
+#fbid = '109896629705563' #hallabol
 
 
 # url for getting events
@@ -73,7 +73,7 @@ for data in eventdata:
     event.save()
 
     cer = ClubEventRelationship()
-    cerclub = Club.objects.get(pk=10)
+    cerclub = Club.objects.get(pk=11)
     cer.club = cerclub
     print cerclub
 

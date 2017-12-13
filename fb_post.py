@@ -32,7 +32,7 @@ def randomword(length):
    return ''.join(random.choice(letters) for i in range(length))
 
 # fb token
-token = 'EAACEdEose0cBABWKn8M6TzxofkrbfAgecFuZA4VC9pQEvF9QTeOD76D25TX4wC3S0DcjU1F1n1ZBQe9InVDkmH4mZBGuPbXZATubvL17n0G9qJcolOZBbX2clN5G9czZBLxol1y73tgWJSg5IspR0JzO1fsaE24JgZCeqRZAGKlnwRbCxxsW6gZANd7LqtgGDfT8ZB2e5pHluB1QGSrxVvoJNs'
+token = 'EAACEdEose0cBACl83wqGf1Rn9U3dh2ZBR5FIfMS5pMFTP2mhKRcyGIexbkGF7f3PE1IzzGoSzfZBUyMVZCqZCi2jfaGrL81ZBdn10qL0pbqy2sRdGZCztNMZCe1997MzB5U4S6TGVeoQiCuMikgmbnoy5hsQmmyEgnmRTZC3EL52oF2H7IaDFp9UrY0xbtwbnXM82CF1aZBXfdAZDZD'
 #making HTTP request to graph API
 def fb_catch(url):
 
@@ -55,12 +55,13 @@ for fbid in fbids:
 #fbid = '' #ieee
 #fbid = '122188297874827' #prayaas
 #fbid = '558880000805766' #astro
-#fbid = '' #ivlabs
+#fbid = '1641158256150398' #ivlabs
 #fbid = '174942216314910' #tesla
 #fbid = '' #grooves
 #fbid = '190530800978437' #iridecence
-fbid = '302597396486782'#team v
-#fbid = '' #iiche
+#fbid = '302597396486782'#team v
+#fbid = '1492529371023579' #iiche
+#fbid = '109896629705563' #hallabol
 
 
 
@@ -78,10 +79,15 @@ for data in postdata:
         activity.description = data['message']
     except KeyError:
         continue
-    activity.save()
+
+    try:
+        activity.save()
+    except:
+        continue
+
 
     car = ClubActivityRelationship()
-    carclub = Club.objects.get(pk=10)
+    carclub = Club.objects.get(pk=12)
     car.club = carclub
     print carclub
     caractivity = activity
