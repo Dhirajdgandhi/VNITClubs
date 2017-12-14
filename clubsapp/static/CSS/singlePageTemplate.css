@@ -62,7 +62,7 @@ body {
 /* Hero Section */
 .hero {
 
-	background-image: url(../IMG/mag_cover.jpg);
+
 
 	display:block;
 	width:100%;
@@ -71,7 +71,43 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.mag{
+	background-image: url(../IMG/mag.png);
+}
+.ecell{
+	background-image: url(../IMG/ecell.png);
+}
+.ieee{
+	background-image: url(../IMG/ieee.jpeg);
+}
+.prayaas{
+	background-image: url(../IMG/prayaas.jpeg);
+}
+.astro{
+	background-image: url(../IMG/astro.png);
+}
 
+.ivlabs{
+	background-image: url(../IMG/ivlabs.png);
+}
+.tesla{
+	background-image: url(../IMG/tesla.png);
+}
+.tvlocity{
+	background-image: url(../IMG/vlocity.png);
+}
+.grooves{
+	background-image: url(../IMG/grooves.png);
+}
+.irdscn{
+	background-image: url(../IMG/irr.png);
+}
+.iiche{
+	background-image: url(../IMG/ichhe.jpeg);
+}
+.hallabol{
+	background-image: url(../IMG/hallabol.png);
+}
 .light {
 	font-weight: bolder;
 	color: rgb(18, 18, 18);
