@@ -78,7 +78,7 @@
 
                     <div class="col-lg-3 col-sm-6 col-xs-12"  id="divPost">
                       <div class="" id="postHead"><h5>{{post.activity.date}}</h5></div>
-                      <div class="postDescription"><p onclick="show_overlay({{post.activity.id}})">{{post.activity.description}}</p></div>
+                      <div class="postDescription" onclick="show_overlay({{post.activity.id}})"><p>{{post.activity.description}}</p></div>
                       <div id="divImage"><img src="{{post.activity.id|activityphoto}}" onerror="this.style.display='none'"/></div>
                       <div id="overlay" class={{post.activity.id}}>
                         <div class="over_post">
@@ -140,7 +140,7 @@
                     <div class="grid">
                       {%for data in gall_data%}
                       <div class="grid-item">
-                        <img src="{{data.photo.photograph.url}}" />
+                        <img src="{{data.photo.photograph.url}}" onerror = "this.style.display='none'" />
                       </div>
                       {%endfor%}
                     </div>
@@ -176,7 +176,9 @@
                         </div>
                       </div>
                     </section>
-
+                    <div class="pricing">
+                      <p>Stay tuned for more updates</p>
+                    </div>
 
 
 

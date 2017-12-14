@@ -2,10 +2,140 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bfe9060-ca32-4fbf-8379-61a5ee0d3fad" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gallery_load.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/bride-shoes.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/bride.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/bride.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/capture.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/client.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/client1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/client2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/client3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/client4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/coffee-photo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/couple.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/cross-jesus-wedding-crucifix.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/dance.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/description.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/description.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/description.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/drama.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/entrepreneur.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/event.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/iPhone.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/instagram.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/iphone.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/iphone1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/iphone2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clubsapp/static/IMG/iphone3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/1/FGR.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/1/FR.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/1/agR.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/1/efg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/1/faV.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/1/fef.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/1/fre.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/1/frgrg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/1/gra.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/1/mag.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/1/rf.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/10/000 (2).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/10/12798847_992281550851693_4174588157351792038_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/10/12821402_992281927518322_4377466605042518029_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/10/20170401_142204.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/10/20170622_130620.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/10/20170629_140742.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/10/282007_2049301545001_7528155_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/10/DPP_0003.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/10/DPP_0005.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/10/DSC00885.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/10/DSC02176.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/10/IMG_9859.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/11/11193409_1610904512519397_4545638857206418397_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/11/11214732_1745597989050048_7112973464638825434_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/11/12919821_1745594369050410_3583987281059920031_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/11/14330042_1815495728726940_7498065454028405785_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/11/14344687_1815495638726949_845841695153064943_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/11/14355631_1815495732060273_7085346517436731223_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/12/20620814_1415949208481552_6185752400308706035_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/12/22815100_122524098442816_8660877371817926681_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/12/22852042_122524115109481_983902280067482652_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/2/14581548_1760268800903436_5483756757827923587_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/2/19420598_1871554406441541_1332929164279592722_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/2/19642243_1874011506195831_2435849363311724004_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/2/19894652_1879584352305213_6787272548664445301_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/2/21032818_1898716630391985_447135569570074911_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/2/21077657_1898716633725318_2783502688759935685_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/2/21105663_1898716627058652_2577136136265963273_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/2/22366498_1916217688641879_879598952882290666_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/2/22449853_1916217565308558_4313442079939500191_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/2/22490080_1916217671975214_7113295341782473835_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/2/23561655_1930382257225422_2457450102275922281_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/2/23844590_1934125470184434_2049768236773954184_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/3/21740530_1948937968705757_2077134242196786793_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/3/22007349_1948938102039077_6341542743912778487_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/3/22008083_1948938115372409_5262523398814607819_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/3/22045821_1948937962039091_380628192605649274_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/4/pra (1).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/4/pra (10).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/4/pra (11).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/4/pra (12).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/4/pra (13).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/4/pra (2).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/4/pra (3).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/4/pra (4).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/4/pra (5).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/4/pra (6).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/4/pra (7).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/4/pra (8).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/4/pra (9).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/5/12079701_1216623215031438_2142832698499932748_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/5/12096580_1216623415031418_4904433738660255409_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/5/16142769_1636782643015491_3518400017343794567_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/5/16174456_1636783819682040_7436725285513097686_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/5/16195930_1636783923015363_6425705175487969430_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/5/21317730_1937505419609877_429698532302450143_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/6/1219721_orig.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/6/5418395_orig.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/6/6890827_orig.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/6/823871_orig.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/6/8945274_orig.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/6/dsc08845.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/6/img-0617.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/7/15577926_175436412932157_1654694268030574528_o.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/7/17155374_219605388515259_8414227041095437549_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/7/17201453_219605378515260_6660996834190072215_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/7/17264622_219605358515262_189731979819596191_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/7/17264894_219605385181926_7167429744591173084_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/7/17308993_222684818207316_5683234109137639829_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/7/23130515_318220618653735_189909869382912294_n (1).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/7/23130515_318220618653735_189909869382912294_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/8/b1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/8/b2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/8/c1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/8/c2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/8/c3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/8/c4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/8/h1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/8/h2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/8/h3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/8/h4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/8/h5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/8/h6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/8/h7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/8/m1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/8/m2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/8/t1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/8/t2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/8/t3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/9/0.celebration of MUD day.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/9/1..jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/9/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/9/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/9/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/9/calligraphy w.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/9/calligraphy workshop.JPG" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clubsapp/templates/clubHome.html" afterPath="$PROJECT_DIR$/clubsapp/templates/clubHome.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clubsapp/views.py" afterPath="$PROJECT_DIR$/clubsapp/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,41 +163,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="clubHome.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clubsapp/templates/clubHome.html">
+      <file leaf-file-name="VnitClubsHome.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/clubsapp/templates/VnitClubsHome.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="142" column="61" lean-forward="false" selection-start-line="142" selection-start-column="61" selection-end-line="142" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_photo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clubsapp/templatetags/activity_photo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
-              <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clubsapp/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/clubsapp/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="53" column="73" lean-forward="false" selection-start-line="53" selection-start-column="73" selection-end-line="53" selection-end-column="73" />
+            <state relative-caret-position="140">
+              <caret line="88" column="42" lean-forward="false" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -157,8 +257,8 @@
         <option value="$PROJECT_DIR$/clubsapp/static/CSS/singlePageTemplate.css" />
         <option value="$PROJECT_DIR$/fb_post.py" />
         <option value="$PROJECT_DIR$/gallery_load.py" />
-        <option value="$PROJECT_DIR$/clubsapp/templates/clubHome.html" />
         <option value="$PROJECT_DIR$/clubsapp/views.py" />
+        <option value="$PROJECT_DIR$/clubsapp/templates/clubHome.html" />
       </list>
     </option>
   </component>
@@ -205,13 +305,20 @@
               <item name="VNITClubs" type="b2602c69:ProjectViewProjectNode" />
               <item name="VNITClubs" type="462c0819:PsiDirectoryNode" />
               <item name="clubsapp" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="VNITClubs" type="b2602c69:ProjectViewProjectNode" />
               <item name="VNITClubs" type="462c0819:PsiDirectoryNode" />
               <item name="clubsapp" type="462c0819:PsiDirectoryNode" />
-              <item name="templatetags" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="CSS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VNITClubs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VNITClubs" type="462c0819:PsiDirectoryNode" />
+              <item name="clubsapp" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="VNITClubs" type="b2602c69:ProjectViewProjectNode" />
@@ -348,14 +455,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3251634" sideWeight="0.4357035" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50980395" sideWeight="0.4969743" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18464053" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26797387" sideWeight="0.56429654" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2990196" sideWeight="0.56429654" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21633889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -364,11 +470,24 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.05756579" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3251634" sideWeight="0.4357035" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50980395" sideWeight="0.4969743" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18464053" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26797387" sideWeight="0.56429654" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21633889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.05756579" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -486,24 +605,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clubsapp/static/JS/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="154" column="57" lean-forward="true" selection-start-line="154" selection-start-column="57" selection-end-line="154" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clubsapp/static/CSS/event.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clubsapp/templates/VnitClubsHome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -677,6 +782,14 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/clubsapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="53" column="73" lean-forward="false" selection-start-line="53" selection-start-column="73" selection-end-line="53" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/clubsapp/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2">
@@ -693,18 +806,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/clubsapp/static/JS/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="802" column="45" lean-forward="true" selection-start-line="802" selection-start-column="45" selection-end-line="802" selection-end-column="45" />
+          <folding>
+            <marker date="1513165981898" expanded="true" signature="21918:21931" ph="..." />
+            <marker date="1513165981898" expanded="true" signature="23860:23873" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/clubsapp/templates/clubHome.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="142" column="61" lean-forward="false" selection-start-line="142" selection-start-column="61" selection-end-line="142" selection-end-column="61" />
+        <state relative-caret-position="3026">
+          <caret line="178" column="41" lean-forward="true" selection-start-line="178" selection-start-column="41" selection-end-line="178" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clubsapp/views.py">
+    <entry file="file://$PROJECT_DIR$/clubsapp/templates/VnitClubsHome.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="53" column="73" lean-forward="false" selection-start-line="53" selection-start-column="73" selection-end-line="53" selection-end-column="73" />
+        <state relative-caret-position="140">
+          <caret line="88" column="42" lean-forward="false" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
           <folding />
         </state>
       </provider>
