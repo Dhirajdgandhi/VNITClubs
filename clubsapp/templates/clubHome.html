@@ -35,6 +35,7 @@
       <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
       <script>var __adobewebfontsappname__="dreamweaver"</script>
       <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
     </head>
 
     <body id="body">
@@ -47,8 +48,13 @@
 
                   <!-- Hero Section -->
                   <section class="hero {{club_data.shortName}}" id="hero">
-                    <h2 class="hero_header">{{ club_data.displayName }}</h2>
-                    <p class="tagline">{{ club_data.clubType }}</p>
+                    <div class="hero_header">
+                      <div class="hero_name">
+                        <h1>{{club_data.displayName}}</h1><br>
+                        <div class="tagline">{{club_data.clubType}}<br>{{club_data.yearOfStart}}</div>
+                      </div>
+                    </div>
+
                   </section>
 
                   <!-- my -->

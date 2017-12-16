@@ -48,21 +48,35 @@ body {
 
 }
 .hero_name {
-	color: #000;
+	color: #bbbeee;
+	padding-top:20px;
+	padding-bottom:20px;
+	background-color:#181f4529;
 	text-align: center;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
+	margin: 0px;
+	width:100%;
 	letter-spacing: 2px;
-	font-size: 60px;
-	margin-bottom:-3em;
-	padding-top:150px;
+	font-size:0px;
+	text-transform: uppercase;
+	top:50%;
+	left:50%;
+	transform:translate(-50%);
+	-o-transform:translate(-50%);
+	-webkit-transform:translate(-50%);
+	-moz-transform:translate(-50%);
+	position:absolute;
+
+}
+.hero_name h1{
+	font-size:100px;
+	font-weight:800;
+}
+.tagline {
+	text-align: center;
+	font-size: 18px;
 }
 /* Hero Section */
 .hero {
-
-
 
 	display:block;
 	width:100%;
@@ -108,35 +122,22 @@ body {
 .hallabol{
 	background-image: url(../IMG/hallabol.png);
 }
-.light {
-	font-weight: bolder;
-	color: rgb(18, 18, 18);
-	font-size: 70px;
-}
-.tagline {
-	text-align: center;
-	color: #FFFFFF;
-	margin-top: -12em;
-	font-weight: lighter;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-size: 20px;
-	position:relative;
-}
+
+
 .scroll{
 	width:20%;
 	max-width:300px;
-	height:12%;
+	height:10%;
 	position:absolute;
 	left:50%;
-	top:88%;
+	top:90%;
 	transform: translateX(-50%);
 	-webkit-transform: translateX(-50%);
 	-o-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);
 	margin-top:1px;
-	background-color:rgba(208, 202, 224, 0.54);
-	border-radius:70% 70% 0% 0%;
+	background-color:rgba(187, 190, 238, 0.53);
+	border-radius:60% 60% 0% 0%;
 	transition:1s;
 }
 .scroll:hover{
@@ -553,6 +554,7 @@ body {
 		text-align:center;
 	}
 
+
 }
 
 @media (max-width:767px){
@@ -567,6 +569,9 @@ body {
 	}
 	.scroll{
 		width:26%;
+	}
+	.hero_name h1{
+		font-size:60px;
 	}
 
 }

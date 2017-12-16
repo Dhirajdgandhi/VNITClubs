@@ -69,7 +69,7 @@
               <div class="h-content" id="head">
               <h1>STUDENT CLUBS</h1>
               <p id="intro">Welcome to the first ever Website for clubs of VNIT. Here you can browse through all the clubs, the latest ongoing events and many more . . .</p>
-                <div class="drag"><i class="	glyphicon glyphicon-arrow-right" id="scrollbutton"></i></div><br><br>
+                <div class="drag"><i class="glyphicon glyphicon-arrow-right" id="scrollbutton"></i></div><br><br>
             </div>
 
             </div>
@@ -86,7 +86,7 @@
                 <li class="item col-lg-4 col-sm-6 col-md-4 col-xs-12">
                     <figure>
                       <!-- Your picture -->
-                      <img src="{% static 'IMG/astronomy.jpg' %}"  class="img-responsive" />
+                      <img src="../static/IMG/thumb_{{club.shortName}}.jpg"  class="img-responsive" />
                       <!-- Picture's description below this one -->
                       <figcaption class="caption">
                         <div class="photo-details">
@@ -102,17 +102,11 @@
 
 
             </ul>
-
-            <ul class="project_info">
-
-
-            </ul>
           </div>
 
           <div class="pricing">
             <p>Stay tuned for more updates</p>
           </div>
-
 
         </div>
         </div>
